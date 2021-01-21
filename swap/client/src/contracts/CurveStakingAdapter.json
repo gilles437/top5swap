@@ -1,0 +1,3349 @@
+{
+  "contractName": "CurveStakingAdapter",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "contract IGaugeController",
+          "name": "_gaugeController",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [],
+      "name": "gaugeController",
+      "outputs": [
+        {
+          "internalType": "contract IGaugeController",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_stakingContract",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_notionalAmount",
+          "type": "uint256"
+        }
+      ],
+      "name": "getStakeCallData",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes",
+          "name": "",
+          "type": "bytes"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_stakingContract",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_notionalAmount",
+          "type": "uint256"
+        }
+      ],
+      "name": "getUnstakeCallData",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes",
+          "name": "",
+          "type": "bytes"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_stakingContract",
+          "type": "address"
+        }
+      ],
+      "name": "getSpenderAddress",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.10+commit.00c0fcaf\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"contract IGaugeController\",\"name\":\"_gaugeController\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[],\"name\":\"gaugeController\",\"outputs\":[{\"internalType\":\"contract IGaugeController\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_stakingContract\",\"type\":\"address\"}],\"name\":\"getSpenderAddress\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_stakingContract\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_notionalAmount\",\"type\":\"uint256\"}],\"name\":\"getStakeCallData\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_stakingContract\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_notionalAmount\",\"type\":\"uint256\"}],\"name\":\"getUnstakeCallData\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"Set Protocol Staking adapter for Curve that returns data to stake/unstake tokens\",\"methods\":{\"constructor\":{\"params\":{\"_gaugeController\":\"Address of Gauge Controller\"}},\"getSpenderAddress(address)\":{\"params\":{\"_stakingContract\":\"Address of the gauge staking contract\"},\"returns\":{\"_0\":\"address                  Address of the contract to approve tokens transfers to\"}},\"getStakeCallData(address,uint256)\":{\"params\":{\"_notionalAmount\":\"Quantity of token to stake\",\"_stakingContract\":\"Address of the gauge staking contract\"},\"returns\":{\"_0\":\"address                  Target address\",\"_1\":\"uint256                  Call value\",\"_2\":\"bytes                    Stake tokens calldata\"}},\"getUnstakeCallData(address,uint256)\":{\"params\":{\"_notionalAmount\":\"Quantity of token to stake\",\"_stakingContract\":\"Address of the gauge staking contract\"},\"returns\":{\"_0\":\"address                  Target address\",\"_1\":\"uint256                  Call value\",\"_2\":\"bytes                    Unstake tokens calldata\"}}},\"title\":\"CurveStakingAdapter\"},\"userdoc\":{\"methods\":{\"constructor\":\"Set state variables\",\"getSpenderAddress(address)\":{\"notice\":\"Returns the address to approve component for staking tokens.\"},\"getStakeCallData(address,uint256)\":{\"notice\":\"Generates the calldata to stake lp tokens in the staking contract\"},\"getUnstakeCallData(address,uint256)\":{\"notice\":\"Generates the calldata to unstake lp tokens from the staking contract\"}}}},\"settings\":{\"compilationTarget\":{\"/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/protocol/integration/CurveStakingAdapter.sol\":\"CurveStakingAdapter\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/interfaces/external/IGaugeController.sol\":{\"keccak256\":\"0x61131702c429542f9a4b3800b218c0236d2c07a62d811e7f03dade36f1e80e82\",\"license\":\"Apache License\",\"urls\":[\"bzz-raw://ed80cb99c7d028e1b7fd1e8b1b53a8bcbfb7edd4d4cab174cb537ac08dfb03a5\",\"dweb:/ipfs/QmZhWpztmWTtemtpFZwgmeKNMB7r4MJtZt4CmUvqhyoWop\"]},\"/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/protocol/integration/CurveStakingAdapter.sol\":{\"keccak256\":\"0xb5bb9eebdb4c911fe865527faa22f6ae3ad4eae3e555d9325a8e6002624bb3f2\",\"license\":\"Apache License\",\"urls\":[\"bzz-raw://b050b65b5f9f9e4c41a36de6a4d573284bf111fd22aebfad50589872200bad20\",\"dweb:/ipfs/QmT2GVpt9tEoUmBFkZ4XSJb79beq7Mw6uxNd7SGLmW8H9z\"]}},\"version\":1}",
+  "bytecode": "0x60a060405234801561001057600080fd5b5060405161075c38038061075c8339818101604052602081101561003357600080fd5b81019080805190602001909291905050508073ffffffffffffffffffffffffffffffffffffffff1660808173ffffffffffffffffffffffffffffffffffffffff1660601b815250505060805160601c6106be61009e6000398061057b52806105a152506106be6000f3fe608060405234801561001057600080fd5b506004361061004c5760003560e01c80630d697603146100515780630e8edd86146101525780639971c165146101d657806399eecb3b146102d7575b600080fd5b61009d6004803603604081101561006757600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919080359060200190929190505050610321565b604051808473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200183815260200180602001828103825283818151815260200191508051906020019080838360005b838110156101155780820151818401526020810190506100fa565b50505050905090810190601f1680156101425780820380516001836020036101000a031916815260200191505b5094505050505060405180910390f35b6101946004803603602081101561016857600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610448565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b610222600480360360408110156101ec57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919080359060200190929190505050610452565b604051808473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200183815260200180602001828103825283818151815260200191508051906020019080838360005b8381101561029a57808201518184015260208101905061027f565b50505050905090810190601f1680156102c75780820380516001836020036101000a031916815260200191505b5094505050505060405180910390f35b6102df610579565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b600080606061032f8561059d565b6103a1576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260188152602001807f496e76616c6964207374616b696e6720636f6e7472616374000000000000000081525060200191505060405180910390fd5b606084604051602401808281526020019150506040516020818303038152906040527fb6b55f25000000000000000000000000000000000000000000000000000000007bffffffffffffffffffffffffffffffffffffffffffffffffffffffff19166020820180517bffffffffffffffffffffffffffffffffffffffffffffffffffffffff8381831617835250505050905085600082819150935093509350509250925092565b6000819050919050565b60008060606104608561059d565b6104d2576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260188152602001807f496e76616c6964207374616b696e6720636f6e7472616374000000000000000081525060200191505060405180910390fd5b606084604051602401808281526020019150506040516020818303038152906040527f2e1a7d4d000000000000000000000000000000000000000000000000000000007bffffffffffffffffffffffffffffffffffffffffffffffffffffffff19166020820180517bffffffffffffffffffffffffffffffffffffffffffffffffffffffff8381831617835250505050905085600082819150935093509350509250925092565b7f000000000000000000000000000000000000000000000000000000000000000081565b60007f000000000000000000000000000000000000000000000000000000000000000073ffffffffffffffffffffffffffffffffffffffff16633f9095b7836040518263ffffffff1660e01b8152600401808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060206040518083038186803b15801561063c57600080fd5b505afa92505050801561067057506040513d602081101561065c57600080fd5b810190808051906020019092919050505060015b61067d5760009050610683565b50600190505b91905056fea2646970667358221220cb7b476f0a602aa0e582df923b7efde4328e8dd3aadc007155217145c95f695c64736f6c634300060a0033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061004c5760003560e01c80630d697603146100515780630e8edd86146101525780639971c165146101d657806399eecb3b146102d7575b600080fd5b61009d6004803603604081101561006757600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919080359060200190929190505050610321565b604051808473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200183815260200180602001828103825283818151815260200191508051906020019080838360005b838110156101155780820151818401526020810190506100fa565b50505050905090810190601f1680156101425780820380516001836020036101000a031916815260200191505b5094505050505060405180910390f35b6101946004803603602081101561016857600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610448565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b610222600480360360408110156101ec57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919080359060200190929190505050610452565b604051808473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200183815260200180602001828103825283818151815260200191508051906020019080838360005b8381101561029a57808201518184015260208101905061027f565b50505050905090810190601f1680156102c75780820380516001836020036101000a031916815260200191505b5094505050505060405180910390f35b6102df610579565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b600080606061032f8561059d565b6103a1576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260188152602001807f496e76616c6964207374616b696e6720636f6e7472616374000000000000000081525060200191505060405180910390fd5b606084604051602401808281526020019150506040516020818303038152906040527fb6b55f25000000000000000000000000000000000000000000000000000000007bffffffffffffffffffffffffffffffffffffffffffffffffffffffff19166020820180517bffffffffffffffffffffffffffffffffffffffffffffffffffffffff8381831617835250505050905085600082819150935093509350509250925092565b6000819050919050565b60008060606104608561059d565b6104d2576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260188152602001807f496e76616c6964207374616b696e6720636f6e7472616374000000000000000081525060200191505060405180910390fd5b606084604051602401808281526020019150506040516020818303038152906040527f2e1a7d4d000000000000000000000000000000000000000000000000000000007bffffffffffffffffffffffffffffffffffffffffffffffffffffffff19166020820180517bffffffffffffffffffffffffffffffffffffffffffffffffffffffff8381831617835250505050905085600082819150935093509350509250925092565b7f000000000000000000000000000000000000000000000000000000000000000081565b60007f000000000000000000000000000000000000000000000000000000000000000073ffffffffffffffffffffffffffffffffffffffff16633f9095b7836040518263ffffffff1660e01b8152600401808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060206040518083038186803b15801561063c57600080fd5b505afa92505050801561067057506040513d602081101561065c57600080fd5b810190808051906020019092919050505060015b61067d5760009050610683565b50600190505b91905056fea2646970667358221220cb7b476f0a602aa0e582df923b7efde4328e8dd3aadc007155217145c95f695c64736f6c634300060a0033",
+  "immutableReferences": {
+    "11287": [
+      {
+        "length": 32,
+        "start": 1403
+      },
+      {
+        "length": 32,
+        "start": 1441
+      }
+    ]
+  },
+  "sourceMap": "900:3308:78:-:0;;;1246:105;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1328:16;1310:34;;;;;;;;;;;;1246:105;900:3308;;;;;;;;;;;",
+  "deployedSourceMap": "900:3308:78:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1829:402;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;3341:124;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;2659:405;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1028:49;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;1829:402;1962:7;1971;1980:12;2012:41;2036:16;2012:23;:41::i;:::-;2004:78;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2092:21;2160:15;2116:60;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2092:84;;2194:16;2212:1;2215:8;2186:38;;;;;;;;;;1829:402;;;;;:::o;3341:124::-;3416:7;3442:16;3435:23;;3341:124;;;:::o;2659:405::-;2794:7;2803;2812:12;2844:41;2868:16;2844:23;:41::i;:::-;2836:78;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2924:21;2993:15;2948:61;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2924:85;;3027:16;3045:1;3048:8;3019:38;;;;;;;;;;2659:405;;;;;:::o;1028:49::-;;;:::o;3745:461::-;3827:4;4074:15;:27;;;4102:16;4074:45;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;4070:130;;4184:5;4177:12;;;;4070:130;;4141:4;4134:11;;3745:461;;;;:::o",
+  "source": "/*\n    Copyright 2020 Set Labs Inc.\n\n    Licensed under the Apache License, Version 2.0 (the \"License\");\n    you may not use this file except in compliance with the License.\n    You may obtain a copy of the License at\n\n    http://www.apache.org/licenses/LICENSE-2.0\n\n    Unless required by applicable law or agreed to in writing, software\n    distributed under the License is distributed on an \"AS IS\" BASIS,\n    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n    See the License for the specific language governing permissions and\n    limitations under the License.\n\n    SPDX-License-Identifier: Apache License, Version 2.0\n*/\n\npragma solidity 0.6.10;\n\nimport { IGaugeController } from \"../../interfaces/external/IGaugeController.sol\";\n\n/**\n * @title CurveStakingAdapter\n * @author Set Protocol\n *\n * Staking adapter for Curve that returns data to stake/unstake tokens\n */\ncontract CurveStakingAdapter {\n\n    /* ============ State Variables ============ */\n\n    // Address of the gauge controller\n    IGaugeController public immutable gaugeController;\n\n    /* ============ Constructor ============ */\n\n    /**\n     * Set state variables\n     *\n     * @param _gaugeController     Address of Gauge Controller\n     */\n    constructor(IGaugeController _gaugeController) public {\n        gaugeController = _gaugeController;\n    }\n\n    /* ============ External Functions ============ */\n\n    /**\n     * Generates the calldata to stake lp tokens in the staking contract\n     *\n     * @param _stakingContract          Address of the gauge staking contract\n     * @param _notionalAmount           Quantity of token to stake\n     *\n     * @return address                  Target address\n     * @return uint256                  Call value\n     * @return bytes                    Stake tokens calldata\n     */\n    function getStakeCallData(\n        address _stakingContract,\n        uint256 _notionalAmount\n    )\n    external\n    view\n    returns(address, uint256, bytes memory) {\n        require(_isValidStakingContract(_stakingContract), \"Invalid staking contract\");\n        bytes memory callData = abi.encodeWithSignature(\"deposit(uint256)\", _notionalAmount);\n        return (_stakingContract, 0, callData);\n    }\n\n    /**\n     * Generates the calldata to unstake lp tokens from the staking contract\n     *\n     * @param _stakingContract          Address of the gauge staking contract\n     * @param _notionalAmount           Quantity of token to stake\n     *\n     * @return address                  Target address\n     * @return uint256                  Call value\n     * @return bytes                    Unstake tokens calldata\n     */\n    function getUnstakeCallData(\n        address _stakingContract,\n        uint256 _notionalAmount\n    )\n    external\n    view\n    returns(address, uint256, bytes memory) {\n        require(_isValidStakingContract(_stakingContract), \"Invalid staking contract\");\n        bytes memory callData = abi.encodeWithSignature(\"withdraw(uint256)\", _notionalAmount);\n        return (_stakingContract, 0, callData);\n    }\n\n    /**\n     * Returns the address to approve component for staking tokens.\n     *\n     * @param _stakingContract          Address of the gauge staking contract\n     *\n     * @return address                  Address of the contract to approve tokens transfers to\n     */\n    function getSpenderAddress(address _stakingContract) external view returns(address) {\n        return _stakingContract;\n    }\n\n    /**\n     * Validates that the staking contract is registered in the gauge controller\n     *\n     * @param _stakingContract          Address of the gauge staking contract\n     *\n     * @return bool                     Whether or not the staking contract is valid\n     */\n    function _isValidStakingContract(address _stakingContract) internal view returns (bool) {\n        // If the gauge address is not defined in the gaugeController, gauge_types will revert.\n        // Otherwise returns the value.\n        // Here we catch the revert and return false to revert with a proper error message\n        try gaugeController.gauge_types(_stakingContract) {\n            return true;\n        } catch {\n            return false;\n        }\n    }\n}\n",
+  "sourcePath": "/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/protocol/integration/CurveStakingAdapter.sol",
+  "ast": {
+    "absolutePath": "/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/protocol/integration/CurveStakingAdapter.sol",
+    "exportedSymbols": {
+      "CurveStakingAdapter": [
+        11402
+      ]
+    },
+    "id": 11403,
+    "license": "Apache License",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 11282,
+        "literals": [
+          "solidity",
+          "0.6",
+          ".10"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "655:23:78"
+      },
+      {
+        "absolutePath": "/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/interfaces/external/IGaugeController.sol",
+        "file": "../../interfaces/external/IGaugeController.sol",
+        "id": 11284,
+        "nodeType": "ImportDirective",
+        "scope": 11403,
+        "sourceUnit": 943,
+        "src": "680:82:78",
+        "symbolAliases": [
+          {
+            "foreign": {
+              "argumentTypes": null,
+              "id": 11283,
+              "name": "IGaugeController",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": null,
+              "src": "689:16:78",
+              "typeDescriptions": {
+                "typeIdentifier": null,
+                "typeString": null
+              }
+            },
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": {
+          "id": 11285,
+          "nodeType": "StructuredDocumentation",
+          "src": "764:135:78",
+          "text": " @title CurveStakingAdapter\n @author Set Protocol\n Staking adapter for Curve that returns data to stake/unstake tokens"
+        },
+        "fullyImplemented": true,
+        "id": 11402,
+        "linearizedBaseContracts": [
+          11402
+        ],
+        "name": "CurveStakingAdapter",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "functionSelector": "99eecb3b",
+            "id": 11287,
+            "mutability": "immutable",
+            "name": "gaugeController",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 11402,
+            "src": "1028:49:78",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_IGaugeController_$942",
+              "typeString": "contract IGaugeController"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 11286,
+              "name": "IGaugeController",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 942,
+              "src": "1028:16:78",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_IGaugeController_$942",
+                "typeString": "contract IGaugeController"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 11297,
+              "nodeType": "Block",
+              "src": "1300:51:78",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 11295,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 11293,
+                      "name": "gaugeController",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 11287,
+                      "src": "1310:15:78",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IGaugeController_$942",
+                        "typeString": "contract IGaugeController"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 11294,
+                      "name": "_gaugeController",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 11290,
+                      "src": "1328:16:78",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IGaugeController_$942",
+                        "typeString": "contract IGaugeController"
+                      }
+                    },
+                    "src": "1310:34:78",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IGaugeController_$942",
+                      "typeString": "contract IGaugeController"
+                    }
+                  },
+                  "id": 11296,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1310:34:78"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 11288,
+              "nodeType": "StructuredDocumentation",
+              "src": "1133:108:78",
+              "text": " Set state variables\n @param _gaugeController     Address of Gauge Controller"
+            },
+            "id": 11298,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 11291,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11290,
+                  "mutability": "mutable",
+                  "name": "_gaugeController",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 11298,
+                  "src": "1258:33:78",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IGaugeController_$942",
+                    "typeString": "contract IGaugeController"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 11289,
+                    "name": "IGaugeController",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 942,
+                    "src": "1258:16:78",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IGaugeController_$942",
+                      "typeString": "contract IGaugeController"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1257:35:78"
+            },
+            "returnParameters": {
+              "id": 11292,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1300:0:78"
+            },
+            "scope": 11402,
+            "src": "1246:105:78",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 11332,
+              "nodeType": "Block",
+              "src": "1994:237:78",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "id": 11314,
+                            "name": "_stakingContract",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 11301,
+                            "src": "2036:16:78",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          ],
+                          "id": 11313,
+                          "name": "_isValidStakingContract",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 11401,
+                          "src": "2012:23:78",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_internal_view$_t_address_$returns$_t_bool_$",
+                            "typeString": "function (address) view returns (bool)"
+                          }
+                        },
+                        "id": 11315,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "2012:41:78",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "496e76616c6964207374616b696e6720636f6e7472616374",
+                        "id": 11316,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "2055:26:78",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_9a03c56c1e084ce4e98a827d43afc3f7f3d830558a655a43dce43583d895a3fa",
+                          "typeString": "literal_string \"Invalid staking contract\""
+                        },
+                        "value": "Invalid staking contract"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_9a03c56c1e084ce4e98a827d43afc3f7f3d830558a655a43dce43583d895a3fa",
+                          "typeString": "literal_string \"Invalid staking contract\""
+                        }
+                      ],
+                      "id": 11312,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        -18,
+                        -18
+                      ],
+                      "referencedDeclaration": -18,
+                      "src": "2004:7:78",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 11317,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "2004:78:78",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 11318,
+                  "nodeType": "ExpressionStatement",
+                  "src": "2004:78:78"
+                },
+                {
+                  "assignments": [
+                    11320
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 11320,
+                      "mutability": "mutable",
+                      "name": "callData",
+                      "nodeType": "VariableDeclaration",
+                      "overrides": null,
+                      "scope": 11332,
+                      "src": "2092:21:78",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes_memory_ptr",
+                        "typeString": "bytes"
+                      },
+                      "typeName": {
+                        "id": 11319,
+                        "name": "bytes",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "2092:5:78",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_storage_ptr",
+                          "typeString": "bytes"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 11326,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "6465706f7369742875696e7432353629",
+                        "id": 11323,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "2140:18:78",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_b6b55f256c3eb337f96418d59e773db6e805074f5e574a2bebb7d71394043619",
+                          "typeString": "literal_string \"deposit(uint256)\""
+                        },
+                        "value": "deposit(uint256)"
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 11324,
+                        "name": "_notionalAmount",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 11303,
+                        "src": "2160:15:78",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_stringliteral_b6b55f256c3eb337f96418d59e773db6e805074f5e574a2bebb7d71394043619",
+                          "typeString": "literal_string \"deposit(uint256)\""
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 11321,
+                        "name": "abi",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": -1,
+                        "src": "2116:3:78",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_abi",
+                          "typeString": "abi"
+                        }
+                      },
+                      "id": 11322,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "memberName": "encodeWithSignature",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "2116:23:78",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_abiencodewithsignature_pure$_t_string_memory_ptr_$returns$_t_bytes_memory_ptr_$",
+                        "typeString": "function (string memory) pure returns (bytes memory)"
+                      }
+                    },
+                    "id": 11325,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "2116:60:78",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_memory_ptr",
+                      "typeString": "bytes memory"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "2092:84:78"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "components": [
+                      {
+                        "argumentTypes": null,
+                        "id": 11327,
+                        "name": "_stakingContract",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 11301,
+                        "src": "2194:16:78",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "30",
+                        "id": 11328,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "2212:1:78",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_0_by_1",
+                          "typeString": "int_const 0"
+                        },
+                        "value": "0"
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 11329,
+                        "name": "callData",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 11320,
+                        "src": "2215:8:78",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      }
+                    ],
+                    "id": 11330,
+                    "isConstant": false,
+                    "isInlineArray": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "TupleExpression",
+                    "src": "2193:31:78",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$_t_address_$_t_rational_0_by_1_$_t_bytes_memory_ptr_$",
+                      "typeString": "tuple(address,int_const 0,bytes memory)"
+                    }
+                  },
+                  "functionReturnParameters": 11311,
+                  "id": 11331,
+                  "nodeType": "Return",
+                  "src": "2186:38:78"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 11299,
+              "nodeType": "StructuredDocumentation",
+              "src": "1413:411:78",
+              "text": " Generates the calldata to stake lp tokens in the staking contract\n @param _stakingContract          Address of the gauge staking contract\n @param _notionalAmount           Quantity of token to stake\n @return address                  Target address\n @return uint256                  Call value\n @return bytes                    Stake tokens calldata"
+            },
+            "functionSelector": "0d697603",
+            "id": 11333,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getStakeCallData",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 11304,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11301,
+                  "mutability": "mutable",
+                  "name": "_stakingContract",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 11333,
+                  "src": "1864:24:78",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 11300,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1864:7:78",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 11303,
+                  "mutability": "mutable",
+                  "name": "_notionalAmount",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 11333,
+                  "src": "1898:23:78",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 11302,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1898:7:78",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1854:73:78"
+            },
+            "returnParameters": {
+              "id": 11311,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11306,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 11333,
+                  "src": "1962:7:78",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 11305,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1962:7:78",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 11308,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 11333,
+                  "src": "1971:7:78",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 11307,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1971:7:78",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 11310,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 11333,
+                  "src": "1980:12:78",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 11309,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1980:5:78",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1961:32:78"
+            },
+            "scope": 11402,
+            "src": "1829:402:78",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 11367,
+              "nodeType": "Block",
+              "src": "2826:238:78",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "id": 11349,
+                            "name": "_stakingContract",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 11336,
+                            "src": "2868:16:78",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          ],
+                          "id": 11348,
+                          "name": "_isValidStakingContract",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 11401,
+                          "src": "2844:23:78",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_internal_view$_t_address_$returns$_t_bool_$",
+                            "typeString": "function (address) view returns (bool)"
+                          }
+                        },
+                        "id": 11350,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "2844:41:78",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "496e76616c6964207374616b696e6720636f6e7472616374",
+                        "id": 11351,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "2887:26:78",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_9a03c56c1e084ce4e98a827d43afc3f7f3d830558a655a43dce43583d895a3fa",
+                          "typeString": "literal_string \"Invalid staking contract\""
+                        },
+                        "value": "Invalid staking contract"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_9a03c56c1e084ce4e98a827d43afc3f7f3d830558a655a43dce43583d895a3fa",
+                          "typeString": "literal_string \"Invalid staking contract\""
+                        }
+                      ],
+                      "id": 11347,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        -18,
+                        -18
+                      ],
+                      "referencedDeclaration": -18,
+                      "src": "2836:7:78",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 11352,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "2836:78:78",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 11353,
+                  "nodeType": "ExpressionStatement",
+                  "src": "2836:78:78"
+                },
+                {
+                  "assignments": [
+                    11355
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 11355,
+                      "mutability": "mutable",
+                      "name": "callData",
+                      "nodeType": "VariableDeclaration",
+                      "overrides": null,
+                      "scope": 11367,
+                      "src": "2924:21:78",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes_memory_ptr",
+                        "typeString": "bytes"
+                      },
+                      "typeName": {
+                        "id": 11354,
+                        "name": "bytes",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "2924:5:78",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_storage_ptr",
+                          "typeString": "bytes"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 11361,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "77697468647261772875696e7432353629",
+                        "id": 11358,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "2972:19:78",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_2e1a7d4d13322e7b96f9a57413e1525c250fb7a9021cf91d1540d5b69f16a49f",
+                          "typeString": "literal_string \"withdraw(uint256)\""
+                        },
+                        "value": "withdraw(uint256)"
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 11359,
+                        "name": "_notionalAmount",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 11338,
+                        "src": "2993:15:78",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_stringliteral_2e1a7d4d13322e7b96f9a57413e1525c250fb7a9021cf91d1540d5b69f16a49f",
+                          "typeString": "literal_string \"withdraw(uint256)\""
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 11356,
+                        "name": "abi",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": -1,
+                        "src": "2948:3:78",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_abi",
+                          "typeString": "abi"
+                        }
+                      },
+                      "id": 11357,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "memberName": "encodeWithSignature",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "2948:23:78",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_abiencodewithsignature_pure$_t_string_memory_ptr_$returns$_t_bytes_memory_ptr_$",
+                        "typeString": "function (string memory) pure returns (bytes memory)"
+                      }
+                    },
+                    "id": 11360,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "2948:61:78",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_memory_ptr",
+                      "typeString": "bytes memory"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "2924:85:78"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "components": [
+                      {
+                        "argumentTypes": null,
+                        "id": 11362,
+                        "name": "_stakingContract",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 11336,
+                        "src": "3027:16:78",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "30",
+                        "id": 11363,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "3045:1:78",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_0_by_1",
+                          "typeString": "int_const 0"
+                        },
+                        "value": "0"
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 11364,
+                        "name": "callData",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 11355,
+                        "src": "3048:8:78",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      }
+                    ],
+                    "id": 11365,
+                    "isConstant": false,
+                    "isInlineArray": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "TupleExpression",
+                    "src": "3026:31:78",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$_t_address_$_t_rational_0_by_1_$_t_bytes_memory_ptr_$",
+                      "typeString": "tuple(address,int_const 0,bytes memory)"
+                    }
+                  },
+                  "functionReturnParameters": 11346,
+                  "id": 11366,
+                  "nodeType": "Return",
+                  "src": "3019:38:78"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 11334,
+              "nodeType": "StructuredDocumentation",
+              "src": "2237:417:78",
+              "text": " Generates the calldata to unstake lp tokens from the staking contract\n @param _stakingContract          Address of the gauge staking contract\n @param _notionalAmount           Quantity of token to stake\n @return address                  Target address\n @return uint256                  Call value\n @return bytes                    Unstake tokens calldata"
+            },
+            "functionSelector": "9971c165",
+            "id": 11368,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getUnstakeCallData",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 11339,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11336,
+                  "mutability": "mutable",
+                  "name": "_stakingContract",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 11368,
+                  "src": "2696:24:78",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 11335,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2696:7:78",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 11338,
+                  "mutability": "mutable",
+                  "name": "_notionalAmount",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 11368,
+                  "src": "2730:23:78",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 11337,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2730:7:78",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2686:73:78"
+            },
+            "returnParameters": {
+              "id": 11346,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11341,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 11368,
+                  "src": "2794:7:78",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 11340,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2794:7:78",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 11343,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 11368,
+                  "src": "2803:7:78",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 11342,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2803:7:78",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 11345,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 11368,
+                  "src": "2812:12:78",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 11344,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2812:5:78",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2793:32:78"
+            },
+            "scope": 11402,
+            "src": "2659:405:78",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 11378,
+              "nodeType": "Block",
+              "src": "3425:40:78",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 11376,
+                    "name": "_stakingContract",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 11371,
+                    "src": "3442:16:78",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "functionReturnParameters": 11375,
+                  "id": 11377,
+                  "nodeType": "Return",
+                  "src": "3435:23:78"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 11369,
+              "nodeType": "StructuredDocumentation",
+              "src": "3070:266:78",
+              "text": " Returns the address to approve component for staking tokens.\n @param _stakingContract          Address of the gauge staking contract\n @return address                  Address of the contract to approve tokens transfers to"
+            },
+            "functionSelector": "0e8edd86",
+            "id": 11379,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getSpenderAddress",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 11372,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11371,
+                  "mutability": "mutable",
+                  "name": "_stakingContract",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 11379,
+                  "src": "3368:24:78",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 11370,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3368:7:78",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3367:26:78"
+            },
+            "returnParameters": {
+              "id": 11375,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11374,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 11379,
+                  "src": "3416:7:78",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 11373,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3416:7:78",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3415:9:78"
+            },
+            "scope": 11402,
+            "src": "3341:124:78",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 11400,
+              "nodeType": "Block",
+              "src": "3833:373:78",
+              "statements": [
+                {
+                  "clauses": [
+                    {
+                      "block": {
+                        "id": 11393,
+                        "nodeType": "Block",
+                        "src": "4120:36:78",
+                        "statements": [
+                          {
+                            "expression": {
+                              "argumentTypes": null,
+                              "hexValue": "74727565",
+                              "id": 11391,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "bool",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "4141:4:78",
+                              "subdenomination": null,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_bool",
+                                "typeString": "bool"
+                              },
+                              "value": "true"
+                            },
+                            "functionReturnParameters": 11386,
+                            "id": 11392,
+                            "nodeType": "Return",
+                            "src": "4134:11:78"
+                          }
+                        ]
+                      },
+                      "errorName": "",
+                      "id": 11394,
+                      "nodeType": "TryCatchClause",
+                      "parameters": null,
+                      "src": "4120:36:78"
+                    },
+                    {
+                      "block": {
+                        "id": 11397,
+                        "nodeType": "Block",
+                        "src": "4163:37:78",
+                        "statements": [
+                          {
+                            "expression": {
+                              "argumentTypes": null,
+                              "hexValue": "66616c7365",
+                              "id": 11395,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "bool",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "4184:5:78",
+                              "subdenomination": null,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_bool",
+                                "typeString": "bool"
+                              },
+                              "value": "false"
+                            },
+                            "functionReturnParameters": 11386,
+                            "id": 11396,
+                            "nodeType": "Return",
+                            "src": "4177:12:78"
+                          }
+                        ]
+                      },
+                      "errorName": "",
+                      "id": 11398,
+                      "nodeType": "TryCatchClause",
+                      "parameters": null,
+                      "src": "4157:43:78"
+                    }
+                  ],
+                  "externalCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 11389,
+                        "name": "_stakingContract",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 11382,
+                        "src": "4102:16:78",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 11387,
+                        "name": "gaugeController",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 11287,
+                        "src": "4074:15:78",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_IGaugeController_$942",
+                          "typeString": "contract IGaugeController"
+                        }
+                      },
+                      "id": 11388,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "gauge_types",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 941,
+                      "src": "4074:27:78",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_int128_$",
+                        "typeString": "function (address) view external returns (int128)"
+                      }
+                    },
+                    "id": 11390,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "4074:45:78",
+                    "tryCall": true,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int128",
+                      "typeString": "int128"
+                    }
+                  },
+                  "id": 11399,
+                  "nodeType": "TryStatement",
+                  "src": "4070:130:78"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 11380,
+              "nodeType": "StructuredDocumentation",
+              "src": "3471:269:78",
+              "text": " Validates that the staking contract is registered in the gauge controller\n @param _stakingContract          Address of the gauge staking contract\n @return bool                     Whether or not the staking contract is valid"
+            },
+            "id": 11401,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "_isValidStakingContract",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 11383,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11382,
+                  "mutability": "mutable",
+                  "name": "_stakingContract",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 11401,
+                  "src": "3778:24:78",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 11381,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3778:7:78",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3777:26:78"
+            },
+            "returnParameters": {
+              "id": 11386,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11385,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 11401,
+                  "src": "3827:4:78",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 11384,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3827:4:78",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3826:6:78"
+            },
+            "scope": 11402,
+            "src": "3745:461:78",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 11403,
+        "src": "900:3308:78"
+      }
+    ],
+    "src": "655:3554:78"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/protocol/integration/CurveStakingAdapter.sol",
+    "exportedSymbols": {
+      "CurveStakingAdapter": [
+        11402
+      ]
+    },
+    "id": 11403,
+    "license": "Apache License",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 11282,
+        "literals": [
+          "solidity",
+          "0.6",
+          ".10"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "655:23:78"
+      },
+      {
+        "absolutePath": "/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/interfaces/external/IGaugeController.sol",
+        "file": "../../interfaces/external/IGaugeController.sol",
+        "id": 11284,
+        "nodeType": "ImportDirective",
+        "scope": 11403,
+        "sourceUnit": 943,
+        "src": "680:82:78",
+        "symbolAliases": [
+          {
+            "foreign": {
+              "argumentTypes": null,
+              "id": 11283,
+              "name": "IGaugeController",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": null,
+              "src": "689:16:78",
+              "typeDescriptions": {
+                "typeIdentifier": null,
+                "typeString": null
+              }
+            },
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": {
+          "id": 11285,
+          "nodeType": "StructuredDocumentation",
+          "src": "764:135:78",
+          "text": " @title CurveStakingAdapter\n @author Set Protocol\n Staking adapter for Curve that returns data to stake/unstake tokens"
+        },
+        "fullyImplemented": true,
+        "id": 11402,
+        "linearizedBaseContracts": [
+          11402
+        ],
+        "name": "CurveStakingAdapter",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "functionSelector": "99eecb3b",
+            "id": 11287,
+            "mutability": "immutable",
+            "name": "gaugeController",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 11402,
+            "src": "1028:49:78",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_IGaugeController_$942",
+              "typeString": "contract IGaugeController"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 11286,
+              "name": "IGaugeController",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 942,
+              "src": "1028:16:78",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_IGaugeController_$942",
+                "typeString": "contract IGaugeController"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 11297,
+              "nodeType": "Block",
+              "src": "1300:51:78",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 11295,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 11293,
+                      "name": "gaugeController",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 11287,
+                      "src": "1310:15:78",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IGaugeController_$942",
+                        "typeString": "contract IGaugeController"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 11294,
+                      "name": "_gaugeController",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 11290,
+                      "src": "1328:16:78",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IGaugeController_$942",
+                        "typeString": "contract IGaugeController"
+                      }
+                    },
+                    "src": "1310:34:78",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IGaugeController_$942",
+                      "typeString": "contract IGaugeController"
+                    }
+                  },
+                  "id": 11296,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1310:34:78"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 11288,
+              "nodeType": "StructuredDocumentation",
+              "src": "1133:108:78",
+              "text": " Set state variables\n @param _gaugeController     Address of Gauge Controller"
+            },
+            "id": 11298,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 11291,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11290,
+                  "mutability": "mutable",
+                  "name": "_gaugeController",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 11298,
+                  "src": "1258:33:78",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IGaugeController_$942",
+                    "typeString": "contract IGaugeController"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 11289,
+                    "name": "IGaugeController",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 942,
+                    "src": "1258:16:78",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IGaugeController_$942",
+                      "typeString": "contract IGaugeController"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1257:35:78"
+            },
+            "returnParameters": {
+              "id": 11292,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1300:0:78"
+            },
+            "scope": 11402,
+            "src": "1246:105:78",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 11332,
+              "nodeType": "Block",
+              "src": "1994:237:78",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "id": 11314,
+                            "name": "_stakingContract",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 11301,
+                            "src": "2036:16:78",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          ],
+                          "id": 11313,
+                          "name": "_isValidStakingContract",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 11401,
+                          "src": "2012:23:78",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_internal_view$_t_address_$returns$_t_bool_$",
+                            "typeString": "function (address) view returns (bool)"
+                          }
+                        },
+                        "id": 11315,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "2012:41:78",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "496e76616c6964207374616b696e6720636f6e7472616374",
+                        "id": 11316,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "2055:26:78",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_9a03c56c1e084ce4e98a827d43afc3f7f3d830558a655a43dce43583d895a3fa",
+                          "typeString": "literal_string \"Invalid staking contract\""
+                        },
+                        "value": "Invalid staking contract"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_9a03c56c1e084ce4e98a827d43afc3f7f3d830558a655a43dce43583d895a3fa",
+                          "typeString": "literal_string \"Invalid staking contract\""
+                        }
+                      ],
+                      "id": 11312,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        -18,
+                        -18
+                      ],
+                      "referencedDeclaration": -18,
+                      "src": "2004:7:78",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 11317,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "2004:78:78",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 11318,
+                  "nodeType": "ExpressionStatement",
+                  "src": "2004:78:78"
+                },
+                {
+                  "assignments": [
+                    11320
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 11320,
+                      "mutability": "mutable",
+                      "name": "callData",
+                      "nodeType": "VariableDeclaration",
+                      "overrides": null,
+                      "scope": 11332,
+                      "src": "2092:21:78",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes_memory_ptr",
+                        "typeString": "bytes"
+                      },
+                      "typeName": {
+                        "id": 11319,
+                        "name": "bytes",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "2092:5:78",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_storage_ptr",
+                          "typeString": "bytes"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 11326,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "6465706f7369742875696e7432353629",
+                        "id": 11323,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "2140:18:78",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_b6b55f256c3eb337f96418d59e773db6e805074f5e574a2bebb7d71394043619",
+                          "typeString": "literal_string \"deposit(uint256)\""
+                        },
+                        "value": "deposit(uint256)"
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 11324,
+                        "name": "_notionalAmount",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 11303,
+                        "src": "2160:15:78",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_stringliteral_b6b55f256c3eb337f96418d59e773db6e805074f5e574a2bebb7d71394043619",
+                          "typeString": "literal_string \"deposit(uint256)\""
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 11321,
+                        "name": "abi",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": -1,
+                        "src": "2116:3:78",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_abi",
+                          "typeString": "abi"
+                        }
+                      },
+                      "id": 11322,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "memberName": "encodeWithSignature",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "2116:23:78",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_abiencodewithsignature_pure$_t_string_memory_ptr_$returns$_t_bytes_memory_ptr_$",
+                        "typeString": "function (string memory) pure returns (bytes memory)"
+                      }
+                    },
+                    "id": 11325,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "2116:60:78",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_memory_ptr",
+                      "typeString": "bytes memory"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "2092:84:78"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "components": [
+                      {
+                        "argumentTypes": null,
+                        "id": 11327,
+                        "name": "_stakingContract",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 11301,
+                        "src": "2194:16:78",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "30",
+                        "id": 11328,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "2212:1:78",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_0_by_1",
+                          "typeString": "int_const 0"
+                        },
+                        "value": "0"
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 11329,
+                        "name": "callData",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 11320,
+                        "src": "2215:8:78",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      }
+                    ],
+                    "id": 11330,
+                    "isConstant": false,
+                    "isInlineArray": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "TupleExpression",
+                    "src": "2193:31:78",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$_t_address_$_t_rational_0_by_1_$_t_bytes_memory_ptr_$",
+                      "typeString": "tuple(address,int_const 0,bytes memory)"
+                    }
+                  },
+                  "functionReturnParameters": 11311,
+                  "id": 11331,
+                  "nodeType": "Return",
+                  "src": "2186:38:78"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 11299,
+              "nodeType": "StructuredDocumentation",
+              "src": "1413:411:78",
+              "text": " Generates the calldata to stake lp tokens in the staking contract\n @param _stakingContract          Address of the gauge staking contract\n @param _notionalAmount           Quantity of token to stake\n @return address                  Target address\n @return uint256                  Call value\n @return bytes                    Stake tokens calldata"
+            },
+            "functionSelector": "0d697603",
+            "id": 11333,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getStakeCallData",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 11304,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11301,
+                  "mutability": "mutable",
+                  "name": "_stakingContract",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 11333,
+                  "src": "1864:24:78",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 11300,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1864:7:78",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 11303,
+                  "mutability": "mutable",
+                  "name": "_notionalAmount",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 11333,
+                  "src": "1898:23:78",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 11302,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1898:7:78",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1854:73:78"
+            },
+            "returnParameters": {
+              "id": 11311,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11306,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 11333,
+                  "src": "1962:7:78",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 11305,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1962:7:78",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 11308,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 11333,
+                  "src": "1971:7:78",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 11307,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1971:7:78",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 11310,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 11333,
+                  "src": "1980:12:78",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 11309,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1980:5:78",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1961:32:78"
+            },
+            "scope": 11402,
+            "src": "1829:402:78",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 11367,
+              "nodeType": "Block",
+              "src": "2826:238:78",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "id": 11349,
+                            "name": "_stakingContract",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 11336,
+                            "src": "2868:16:78",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          ],
+                          "id": 11348,
+                          "name": "_isValidStakingContract",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 11401,
+                          "src": "2844:23:78",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_internal_view$_t_address_$returns$_t_bool_$",
+                            "typeString": "function (address) view returns (bool)"
+                          }
+                        },
+                        "id": 11350,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "2844:41:78",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "496e76616c6964207374616b696e6720636f6e7472616374",
+                        "id": 11351,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "2887:26:78",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_9a03c56c1e084ce4e98a827d43afc3f7f3d830558a655a43dce43583d895a3fa",
+                          "typeString": "literal_string \"Invalid staking contract\""
+                        },
+                        "value": "Invalid staking contract"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_9a03c56c1e084ce4e98a827d43afc3f7f3d830558a655a43dce43583d895a3fa",
+                          "typeString": "literal_string \"Invalid staking contract\""
+                        }
+                      ],
+                      "id": 11347,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        -18,
+                        -18
+                      ],
+                      "referencedDeclaration": -18,
+                      "src": "2836:7:78",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 11352,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "2836:78:78",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 11353,
+                  "nodeType": "ExpressionStatement",
+                  "src": "2836:78:78"
+                },
+                {
+                  "assignments": [
+                    11355
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 11355,
+                      "mutability": "mutable",
+                      "name": "callData",
+                      "nodeType": "VariableDeclaration",
+                      "overrides": null,
+                      "scope": 11367,
+                      "src": "2924:21:78",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes_memory_ptr",
+                        "typeString": "bytes"
+                      },
+                      "typeName": {
+                        "id": 11354,
+                        "name": "bytes",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "2924:5:78",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_storage_ptr",
+                          "typeString": "bytes"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 11361,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "77697468647261772875696e7432353629",
+                        "id": 11358,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "2972:19:78",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_2e1a7d4d13322e7b96f9a57413e1525c250fb7a9021cf91d1540d5b69f16a49f",
+                          "typeString": "literal_string \"withdraw(uint256)\""
+                        },
+                        "value": "withdraw(uint256)"
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 11359,
+                        "name": "_notionalAmount",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 11338,
+                        "src": "2993:15:78",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_stringliteral_2e1a7d4d13322e7b96f9a57413e1525c250fb7a9021cf91d1540d5b69f16a49f",
+                          "typeString": "literal_string \"withdraw(uint256)\""
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 11356,
+                        "name": "abi",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": -1,
+                        "src": "2948:3:78",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_abi",
+                          "typeString": "abi"
+                        }
+                      },
+                      "id": 11357,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "memberName": "encodeWithSignature",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "2948:23:78",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_abiencodewithsignature_pure$_t_string_memory_ptr_$returns$_t_bytes_memory_ptr_$",
+                        "typeString": "function (string memory) pure returns (bytes memory)"
+                      }
+                    },
+                    "id": 11360,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "2948:61:78",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_memory_ptr",
+                      "typeString": "bytes memory"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "2924:85:78"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "components": [
+                      {
+                        "argumentTypes": null,
+                        "id": 11362,
+                        "name": "_stakingContract",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 11336,
+                        "src": "3027:16:78",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "30",
+                        "id": 11363,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "3045:1:78",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_0_by_1",
+                          "typeString": "int_const 0"
+                        },
+                        "value": "0"
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 11364,
+                        "name": "callData",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 11355,
+                        "src": "3048:8:78",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      }
+                    ],
+                    "id": 11365,
+                    "isConstant": false,
+                    "isInlineArray": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "TupleExpression",
+                    "src": "3026:31:78",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$_t_address_$_t_rational_0_by_1_$_t_bytes_memory_ptr_$",
+                      "typeString": "tuple(address,int_const 0,bytes memory)"
+                    }
+                  },
+                  "functionReturnParameters": 11346,
+                  "id": 11366,
+                  "nodeType": "Return",
+                  "src": "3019:38:78"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 11334,
+              "nodeType": "StructuredDocumentation",
+              "src": "2237:417:78",
+              "text": " Generates the calldata to unstake lp tokens from the staking contract\n @param _stakingContract          Address of the gauge staking contract\n @param _notionalAmount           Quantity of token to stake\n @return address                  Target address\n @return uint256                  Call value\n @return bytes                    Unstake tokens calldata"
+            },
+            "functionSelector": "9971c165",
+            "id": 11368,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getUnstakeCallData",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 11339,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11336,
+                  "mutability": "mutable",
+                  "name": "_stakingContract",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 11368,
+                  "src": "2696:24:78",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 11335,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2696:7:78",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 11338,
+                  "mutability": "mutable",
+                  "name": "_notionalAmount",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 11368,
+                  "src": "2730:23:78",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 11337,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2730:7:78",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2686:73:78"
+            },
+            "returnParameters": {
+              "id": 11346,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11341,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 11368,
+                  "src": "2794:7:78",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 11340,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2794:7:78",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 11343,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 11368,
+                  "src": "2803:7:78",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 11342,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2803:7:78",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 11345,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 11368,
+                  "src": "2812:12:78",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 11344,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2812:5:78",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2793:32:78"
+            },
+            "scope": 11402,
+            "src": "2659:405:78",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 11378,
+              "nodeType": "Block",
+              "src": "3425:40:78",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 11376,
+                    "name": "_stakingContract",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 11371,
+                    "src": "3442:16:78",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "functionReturnParameters": 11375,
+                  "id": 11377,
+                  "nodeType": "Return",
+                  "src": "3435:23:78"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 11369,
+              "nodeType": "StructuredDocumentation",
+              "src": "3070:266:78",
+              "text": " Returns the address to approve component for staking tokens.\n @param _stakingContract          Address of the gauge staking contract\n @return address                  Address of the contract to approve tokens transfers to"
+            },
+            "functionSelector": "0e8edd86",
+            "id": 11379,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getSpenderAddress",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 11372,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11371,
+                  "mutability": "mutable",
+                  "name": "_stakingContract",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 11379,
+                  "src": "3368:24:78",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 11370,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3368:7:78",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3367:26:78"
+            },
+            "returnParameters": {
+              "id": 11375,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11374,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 11379,
+                  "src": "3416:7:78",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 11373,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3416:7:78",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3415:9:78"
+            },
+            "scope": 11402,
+            "src": "3341:124:78",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 11400,
+              "nodeType": "Block",
+              "src": "3833:373:78",
+              "statements": [
+                {
+                  "clauses": [
+                    {
+                      "block": {
+                        "id": 11393,
+                        "nodeType": "Block",
+                        "src": "4120:36:78",
+                        "statements": [
+                          {
+                            "expression": {
+                              "argumentTypes": null,
+                              "hexValue": "74727565",
+                              "id": 11391,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "bool",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "4141:4:78",
+                              "subdenomination": null,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_bool",
+                                "typeString": "bool"
+                              },
+                              "value": "true"
+                            },
+                            "functionReturnParameters": 11386,
+                            "id": 11392,
+                            "nodeType": "Return",
+                            "src": "4134:11:78"
+                          }
+                        ]
+                      },
+                      "errorName": "",
+                      "id": 11394,
+                      "nodeType": "TryCatchClause",
+                      "parameters": null,
+                      "src": "4120:36:78"
+                    },
+                    {
+                      "block": {
+                        "id": 11397,
+                        "nodeType": "Block",
+                        "src": "4163:37:78",
+                        "statements": [
+                          {
+                            "expression": {
+                              "argumentTypes": null,
+                              "hexValue": "66616c7365",
+                              "id": 11395,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "bool",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "4184:5:78",
+                              "subdenomination": null,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_bool",
+                                "typeString": "bool"
+                              },
+                              "value": "false"
+                            },
+                            "functionReturnParameters": 11386,
+                            "id": 11396,
+                            "nodeType": "Return",
+                            "src": "4177:12:78"
+                          }
+                        ]
+                      },
+                      "errorName": "",
+                      "id": 11398,
+                      "nodeType": "TryCatchClause",
+                      "parameters": null,
+                      "src": "4157:43:78"
+                    }
+                  ],
+                  "externalCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 11389,
+                        "name": "_stakingContract",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 11382,
+                        "src": "4102:16:78",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 11387,
+                        "name": "gaugeController",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 11287,
+                        "src": "4074:15:78",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_IGaugeController_$942",
+                          "typeString": "contract IGaugeController"
+                        }
+                      },
+                      "id": 11388,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "gauge_types",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 941,
+                      "src": "4074:27:78",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_int128_$",
+                        "typeString": "function (address) view external returns (int128)"
+                      }
+                    },
+                    "id": 11390,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "4074:45:78",
+                    "tryCall": true,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int128",
+                      "typeString": "int128"
+                    }
+                  },
+                  "id": 11399,
+                  "nodeType": "TryStatement",
+                  "src": "4070:130:78"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 11380,
+              "nodeType": "StructuredDocumentation",
+              "src": "3471:269:78",
+              "text": " Validates that the staking contract is registered in the gauge controller\n @param _stakingContract          Address of the gauge staking contract\n @return bool                     Whether or not the staking contract is valid"
+            },
+            "id": 11401,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "_isValidStakingContract",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 11383,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11382,
+                  "mutability": "mutable",
+                  "name": "_stakingContract",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 11401,
+                  "src": "3778:24:78",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 11381,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3778:7:78",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3777:26:78"
+            },
+            "returnParameters": {
+              "id": 11386,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11385,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 11401,
+                  "src": "3827:4:78",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 11384,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3827:4:78",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3826:6:78"
+            },
+            "scope": 11402,
+            "src": "3745:461:78",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 11403,
+        "src": "900:3308:78"
+      }
+    ],
+    "src": "655:3554:78"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.10+commit.00c0fcaf.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.2.1",
+  "updatedAt": "2021-01-21T08:20:37.694Z",
+  "devdoc": {
+    "author": "Set Protocol Staking adapter for Curve that returns data to stake/unstake tokens",
+    "methods": {
+      "constructor": {
+        "params": {
+          "_gaugeController": "Address of Gauge Controller"
+        }
+      },
+      "getSpenderAddress(address)": {
+        "params": {
+          "_stakingContract": "Address of the gauge staking contract"
+        },
+        "returns": {
+          "_0": "address                  Address of the contract to approve tokens transfers to"
+        }
+      },
+      "getStakeCallData(address,uint256)": {
+        "params": {
+          "_notionalAmount": "Quantity of token to stake",
+          "_stakingContract": "Address of the gauge staking contract"
+        },
+        "returns": {
+          "_0": "address                  Target address",
+          "_1": "uint256                  Call value",
+          "_2": "bytes                    Stake tokens calldata"
+        }
+      },
+      "getUnstakeCallData(address,uint256)": {
+        "params": {
+          "_notionalAmount": "Quantity of token to stake",
+          "_stakingContract": "Address of the gauge staking contract"
+        },
+        "returns": {
+          "_0": "address                  Target address",
+          "_1": "uint256                  Call value",
+          "_2": "bytes                    Unstake tokens calldata"
+        }
+      }
+    },
+    "title": "CurveStakingAdapter"
+  },
+  "userdoc": {
+    "methods": {
+      "constructor": "Set state variables",
+      "getSpenderAddress(address)": {
+        "notice": "Returns the address to approve component for staking tokens."
+      },
+      "getStakeCallData(address,uint256)": {
+        "notice": "Generates the calldata to stake lp tokens in the staking contract"
+      },
+      "getUnstakeCallData(address,uint256)": {
+        "notice": "Generates the calldata to unstake lp tokens from the staking contract"
+      }
+    }
+  }
+}

@@ -1,0 +1,201 @@
+{
+  "contractName": "IModule",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "removeModule",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.10+commit.00c0fcaf\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"removeModule\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"Set Protocol Interface for interacting with Modules.\",\"methods\":{},\"title\":\"IModule\"},\"userdoc\":{\"methods\":{\"removeModule()\":{\"notice\":\"Called by a SetToken to notify that this module was removed from the Set token. Any logic can be included in case checks need to be made or state needs to be cleared.\"}}}},\"settings\":{\"compilationTarget\":{\"/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/interfaces/IModule.sol\":\"IModule\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/interfaces/IModule.sol\":{\"keccak256\":\"0xc6fea62e0c2fe10548cb32ff8188b7f036cd072ea2048b664e90b3570ce538fb\",\"license\":\"Apache License\",\"urls\":[\"bzz-raw://2a7594ef174c6bce3a502d34269dccf4e7f7382fc521aa9421bf31d000ca3525\",\"dweb:/ipfs/QmRBnDZnMrsEm45nhTAjzvb7znsKXdVTWy8f6FX1CiH8cu\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "/*\n    Copyright 2020 Set Labs Inc.\n\n    Licensed under the Apache License, Version 2.0 (the \"License\");\n    you may not use this file except in compliance with the License.\n    You may obtain a copy of the License at\n\n    http://www.apache.org/licenses/LICENSE-2.0\n\n    Unless required by applicable law or agreed to in writing, software\n    distributed under the License is distributed on an \"AS IS\" BASIS,\n    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n    See the License for the specific language governing permissions and\n    limitations under the License.\n\n    SPDX-License-Identifier: Apache License, Version 2.0\n*/\npragma solidity 0.6.10;\n\n\n/**\n * @title IModule\n * @author Set Protocol\n *\n * Interface for interacting with Modules.\n */\ninterface IModule {\n    /**\n     * Called by a SetToken to notify that this module was removed from the Set token. Any logic can be included\n     * in case checks need to be made or state needs to be cleared.\n     */\n    function removeModule() external;\n}",
+  "sourcePath": "/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/interfaces/IModule.sol",
+  "ast": {
+    "absolutePath": "/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/interfaces/IModule.sol",
+    "exportedSymbols": {
+      "IModule": [
+        414
+      ]
+    },
+    "id": 415,
+    "license": "Apache License",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 408,
+        "literals": [
+          "solidity",
+          "0.6",
+          ".10"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "654:23:10"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 409,
+          "nodeType": "StructuredDocumentation",
+          "src": "680:95:10",
+          "text": " @title IModule\n @author Set Protocol\n Interface for interacting with Modules."
+        },
+        "fullyImplemented": false,
+        "id": 414,
+        "linearizedBaseContracts": [
+          414
+        ],
+        "name": "IModule",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": {
+              "id": 410,
+              "nodeType": "StructuredDocumentation",
+              "src": "800:192:10",
+              "text": " Called by a SetToken to notify that this module was removed from the Set token. Any logic can be included\n in case checks need to be made or state needs to be cleared."
+            },
+            "functionSelector": "847ef08d",
+            "id": 413,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "removeModule",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 411,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1018:2:10"
+            },
+            "returnParameters": {
+              "id": 412,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1029:0:10"
+            },
+            "scope": 414,
+            "src": "997:33:10",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 415,
+        "src": "776:256:10"
+      }
+    ],
+    "src": "654:378:10"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/interfaces/IModule.sol",
+    "exportedSymbols": {
+      "IModule": [
+        414
+      ]
+    },
+    "id": 415,
+    "license": "Apache License",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 408,
+        "literals": [
+          "solidity",
+          "0.6",
+          ".10"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "654:23:10"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 409,
+          "nodeType": "StructuredDocumentation",
+          "src": "680:95:10",
+          "text": " @title IModule\n @author Set Protocol\n Interface for interacting with Modules."
+        },
+        "fullyImplemented": false,
+        "id": 414,
+        "linearizedBaseContracts": [
+          414
+        ],
+        "name": "IModule",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": {
+              "id": 410,
+              "nodeType": "StructuredDocumentation",
+              "src": "800:192:10",
+              "text": " Called by a SetToken to notify that this module was removed from the Set token. Any logic can be included\n in case checks need to be made or state needs to be cleared."
+            },
+            "functionSelector": "847ef08d",
+            "id": 413,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "removeModule",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 411,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1018:2:10"
+            },
+            "returnParameters": {
+              "id": 412,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1029:0:10"
+            },
+            "scope": 414,
+            "src": "997:33:10",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 415,
+        "src": "776:256:10"
+      }
+    ],
+    "src": "654:378:10"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.10+commit.00c0fcaf.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.2.1",
+  "updatedAt": "2021-01-21T08:20:37.547Z",
+  "devdoc": {
+    "author": "Set Protocol Interface for interacting with Modules.",
+    "methods": {},
+    "title": "IModule"
+  },
+  "userdoc": {
+    "methods": {
+      "removeModule()": {
+        "notice": "Called by a SetToken to notify that this module was removed from the Set token. Any logic can be included in case checks need to be made or state needs to be cleared."
+      }
+    }
+  }
+}

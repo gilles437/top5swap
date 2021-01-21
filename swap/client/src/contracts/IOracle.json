@@ -1,0 +1,267 @@
+{
+  "contractName": "IOracle",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "read",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.10+commit.00c0fcaf\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"read\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"Set Protocol Interface for operating with any external Oracle that returns uint256 or an adapting contract that converts oracle output to uint256\",\"methods\":{\"read()\":{\"returns\":{\"_0\":\"Current price of asset represented in uint256, typically a preciseUnit where 10^18 = 1.\"}}},\"title\":\"IOracle\"},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/interfaces/IOracle.sol\":\"IOracle\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/interfaces/IOracle.sol\":{\"keccak256\":\"0xd39e4073954d25392a30d482eb99ed993ba921a42535b491666b1469d6647f65\",\"license\":\"Apache License\",\"urls\":[\"bzz-raw://61b4d769df1607cea472e8348e6dfcad761991a0615f36fd827aa8c29dee9c13\",\"dweb:/ipfs/QmXr6YQSeM78dNaEDnijERgDn9RvpkAYaBYEQGohTqHdTs\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "/*\n    Copyright 2020 Set Labs Inc.\n\n    Licensed under the Apache License, Version 2.0 (the \"License\");\n    you may not use this file except in compliance with the License.\n    You may obtain a copy of the License at\n\n    http://www.apache.org/licenses/LICENSE-2.0\n\n    Unless required by applicable law or agreed to in writing, software\n    distributed under the License is distributed on an \"AS IS\" BASIS,\n    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n    See the License for the specific language governing permissions and\n    limitations under the License.\n\n    SPDX-License-Identifier: Apache License, Version 2.0\n*/\npragma solidity 0.6.10;\n\n\n/**\n * @title IOracle\n * @author Set Protocol\n *\n * Interface for operating with any external Oracle that returns uint256 or\n * an adapting contract that converts oracle output to uint256\n */\ninterface IOracle {\n    /**\n     * @return  Current price of asset represented in uint256, typically a preciseUnit where 10^18 = 1.\n     */\n    function read() external view returns (uint256);\n}",
+  "sourcePath": "/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/interfaces/IOracle.sol",
+  "ast": {
+    "absolutePath": "/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/interfaces/IOracle.sol",
+    "exportedSymbols": {
+      "IOracle": [
+        507
+      ]
+    },
+    "id": 508,
+    "license": "Apache License",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 499,
+        "literals": [
+          "solidity",
+          "0.6",
+          ".10"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "654:23:14"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 500,
+          "nodeType": "StructuredDocumentation",
+          "src": "680:191:14",
+          "text": " @title IOracle\n @author Set Protocol\n Interface for operating with any external Oracle that returns uint256 or\n an adapting contract that converts oracle output to uint256"
+        },
+        "fullyImplemented": false,
+        "id": 507,
+        "linearizedBaseContracts": [
+          507
+        ],
+        "name": "IOracle",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": {
+              "id": 501,
+              "nodeType": "StructuredDocumentation",
+              "src": "896:115:14",
+              "text": " @return  Current price of asset represented in uint256, typically a preciseUnit where 10^18 = 1."
+            },
+            "functionSelector": "57de26a4",
+            "id": 506,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "read",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 502,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1029:2:14"
+            },
+            "returnParameters": {
+              "id": 505,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 504,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 506,
+                  "src": "1055:7:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 503,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1055:7:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1054:9:14"
+            },
+            "scope": 507,
+            "src": "1016:48:14",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 508,
+        "src": "872:194:14"
+      }
+    ],
+    "src": "654:412:14"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/interfaces/IOracle.sol",
+    "exportedSymbols": {
+      "IOracle": [
+        507
+      ]
+    },
+    "id": 508,
+    "license": "Apache License",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 499,
+        "literals": [
+          "solidity",
+          "0.6",
+          ".10"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "654:23:14"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 500,
+          "nodeType": "StructuredDocumentation",
+          "src": "680:191:14",
+          "text": " @title IOracle\n @author Set Protocol\n Interface for operating with any external Oracle that returns uint256 or\n an adapting contract that converts oracle output to uint256"
+        },
+        "fullyImplemented": false,
+        "id": 507,
+        "linearizedBaseContracts": [
+          507
+        ],
+        "name": "IOracle",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": {
+              "id": 501,
+              "nodeType": "StructuredDocumentation",
+              "src": "896:115:14",
+              "text": " @return  Current price of asset represented in uint256, typically a preciseUnit where 10^18 = 1."
+            },
+            "functionSelector": "57de26a4",
+            "id": 506,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "read",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 502,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1029:2:14"
+            },
+            "returnParameters": {
+              "id": 505,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 504,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 506,
+                  "src": "1055:7:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 503,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1055:7:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1054:9:14"
+            },
+            "scope": 507,
+            "src": "1016:48:14",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 508,
+        "src": "872:194:14"
+      }
+    ],
+    "src": "654:412:14"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.10+commit.00c0fcaf.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.2.1",
+  "updatedAt": "2021-01-21T08:20:37.549Z",
+  "devdoc": {
+    "author": "Set Protocol Interface for operating with any external Oracle that returns uint256 or an adapting contract that converts oracle output to uint256",
+    "methods": {
+      "read()": {
+        "returns": {
+          "_0": "Current price of asset represented in uint256, typically a preciseUnit where 10^18 = 1."
+        }
+      }
+    },
+    "title": "IOracle"
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

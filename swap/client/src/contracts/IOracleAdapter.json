@@ -1,0 +1,466 @@
+{
+  "contractName": "IOracleAdapter",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_assetOne",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_assetTwo",
+          "type": "address"
+        }
+      ],
+      "name": "getPrice",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.10+commit.00c0fcaf\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_assetOne\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_assetTwo\",\"type\":\"address\"}],\"name\":\"getPrice\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"Set Protocol Interface for calling an oracle adapter.\",\"methods\":{\"getPrice(address,address)\":{\"params\":{\"_assetOne\":\"First asset in pair\",\"_assetTwo\":\"Second asset in pair\"},\"returns\":{\"_0\":\"Boolean indicating if oracle exists\",\"_1\":\"Current price of asset represented in uint256\"}}},\"title\":\"IOracleAdapter\"},\"userdoc\":{\"methods\":{\"getPrice(address,address)\":{\"notice\":\"Function for retrieving a price that requires sourcing data from outside protocols to calculate.\"}}}},\"settings\":{\"compilationTarget\":{\"/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/interfaces/IOracleAdapter.sol\":\"IOracleAdapter\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/interfaces/IOracleAdapter.sol\":{\"keccak256\":\"0x263c5de90bcaae4ca98c9f6fc4ef9d7c18ba307dfe550944c3bd527d5a6b0a0c\",\"license\":\"Apache License\",\"urls\":[\"bzz-raw://ee77fb8c59df5969859530924ec41edce7cc8bca9e8dfff862868b6cff6beebf\",\"dweb:/ipfs/QmNumfpi7Ln4pzAR3UaRc7yeiigCWhUzNK4cXrsKQz58EJ\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "/*\n    Copyright 2020 Set Labs Inc.\n\n    Licensed under the Apache License, Version 2.0 (the \"License\");\n    you may not use this file except in compliance with the License.\n    You may obtain a copy of the License at\n\n    http://www.apache.org/licenses/LICENSE-2.0\n\n    Unless required by applicable law or agreed to in writing, software\n    distributed under the License is distributed on an \"AS IS\" BASIS,\n    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n    See the License for the specific language governing permissions and\n    limitations under the License.\n\n    SPDX-License-Identifier: Apache License, Version 2.0\n*/\npragma solidity 0.6.10;\n\n\n/**\n * @title IOracleAdapter\n * @author Set Protocol\n *\n * Interface for calling an oracle adapter.\n */\ninterface IOracleAdapter {\n\n    /**\n     * Function for retrieving a price that requires sourcing data from outside protocols to calculate.\n     *\n     * @param  _assetOne    First asset in pair\n     * @param  _assetTwo    Second asset in pair\n     * @return                  Boolean indicating if oracle exists\n     * @return              Current price of asset represented in uint256\n     */\n    function getPrice(address _assetOne, address _assetTwo) external view returns (bool, uint256);\n}",
+  "sourcePath": "/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/interfaces/IOracleAdapter.sol",
+  "ast": {
+    "absolutePath": "/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/interfaces/IOracleAdapter.sol",
+    "exportedSymbols": {
+      "IOracleAdapter": [
+        523
+      ]
+    },
+    "id": 524,
+    "license": "Apache License",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 509,
+        "literals": [
+          "solidity",
+          "0.6",
+          ".10"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "654:23:15"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 510,
+          "nodeType": "StructuredDocumentation",
+          "src": "680:103:15",
+          "text": " @title IOracleAdapter\n @author Set Protocol\n Interface for calling an oracle adapter."
+        },
+        "fullyImplemented": false,
+        "id": 523,
+        "linearizedBaseContracts": [
+          523
+        ],
+        "name": "IOracleAdapter",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": {
+              "id": 511,
+              "nodeType": "StructuredDocumentation",
+              "src": "816:361:15",
+              "text": " Function for retrieving a price that requires sourcing data from outside protocols to calculate.\n @param  _assetOne    First asset in pair\n @param  _assetTwo    Second asset in pair\n @return                  Boolean indicating if oracle exists\n @return              Current price of asset represented in uint256"
+            },
+            "functionSelector": "ac41865a",
+            "id": 522,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getPrice",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 516,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 513,
+                  "mutability": "mutable",
+                  "name": "_assetOne",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 522,
+                  "src": "1200:17:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 512,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1200:7:15",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 515,
+                  "mutability": "mutable",
+                  "name": "_assetTwo",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 522,
+                  "src": "1219:17:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 514,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1219:7:15",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1199:38:15"
+            },
+            "returnParameters": {
+              "id": 521,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 518,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 522,
+                  "src": "1261:4:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 517,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1261:4:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 520,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 522,
+                  "src": "1267:7:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 519,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1267:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1260:15:15"
+            },
+            "scope": 523,
+            "src": "1182:94:15",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 524,
+        "src": "784:494:15"
+      }
+    ],
+    "src": "654:624:15"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/interfaces/IOracleAdapter.sol",
+    "exportedSymbols": {
+      "IOracleAdapter": [
+        523
+      ]
+    },
+    "id": 524,
+    "license": "Apache License",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 509,
+        "literals": [
+          "solidity",
+          "0.6",
+          ".10"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "654:23:15"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 510,
+          "nodeType": "StructuredDocumentation",
+          "src": "680:103:15",
+          "text": " @title IOracleAdapter\n @author Set Protocol\n Interface for calling an oracle adapter."
+        },
+        "fullyImplemented": false,
+        "id": 523,
+        "linearizedBaseContracts": [
+          523
+        ],
+        "name": "IOracleAdapter",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": {
+              "id": 511,
+              "nodeType": "StructuredDocumentation",
+              "src": "816:361:15",
+              "text": " Function for retrieving a price that requires sourcing data from outside protocols to calculate.\n @param  _assetOne    First asset in pair\n @param  _assetTwo    Second asset in pair\n @return                  Boolean indicating if oracle exists\n @return              Current price of asset represented in uint256"
+            },
+            "functionSelector": "ac41865a",
+            "id": 522,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getPrice",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 516,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 513,
+                  "mutability": "mutable",
+                  "name": "_assetOne",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 522,
+                  "src": "1200:17:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 512,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1200:7:15",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 515,
+                  "mutability": "mutable",
+                  "name": "_assetTwo",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 522,
+                  "src": "1219:17:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 514,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1219:7:15",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1199:38:15"
+            },
+            "returnParameters": {
+              "id": 521,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 518,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 522,
+                  "src": "1261:4:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 517,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1261:4:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 520,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 522,
+                  "src": "1267:7:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 519,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1267:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1260:15:15"
+            },
+            "scope": 523,
+            "src": "1182:94:15",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 524,
+        "src": "784:494:15"
+      }
+    ],
+    "src": "654:624:15"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.10+commit.00c0fcaf.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.2.1",
+  "updatedAt": "2021-01-21T08:20:37.550Z",
+  "devdoc": {
+    "author": "Set Protocol Interface for calling an oracle adapter.",
+    "methods": {
+      "getPrice(address,address)": {
+        "params": {
+          "_assetOne": "First asset in pair",
+          "_assetTwo": "Second asset in pair"
+        },
+        "returns": {
+          "_0": "Boolean indicating if oracle exists",
+          "_1": "Current price of asset represented in uint256"
+        }
+      }
+    },
+    "title": "IOracleAdapter"
+  },
+  "userdoc": {
+    "methods": {
+      "getPrice(address,address)": {
+        "notice": "Function for retrieving a price that requires sourcing data from outside protocols to calculate."
+      }
+    }
+  }
+}

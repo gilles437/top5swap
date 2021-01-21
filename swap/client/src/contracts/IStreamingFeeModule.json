@@ -1,0 +1,660 @@
+{
+  "contractName": "IStreamingFeeModule",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "contract ISetToken",
+          "name": "_setToken",
+          "type": "address"
+        }
+      ],
+      "name": "feeStates",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "feeRecipient",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "maxStreamingFeePercentage",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "streamingFeePercentage",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "lastStreamingFeeTimestamp",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct StreamingFeeModule.FeeState",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "contract ISetToken",
+          "name": "_setToken",
+          "type": "address"
+        }
+      ],
+      "name": "getFee",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.10+commit.00c0fcaf\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"contract ISetToken\",\"name\":\"_setToken\",\"type\":\"address\"}],\"name\":\"feeStates\",\"outputs\":[{\"components\":[{\"internalType\":\"address\",\"name\":\"feeRecipient\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"maxStreamingFeePercentage\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"streamingFeePercentage\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"lastStreamingFeeTimestamp\",\"type\":\"uint256\"}],\"internalType\":\"struct StreamingFeeModule.FeeState\",\"name\":\"\",\"type\":\"tuple\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"contract ISetToken\",\"name\":\"_setToken\",\"type\":\"address\"}],\"name\":\"getFee\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/interfaces/IStreamingFeeModule.sol\":\"IStreamingFeeModule\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/interfaces/IController.sol\":{\"keccak256\":\"0x8deb2f94e24e9524ce4de88804c98694781d8f38fbadccc3207d28b8e0ce4911\",\"license\":\"Apache License\",\"urls\":[\"bzz-raw://755f656a314737b0eeffbee1b7dc257b751c0764d70f008beb6cccececaeb2d7\",\"dweb:/ipfs/QmUmFs1ukqWUmfcm5irGYHYZnv8NwMYGD3EUuoA5BvbhER\"]},\"/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/interfaces/IIntegrationRegistry.sol\":{\"keccak256\":\"0xb9a2f67aa926694fcfa6b9f2300423a253162078b12e3ff0b8c864c5a143c975\",\"license\":\"Apache License\",\"urls\":[\"bzz-raw://2448da2adc2ca3c858e2413a0833f7a384e4a9430af0a923411d0d0ff1c5076d\",\"dweb:/ipfs/QmTEdnKViq2riEoDzfLwuXxtWdieLL8ZfRL7WanfQwXxHf\"]},\"/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/interfaces/IModule.sol\":{\"keccak256\":\"0xc6fea62e0c2fe10548cb32ff8188b7f036cd072ea2048b664e90b3570ce538fb\",\"license\":\"Apache License\",\"urls\":[\"bzz-raw://2a7594ef174c6bce3a502d34269dccf4e7f7382fc521aa9421bf31d000ca3525\",\"dweb:/ipfs/QmRBnDZnMrsEm45nhTAjzvb7znsKXdVTWy8f6FX1CiH8cu\"]},\"/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/interfaces/IPriceOracle.sol\":{\"keccak256\":\"0xe7882bdc45986d01ebdbe189ac7b2b42de6ba06d070a331c2de61668ac805a62\",\"license\":\"Apache License\",\"urls\":[\"bzz-raw://ad37f4650905c70d415ddc8836e363e8a386f30a9764bb6b3f9fb0e183d73703\",\"dweb:/ipfs/QmNpk6Q3nAZmh4GDsdPaU56yLR4vuAwnoqQuQzBndDJTVq\"]},\"/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/interfaces/ISetToken.sol\":{\"keccak256\":\"0x2f24b90ffc5e6bb97b169482fa915e9016fadbaade011a73d352201b396ebe12\",\"license\":\"Apache License\",\"urls\":[\"bzz-raw://8fbcd20954a2c646a953586e4a0a1cca0b968b3726c24c304dc3f6a4ce632f72\",\"dweb:/ipfs/QmQRHbqemSeohZuMWDaNrUaoQUUbP9i9UUdwn4Pph4ayAj\"]},\"/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/interfaces/ISetValuer.sol\":{\"keccak256\":\"0xcd73631200f53273d0825796bc29b268c6195b9ef3fff81663b28edce3de6a28\",\"license\":\"Apache License\",\"urls\":[\"bzz-raw://8f97e64b5264a51dba7361052d37c58668fe2331d04051d982ad43112d3f1b0c\",\"dweb:/ipfs/QmYQvzUzsMZ7mk9j3pGBchiBf7FAB2nXWGcNzJ2V4wKpwN\"]},\"/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/interfaces/IStreamingFeeModule.sol\":{\"keccak256\":\"0xfbb9e36b76451d5571251a8e5a64fb9bb97df52d47968d89f5a251b81084d8b4\",\"license\":\"Apache License\",\"urls\":[\"bzz-raw://66c3d5bc840bd145f485c6f1b3b240f1784d3fd805e207fce081ac0c6385e442\",\"dweb:/ipfs/QmYoS1usqM9VHCnsXNY5r6JpeYVRwgUuGRexLK7Dt5Cu5n\"]},\"/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/lib/ExplicitERC20.sol\":{\"keccak256\":\"0x6b68bb213cffd51cbece27b1c7235240d84cc0f6da7a9f2ffeb07e65b3e82299\",\"license\":\"Apache License\",\"urls\":[\"bzz-raw://8362c95ef29efaed3cb3f90b623661c2d1b5c20aef58bd9d3ecd375f123b74f1\",\"dweb:/ipfs/QmfBG1JW7PrjsWf3Zib6hF9UdgPLmpghGSssTh7SAQVUKh\"]},\"/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/lib/PreciseUnitMath.sol\":{\"keccak256\":\"0x3b9bad1db3dff62ac253d40bf65e06cf42a1a6dac114888c5aef79ede32d8e82\",\"license\":\"Apache License\",\"urls\":[\"bzz-raw://c0ad06068cf3e4a4069f335c667a8d8dc02902ad2427b983e0508e03b71666df\",\"dweb:/ipfs/QmQ4MurA7M1tDyZuVUX1nN5ak2vN1edQ4rSRxq227Pw2rm\"]},\"/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/protocol/lib/Invoke.sol\":{\"keccak256\":\"0x9dcceb24866055df08edd163889ef299fab75386a5fb87c0f64a1392cea409cd\",\"license\":\"Apache License\",\"urls\":[\"bzz-raw://92f040f3d97622532e297e9921d230e00642d26125c87366c489f6ebda6123d6\",\"dweb:/ipfs/QmRgi822f7GnnMx3C7cGftdpWE53PfVzyFJ6MrNX5cwtU2\"]},\"/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/protocol/lib/ModuleBase.sol\":{\"keccak256\":\"0x01789b1ac3f59746f64d821d5aac9e8a2b73189f005c8c05794c5b3fd2f5bd92\",\"license\":\"Apache License\",\"urls\":[\"bzz-raw://8c18918f9849c03d7a2f8a057e781b0e435232e6b495f4b8ba6fad84a4f8372b\",\"dweb:/ipfs/QmdqWx58ef3QapA8AttqZrqoWvLhWYa6X8zc1hvonoZEPm\"]},\"/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/protocol/lib/ResourceIdentifier.sol\":{\"keccak256\":\"0xd6d2b5d95b71305088a90913f1a4ef9fffc14c50f5a02b6eff7b5a8d211b3a2d\",\"license\":\"Apache License\",\"urls\":[\"bzz-raw://775c80b5d1ef43f00ce88f674c15ec79645fa1171f8ae40d2514a8da436444b1\",\"dweb:/ipfs/QmdKQUSqduKpcSJMvt2NMRtDZW3GkjoZQkXUSWCRZzojLN\"]},\"/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/protocol/modules/StreamingFeeModule.sol\":{\"keccak256\":\"0xc1d848009bf965438efcc42f7e5d19e743c07d0519dbee75d2887747374ea907\",\"license\":\"Apache License\",\"urls\":[\"bzz-raw://cf7f66e857358b801c07b243948e4d1858af960510add8ce5ab5c7fa3b31f65d\",\"dweb:/ipfs/QmS1fXGtM9hJLTThce9mehfp9CRGpVRfTxxePaFArFZknZ\"]},\"@openzeppelin/contracts/math/SafeMath.sol\":{\"keccak256\":\"0x3b21f2c8d626de3b9925ae33e972d8bf5c8b1bffb3f4ee94daeed7d0679036e6\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://7f8d45329fecbf0836ad7543330c3ecd0f8d0ffa42d4016278c3eb2215fdcdfe\",\"dweb:/ipfs/QmXWLT7GcnHtA5NiD6MFi2CV3EWJY4wv5mLNnypqYDrxL3\"]},\"@openzeppelin/contracts/math/SignedSafeMath.sol\":{\"keccak256\":\"0xd17ac7e1d8f83d20d80e652adfed83da122f3a3c7b69fefa2985d85aebf0a3e9\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://64e13936e5e7382737f9c12918f5365fd9e68bf96e83d66f3323f47b1d7162c7\",\"dweb:/ipfs/Qmd2qkUCFdpAXJ6NNTkPxmkKaPzYYmeBhDey8N8XN39wqw\"]},\"@openzeppelin/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x5f02220344881ce43204ae4a6281145a67bc52c2bb1290a791857df3d19d78f5\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://24427744bd3e6cb73c17010119af12a318289c0253a4d9acb8576c9fb3797b08\",\"dweb:/ipfs/QmTLDqpKRBuxGxRAmjgXt9AkXyACW3MtKzi7PYjm5iMfGC\"]},\"@openzeppelin/contracts/token/ERC20/SafeERC20.sol\":{\"keccak256\":\"0xf12dfbe97e6276980b83d2830bb0eb75e0cf4f3e626c2471137f82158ae6a0fc\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://b3a849c2d95e85463909e5b5c920b13e7a11216ca14127085e16d22b9379d52a\",\"dweb:/ipfs/QmUg3CZDbCCcQdroEpexBy5ZFd5vD1UWijWQq9qHZjtJNQ\"]},\"@openzeppelin/contracts/utils/Address.sol\":{\"keccak256\":\"0xa6a15ddddcbf29d2922a1e0d4151b5d2d33da24b93cc9ebc12390e0d855532f8\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://7c119bcaecfa853d564ac88d312777f75fa1126a3bca88a3371adb0ad9f35cb0\",\"dweb:/ipfs/QmY9UPuXeSKq86Zh38fE43VGQPhKMN34mkuFSFqPcr6nvZ\"]},\"@openzeppelin/contracts/utils/ReentrancyGuard.sol\":{\"keccak256\":\"0x8bbbc2f5c10065ee272592ae0a7a6ceb23de2fbd81564ee0bb015ecf404d5f61\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://b95e56c1640d0ef789fc5c16269e141e992f6c8ac97cc6d377bd3825e9cab182\",\"dweb:/ipfs/QmVzaxJZY51EhagrcNnkxoU6Uq17RhATe7aHvtkC6wUkgK\"]},\"@openzeppelin/contracts/utils/SafeCast.sol\":{\"keccak256\":\"0x7b2b8baa20fd60ab4a328c8e34c64a353651b80ba4b5b157cbb61813f6f85d55\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://125b7f9efa390e663d630c62b97ae4e0707f31623bea989ef94c97ca9d777dd2\",\"dweb:/ipfs/QmaaLSuwvqK7wqcgyS3utHgfmB7RntcvP7eJSuvQod8Z9P\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "/*\n    Copyright 2020 Set Labs Inc.\n\n    Licensed under the Apache License, Version 2.0 (the \"License\");\n    you may not use this file except in compliance with the License.\n    You may obtain a copy of the License at\n\n    http://www.apache.org/licenses/LICENSE-2.0\n\n    Unless required by applicable law or agreed to in writing, software\n    distributed under the License is distributed on an \"AS IS\" BASIS,\n    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n    See the License for the specific language governing permissions and\n    limitations under the License.\n\n    SPDX-License-Identifier: Apache License, Version 2.0\n*/\npragma solidity 0.6.10;\npragma experimental \"ABIEncoderV2\";\n\nimport { ISetToken } from \"./ISetToken.sol\";\nimport { StreamingFeeModule } from \"../protocol/modules/StreamingFeeModule.sol\";\n\ninterface IStreamingFeeModule {\n    function feeStates(ISetToken _setToken) external view returns (StreamingFeeModule.FeeState memory);\n    function getFee(ISetToken _setToken) external view returns (uint256);\n}",
+  "sourcePath": "/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/interfaces/IStreamingFeeModule.sol",
+  "ast": {
+    "absolutePath": "/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/interfaces/IStreamingFeeModule.sol",
+    "exportedSymbols": {
+      "IStreamingFeeModule": [
+        866
+      ]
+    },
+    "id": 867,
+    "license": "Apache License",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 846,
+        "literals": [
+          "solidity",
+          "0.6",
+          ".10"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "654:23:20"
+      },
+      {
+        "id": 847,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "678:35:20"
+      },
+      {
+        "absolutePath": "/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/interfaces/ISetToken.sol",
+        "file": "./ISetToken.sol",
+        "id": 849,
+        "nodeType": "ImportDirective",
+        "scope": 867,
+        "sourceUnit": 794,
+        "src": "715:44:20",
+        "symbolAliases": [
+          {
+            "foreign": {
+              "argumentTypes": null,
+              "id": 848,
+              "name": "ISetToken",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": null,
+              "src": "724:9:20",
+              "typeDescriptions": {
+                "typeIdentifier": null,
+                "typeString": null
+              }
+            },
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/protocol/modules/StreamingFeeModule.sol",
+        "file": "../protocol/modules/StreamingFeeModule.sol",
+        "id": 851,
+        "nodeType": "ImportDirective",
+        "scope": 867,
+        "sourceUnit": 22992,
+        "src": "760:80:20",
+        "symbolAliases": [
+          {
+            "foreign": {
+              "argumentTypes": null,
+              "id": 850,
+              "name": "StreamingFeeModule",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": null,
+              "src": "769:18:20",
+              "typeDescriptions": {
+                "typeIdentifier": null,
+                "typeString": null
+              }
+            },
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 866,
+        "linearizedBaseContracts": [
+          866
+        ],
+        "name": "IStreamingFeeModule",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "functionSelector": "8e7bdd48",
+            "id": 858,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "feeStates",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 854,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 853,
+                  "mutability": "mutable",
+                  "name": "_setToken",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 858,
+                  "src": "897:19:20",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_ISetToken_$793",
+                    "typeString": "contract ISetToken"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 852,
+                    "name": "ISetToken",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 793,
+                    "src": "897:9:20",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_ISetToken_$793",
+                      "typeString": "contract ISetToken"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "896:21:20"
+            },
+            "returnParameters": {
+              "id": 857,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 856,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 858,
+                  "src": "941:34:20",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_FeeState_$22484_memory_ptr",
+                    "typeString": "struct StreamingFeeModule.FeeState"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 855,
+                    "name": "StreamingFeeModule.FeeState",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 22484,
+                    "src": "941:27:20",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_FeeState_$22484_storage_ptr",
+                      "typeString": "struct StreamingFeeModule.FeeState"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "940:36:20"
+            },
+            "scope": 866,
+            "src": "878:99:20",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "functionSelector": "b88c9148",
+            "id": 865,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getFee",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 861,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 860,
+                  "mutability": "mutable",
+                  "name": "_setToken",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 865,
+                  "src": "998:19:20",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_ISetToken_$793",
+                    "typeString": "contract ISetToken"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 859,
+                    "name": "ISetToken",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 793,
+                    "src": "998:9:20",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_ISetToken_$793",
+                      "typeString": "contract ISetToken"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "997:21:20"
+            },
+            "returnParameters": {
+              "id": 864,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 863,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 865,
+                  "src": "1042:7:20",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 862,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1042:7:20",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1041:9:20"
+            },
+            "scope": 866,
+            "src": "982:69:20",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 867,
+        "src": "842:211:20"
+      }
+    ],
+    "src": "654:399:20"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/interfaces/IStreamingFeeModule.sol",
+    "exportedSymbols": {
+      "IStreamingFeeModule": [
+        866
+      ]
+    },
+    "id": 867,
+    "license": "Apache License",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 846,
+        "literals": [
+          "solidity",
+          "0.6",
+          ".10"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "654:23:20"
+      },
+      {
+        "id": 847,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "678:35:20"
+      },
+      {
+        "absolutePath": "/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/interfaces/ISetToken.sol",
+        "file": "./ISetToken.sol",
+        "id": 849,
+        "nodeType": "ImportDirective",
+        "scope": 867,
+        "sourceUnit": 794,
+        "src": "715:44:20",
+        "symbolAliases": [
+          {
+            "foreign": {
+              "argumentTypes": null,
+              "id": 848,
+              "name": "ISetToken",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": null,
+              "src": "724:9:20",
+              "typeDescriptions": {
+                "typeIdentifier": null,
+                "typeString": null
+              }
+            },
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/protocol/modules/StreamingFeeModule.sol",
+        "file": "../protocol/modules/StreamingFeeModule.sol",
+        "id": 851,
+        "nodeType": "ImportDirective",
+        "scope": 867,
+        "sourceUnit": 22992,
+        "src": "760:80:20",
+        "symbolAliases": [
+          {
+            "foreign": {
+              "argumentTypes": null,
+              "id": 850,
+              "name": "StreamingFeeModule",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": null,
+              "src": "769:18:20",
+              "typeDescriptions": {
+                "typeIdentifier": null,
+                "typeString": null
+              }
+            },
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 866,
+        "linearizedBaseContracts": [
+          866
+        ],
+        "name": "IStreamingFeeModule",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "functionSelector": "8e7bdd48",
+            "id": 858,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "feeStates",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 854,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 853,
+                  "mutability": "mutable",
+                  "name": "_setToken",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 858,
+                  "src": "897:19:20",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_ISetToken_$793",
+                    "typeString": "contract ISetToken"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 852,
+                    "name": "ISetToken",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 793,
+                    "src": "897:9:20",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_ISetToken_$793",
+                      "typeString": "contract ISetToken"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "896:21:20"
+            },
+            "returnParameters": {
+              "id": 857,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 856,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 858,
+                  "src": "941:34:20",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_FeeState_$22484_memory_ptr",
+                    "typeString": "struct StreamingFeeModule.FeeState"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 855,
+                    "name": "StreamingFeeModule.FeeState",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 22484,
+                    "src": "941:27:20",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_FeeState_$22484_storage_ptr",
+                      "typeString": "struct StreamingFeeModule.FeeState"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "940:36:20"
+            },
+            "scope": 866,
+            "src": "878:99:20",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "functionSelector": "b88c9148",
+            "id": 865,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getFee",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 861,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 860,
+                  "mutability": "mutable",
+                  "name": "_setToken",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 865,
+                  "src": "998:19:20",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_ISetToken_$793",
+                    "typeString": "contract ISetToken"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 859,
+                    "name": "ISetToken",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 793,
+                    "src": "998:9:20",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_ISetToken_$793",
+                      "typeString": "contract ISetToken"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "997:21:20"
+            },
+            "returnParameters": {
+              "id": 864,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 863,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 865,
+                  "src": "1042:7:20",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 862,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1042:7:20",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1041:9:20"
+            },
+            "scope": 866,
+            "src": "982:69:20",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 867,
+        "src": "842:211:20"
+      }
+    ],
+    "src": "654:399:20"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.10+commit.00c0fcaf.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.2.1",
+  "updatedAt": "2021-01-21T08:20:37.553Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

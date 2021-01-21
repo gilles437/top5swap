@@ -1,0 +1,1461 @@
+{
+  "contractName": "ResourceIdentifierMock",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "contract IController",
+          "name": "_controller",
+          "type": "address"
+        }
+      ],
+      "name": "testGetIntegrationRegistry",
+      "outputs": [
+        {
+          "internalType": "contract IIntegrationRegistry",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "contract IController",
+          "name": "_controller",
+          "type": "address"
+        }
+      ],
+      "name": "testGetPriceOracle",
+      "outputs": [
+        {
+          "internalType": "contract IPriceOracle",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "contract IController",
+          "name": "_controller",
+          "type": "address"
+        }
+      ],
+      "name": "testGetSetValuer",
+      "outputs": [
+        {
+          "internalType": "contract ISetValuer",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.10+commit.00c0fcaf\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"contract IController\",\"name\":\"_controller\",\"type\":\"address\"}],\"name\":\"testGetIntegrationRegistry\",\"outputs\":[{\"internalType\":\"contract IIntegrationRegistry\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"contract IController\",\"name\":\"_controller\",\"type\":\"address\"}],\"name\":\"testGetPriceOracle\",\"outputs\":[{\"internalType\":\"contract IPriceOracle\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"contract IController\",\"name\":\"_controller\",\"type\":\"address\"}],\"name\":\"testGetSetValuer\",\"outputs\":[{\"internalType\":\"contract ISetValuer\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/mocks/protocol/lib/ResourceIdentifierMock.sol\":\"ResourceIdentifierMock\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/interfaces/IController.sol\":{\"keccak256\":\"0x8deb2f94e24e9524ce4de88804c98694781d8f38fbadccc3207d28b8e0ce4911\",\"license\":\"Apache License\",\"urls\":[\"bzz-raw://755f656a314737b0eeffbee1b7dc257b751c0764d70f008beb6cccececaeb2d7\",\"dweb:/ipfs/QmUmFs1ukqWUmfcm5irGYHYZnv8NwMYGD3EUuoA5BvbhER\"]},\"/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/interfaces/IIntegrationRegistry.sol\":{\"keccak256\":\"0xb9a2f67aa926694fcfa6b9f2300423a253162078b12e3ff0b8c864c5a143c975\",\"license\":\"Apache License\",\"urls\":[\"bzz-raw://2448da2adc2ca3c858e2413a0833f7a384e4a9430af0a923411d0d0ff1c5076d\",\"dweb:/ipfs/QmTEdnKViq2riEoDzfLwuXxtWdieLL8ZfRL7WanfQwXxHf\"]},\"/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/interfaces/IPriceOracle.sol\":{\"keccak256\":\"0xe7882bdc45986d01ebdbe189ac7b2b42de6ba06d070a331c2de61668ac805a62\",\"license\":\"Apache License\",\"urls\":[\"bzz-raw://ad37f4650905c70d415ddc8836e363e8a386f30a9764bb6b3f9fb0e183d73703\",\"dweb:/ipfs/QmNpk6Q3nAZmh4GDsdPaU56yLR4vuAwnoqQuQzBndDJTVq\"]},\"/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/interfaces/ISetToken.sol\":{\"keccak256\":\"0x2f24b90ffc5e6bb97b169482fa915e9016fadbaade011a73d352201b396ebe12\",\"license\":\"Apache License\",\"urls\":[\"bzz-raw://8fbcd20954a2c646a953586e4a0a1cca0b968b3726c24c304dc3f6a4ce632f72\",\"dweb:/ipfs/QmQRHbqemSeohZuMWDaNrUaoQUUbP9i9UUdwn4Pph4ayAj\"]},\"/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/interfaces/ISetValuer.sol\":{\"keccak256\":\"0xcd73631200f53273d0825796bc29b268c6195b9ef3fff81663b28edce3de6a28\",\"license\":\"Apache License\",\"urls\":[\"bzz-raw://8f97e64b5264a51dba7361052d37c58668fe2331d04051d982ad43112d3f1b0c\",\"dweb:/ipfs/QmYQvzUzsMZ7mk9j3pGBchiBf7FAB2nXWGcNzJ2V4wKpwN\"]},\"/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/mocks/protocol/lib/ResourceIdentifierMock.sol\":{\"keccak256\":\"0x78d8b5194ed1747966fec8d2a4c0c5405947e66077cd9bc8837c2aa5a61408f7\",\"license\":\"Apache License\",\"urls\":[\"bzz-raw://4c3beda5efe99390ef575c91805790d9a6f3356b88f4e049e6d1786c0455d101\",\"dweb:/ipfs/QmcajHYhHLqMuidjuhQ2ujSu3Bwu3uVziVVRqunTWm6fV6\"]},\"/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/protocol/lib/ResourceIdentifier.sol\":{\"keccak256\":\"0xd6d2b5d95b71305088a90913f1a4ef9fffc14c50f5a02b6eff7b5a8d211b3a2d\",\"license\":\"Apache License\",\"urls\":[\"bzz-raw://775c80b5d1ef43f00ce88f674c15ec79645fa1171f8ae40d2514a8da436444b1\",\"dweb:/ipfs/QmdKQUSqduKpcSJMvt2NMRtDZW3GkjoZQkXUSWCRZzojLN\"]},\"@openzeppelin/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x5f02220344881ce43204ae4a6281145a67bc52c2bb1290a791857df3d19d78f5\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://24427744bd3e6cb73c17010119af12a318289c0253a4d9acb8576c9fb3797b08\",\"dweb:/ipfs/QmTLDqpKRBuxGxRAmjgXt9AkXyACW3MtKzi7PYjm5iMfGC\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50610400806100206000396000f3fe608060405234801561001057600080fd5b50600436106100415760003560e01c80634939a1861461004657806391d47662146100ca578063b565b9d81461014e575b600080fd5b6100886004803603602081101561005c57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506101d2565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b61010c600480360360208110156100e057600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506101e4565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6101906004803603602081101561016457600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506101f6565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b60006101dd82610208565b9050919050565b60006101ef8261029e565b9050919050565b600061020182610334565b9050919050565b60008173ffffffffffffffffffffffffffffffffffffffff1663e765ced660006040518263ffffffff1660e01b81526004018082815260200191505060206040518083038186803b15801561025c57600080fd5b505afa158015610270573d6000803e3d6000fd5b505050506040513d602081101561028657600080fd5b81019080805190602001909291905050509050919050565b60008173ffffffffffffffffffffffffffffffffffffffff1663e765ced660026040518263ffffffff1660e01b81526004018082815260200191505060206040518083038186803b1580156102f257600080fd5b505afa158015610306573d6000803e3d6000fd5b505050506040513d602081101561031c57600080fd5b81019080805190602001909291905050509050919050565b60008173ffffffffffffffffffffffffffffffffffffffff1663e765ced660016040518263ffffffff1660e01b81526004018082815260200191505060206040518083038186803b15801561038857600080fd5b505afa15801561039c573d6000803e3d6000fd5b505050506040513d60208110156103b257600080fd5b8101908080519060200190929190505050905091905056fea26469706673582212202b7ff63256fac865164d03ef2847860689de925562b67a736eca61f8c2d3aae764736f6c634300060a0033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100415760003560e01c80634939a1861461004657806391d47662146100ca578063b565b9d81461014e575b600080fd5b6100886004803603602081101561005c57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506101d2565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b61010c600480360360208110156100e057600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506101e4565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6101906004803603602081101561016457600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506101f6565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b60006101dd82610208565b9050919050565b60006101ef8261029e565b9050919050565b600061020182610334565b9050919050565b60008173ffffffffffffffffffffffffffffffffffffffff1663e765ced660006040518263ffffffff1660e01b81526004018082815260200191505060206040518083038186803b15801561025c57600080fd5b505afa158015610270573d6000803e3d6000fd5b505050506040513d602081101561028657600080fd5b81019080805190602001909291905050509050919050565b60008173ffffffffffffffffffffffffffffffffffffffff1663e765ced660026040518263ffffffff1660e01b81526004018082815260200191505060206040518083038186803b1580156102f257600080fd5b505afa158015610306573d6000803e3d6000fd5b505050506040513d602081101561031c57600080fd5b81019080805190602001909291905050509050919050565b60008173ffffffffffffffffffffffffffffffffffffffff1663e765ced660016040518263ffffffff1660e01b81526004018082815260200191505060206040518083038186803b15801561038857600080fd5b505afa15801561039c573d6000803e3d6000fd5b505050506040513d60208110156103b257600080fd5b8101908080519060200190929190505050905091905056fea26469706673582212202b7ff63256fac865164d03ef2847860689de925562b67a736eca61f8c2d3aae764736f6c634300060a0033",
+  "immutableReferences": {},
+  "sourceMap": "1050:616:58:-:0;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "1050:616:58:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1145:193;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;1510:154;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;1344:160;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;1145:193;1229:20;1277:54;1319:11;1277:41;:54::i;:::-;1270:61;;1145:193;;;:::o;1510:154::-;1584:10;1613:44;1645:11;1613:31;:44::i;:::-;1606:51;;1510:154;;;:::o;1344:160::-;1420:12;1451:46;1485:11;1451:33;:46::i;:::-;1444:53;;1344:160;;;:::o;1748:204:86:-;1828:20;1888:11;:22;;;1286:1;1888:56;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1860:85;;1748:204;;;:::o;2386:164::-;2456:10;2496:11;:22;;;1535:1;2496:46;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2478:65;;2386:164;;;:::o;2083:172::-;2155:12;2199:11;:22;;;1408:1;2199:48;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2179:69;;2083:172;;;:::o",
+  "source": "/*\n    Copyright 2020 Set Labs Inc.\n\n    Licensed under the Apache License, Version 2.0 (the \"License\");\n    you may not use this file except in compliance with the License.\n    You may obtain a copy of the License at\n\n    http://www.apache.org/licenses/LICENSE-2.0\n\n    Unless required by applicable law or agreed to in writing, software\n    distributed under the License is distributed on an \"AS IS\" BASIS,\n    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n    See the License for the specific language governing permissions and\n    limitations under the License.\n\n    SPDX-License-Identifier: Apache License, Version 2.0\n*/\n\npragma solidity 0.6.10;\n\nimport { IController } from \"../../../interfaces/IController.sol\";\nimport { IIntegrationRegistry } from \"../../../interfaces/IIntegrationRegistry.sol\";\nimport { IPriceOracle } from \"../../../interfaces/IPriceOracle.sol\";\nimport { ISetValuer } from \"../../../interfaces/ISetValuer.sol\";\nimport { ResourceIdentifier } from \"../../../protocol/lib/ResourceIdentifier.sol\";\n\ncontract ResourceIdentifierMock {\n\n    /* ============ External Functions ============ */\n\n    function testGetIntegrationRegistry(IController _controller) external view returns (IIntegrationRegistry) {\n        \n        return ResourceIdentifier.getIntegrationRegistry(_controller);\n    }\n\n    function testGetPriceOracle(IController _controller) external view returns (IPriceOracle) {\n        return ResourceIdentifier.getPriceOracle(_controller);\n    }\n\n    function testGetSetValuer(IController _controller) external view returns (ISetValuer) {\n        return ResourceIdentifier.getSetValuer(_controller);\n    }\n}",
+  "sourcePath": "/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/mocks/protocol/lib/ResourceIdentifierMock.sol",
+  "ast": {
+    "absolutePath": "/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/mocks/protocol/lib/ResourceIdentifierMock.sol",
+    "exportedSymbols": {
+      "ResourceIdentifierMock": [
+        5796
+      ]
+    },
+    "id": 5797,
+    "license": "Apache License",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 5746,
+        "literals": [
+          "solidity",
+          "0.6",
+          ".10"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "655:23:58"
+      },
+      {
+        "absolutePath": "/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/interfaces/IController.sol",
+        "file": "../../../interfaces/IController.sol",
+        "id": 5748,
+        "nodeType": "ImportDirective",
+        "scope": 5797,
+        "sourceUnit": 251,
+        "src": "680:66:58",
+        "symbolAliases": [
+          {
+            "foreign": {
+              "argumentTypes": null,
+              "id": 5747,
+              "name": "IController",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": null,
+              "src": "689:11:58",
+              "typeDescriptions": {
+                "typeIdentifier": null,
+                "typeString": null
+              }
+            },
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/interfaces/IIntegrationRegistry.sol",
+        "file": "../../../interfaces/IIntegrationRegistry.sol",
+        "id": 5750,
+        "nodeType": "ImportDirective",
+        "scope": 5797,
+        "sourceUnit": 380,
+        "src": "747:84:58",
+        "symbolAliases": [
+          {
+            "foreign": {
+              "argumentTypes": null,
+              "id": 5749,
+              "name": "IIntegrationRegistry",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": null,
+              "src": "756:20:58",
+              "typeDescriptions": {
+                "typeIdentifier": null,
+                "typeString": null
+              }
+            },
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/interfaces/IPriceOracle.sol",
+        "file": "../../../interfaces/IPriceOracle.sol",
+        "id": 5752,
+        "nodeType": "ImportDirective",
+        "scope": 5797,
+        "sourceUnit": 542,
+        "src": "832:68:58",
+        "symbolAliases": [
+          {
+            "foreign": {
+              "argumentTypes": null,
+              "id": 5751,
+              "name": "IPriceOracle",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": null,
+              "src": "841:12:58",
+              "typeDescriptions": {
+                "typeIdentifier": null,
+                "typeString": null
+              }
+            },
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/interfaces/ISetValuer.sol",
+        "file": "../../../interfaces/ISetValuer.sol",
+        "id": 5754,
+        "nodeType": "ImportDirective",
+        "scope": 5797,
+        "sourceUnit": 808,
+        "src": "901:64:58",
+        "symbolAliases": [
+          {
+            "foreign": {
+              "argumentTypes": null,
+              "id": 5753,
+              "name": "ISetValuer",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": null,
+              "src": "910:10:58",
+              "typeDescriptions": {
+                "typeIdentifier": null,
+                "typeString": null
+              }
+            },
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/protocol/lib/ResourceIdentifier.sol",
+        "file": "../../../protocol/lib/ResourceIdentifier.sol",
+        "id": 5756,
+        "nodeType": "ImportDirective",
+        "scope": 5797,
+        "sourceUnit": 13427,
+        "src": "966:82:58",
+        "symbolAliases": [
+          {
+            "foreign": {
+              "argumentTypes": null,
+              "id": 5755,
+              "name": "ResourceIdentifier",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": null,
+              "src": "975:18:58",
+              "typeDescriptions": {
+                "typeIdentifier": null,
+                "typeString": null
+              }
+            },
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 5796,
+        "linearizedBaseContracts": [
+          5796
+        ],
+        "name": "ResourceIdentifierMock",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 5768,
+              "nodeType": "Block",
+              "src": "1251:87:58",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 5765,
+                        "name": "_controller",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5758,
+                        "src": "1319:11:58",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_IController_$250",
+                          "typeString": "contract IController"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_contract$_IController_$250",
+                          "typeString": "contract IController"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 5763,
+                        "name": "ResourceIdentifier",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 13426,
+                        "src": "1277:18:58",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_ResourceIdentifier_$13426_$",
+                          "typeString": "type(library ResourceIdentifier)"
+                        }
+                      },
+                      "id": 5764,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "getIntegrationRegistry",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 13393,
+                      "src": "1277:41:58",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_contract$_IController_$250_$returns$_t_contract$_IIntegrationRegistry_$379_$",
+                        "typeString": "function (contract IController) view returns (contract IIntegrationRegistry)"
+                      }
+                    },
+                    "id": 5766,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1277:54:58",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IIntegrationRegistry_$379",
+                      "typeString": "contract IIntegrationRegistry"
+                    }
+                  },
+                  "functionReturnParameters": 5762,
+                  "id": 5767,
+                  "nodeType": "Return",
+                  "src": "1270:61:58"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "4939a186",
+            "id": 5769,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "testGetIntegrationRegistry",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 5759,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5758,
+                  "mutability": "mutable",
+                  "name": "_controller",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 5769,
+                  "src": "1181:23:58",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IController_$250",
+                    "typeString": "contract IController"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 5757,
+                    "name": "IController",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 250,
+                    "src": "1181:11:58",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IController_$250",
+                      "typeString": "contract IController"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1180:25:58"
+            },
+            "returnParameters": {
+              "id": 5762,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5761,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 5769,
+                  "src": "1229:20:58",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IIntegrationRegistry_$379",
+                    "typeString": "contract IIntegrationRegistry"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 5760,
+                    "name": "IIntegrationRegistry",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 379,
+                    "src": "1229:20:58",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IIntegrationRegistry_$379",
+                      "typeString": "contract IIntegrationRegistry"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1228:22:58"
+            },
+            "scope": 5796,
+            "src": "1145:193:58",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 5781,
+              "nodeType": "Block",
+              "src": "1434:70:58",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 5778,
+                        "name": "_controller",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5771,
+                        "src": "1485:11:58",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_IController_$250",
+                          "typeString": "contract IController"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_contract$_IController_$250",
+                          "typeString": "contract IController"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 5776,
+                        "name": "ResourceIdentifier",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 13426,
+                        "src": "1451:18:58",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_ResourceIdentifier_$13426_$",
+                          "typeString": "type(library ResourceIdentifier)"
+                        }
+                      },
+                      "id": 5777,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "getPriceOracle",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 13409,
+                      "src": "1451:33:58",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_contract$_IController_$250_$returns$_t_contract$_IPriceOracle_$541_$",
+                        "typeString": "function (contract IController) view returns (contract IPriceOracle)"
+                      }
+                    },
+                    "id": 5779,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1451:46:58",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IPriceOracle_$541",
+                      "typeString": "contract IPriceOracle"
+                    }
+                  },
+                  "functionReturnParameters": 5775,
+                  "id": 5780,
+                  "nodeType": "Return",
+                  "src": "1444:53:58"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "b565b9d8",
+            "id": 5782,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "testGetPriceOracle",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 5772,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5771,
+                  "mutability": "mutable",
+                  "name": "_controller",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 5782,
+                  "src": "1372:23:58",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IController_$250",
+                    "typeString": "contract IController"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 5770,
+                    "name": "IController",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 250,
+                    "src": "1372:11:58",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IController_$250",
+                      "typeString": "contract IController"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1371:25:58"
+            },
+            "returnParameters": {
+              "id": 5775,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5774,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 5782,
+                  "src": "1420:12:58",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IPriceOracle_$541",
+                    "typeString": "contract IPriceOracle"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 5773,
+                    "name": "IPriceOracle",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 541,
+                    "src": "1420:12:58",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IPriceOracle_$541",
+                      "typeString": "contract IPriceOracle"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1419:14:58"
+            },
+            "scope": 5796,
+            "src": "1344:160:58",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 5794,
+              "nodeType": "Block",
+              "src": "1596:68:58",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 5791,
+                        "name": "_controller",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5784,
+                        "src": "1645:11:58",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_IController_$250",
+                          "typeString": "contract IController"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_contract$_IController_$250",
+                          "typeString": "contract IController"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 5789,
+                        "name": "ResourceIdentifier",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 13426,
+                        "src": "1613:18:58",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_ResourceIdentifier_$13426_$",
+                          "typeString": "type(library ResourceIdentifier)"
+                        }
+                      },
+                      "id": 5790,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "getSetValuer",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 13425,
+                      "src": "1613:31:58",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_contract$_IController_$250_$returns$_t_contract$_ISetValuer_$807_$",
+                        "typeString": "function (contract IController) view returns (contract ISetValuer)"
+                      }
+                    },
+                    "id": 5792,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1613:44:58",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_ISetValuer_$807",
+                      "typeString": "contract ISetValuer"
+                    }
+                  },
+                  "functionReturnParameters": 5788,
+                  "id": 5793,
+                  "nodeType": "Return",
+                  "src": "1606:51:58"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "91d47662",
+            "id": 5795,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "testGetSetValuer",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 5785,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5784,
+                  "mutability": "mutable",
+                  "name": "_controller",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 5795,
+                  "src": "1536:23:58",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IController_$250",
+                    "typeString": "contract IController"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 5783,
+                    "name": "IController",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 250,
+                    "src": "1536:11:58",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IController_$250",
+                      "typeString": "contract IController"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1535:25:58"
+            },
+            "returnParameters": {
+              "id": 5788,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5787,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 5795,
+                  "src": "1584:10:58",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_ISetValuer_$807",
+                    "typeString": "contract ISetValuer"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 5786,
+                    "name": "ISetValuer",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 807,
+                    "src": "1584:10:58",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_ISetValuer_$807",
+                      "typeString": "contract ISetValuer"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1583:12:58"
+            },
+            "scope": 5796,
+            "src": "1510:154:58",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 5797,
+        "src": "1050:616:58"
+      }
+    ],
+    "src": "655:1011:58"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/mocks/protocol/lib/ResourceIdentifierMock.sol",
+    "exportedSymbols": {
+      "ResourceIdentifierMock": [
+        5796
+      ]
+    },
+    "id": 5797,
+    "license": "Apache License",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 5746,
+        "literals": [
+          "solidity",
+          "0.6",
+          ".10"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "655:23:58"
+      },
+      {
+        "absolutePath": "/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/interfaces/IController.sol",
+        "file": "../../../interfaces/IController.sol",
+        "id": 5748,
+        "nodeType": "ImportDirective",
+        "scope": 5797,
+        "sourceUnit": 251,
+        "src": "680:66:58",
+        "symbolAliases": [
+          {
+            "foreign": {
+              "argumentTypes": null,
+              "id": 5747,
+              "name": "IController",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": null,
+              "src": "689:11:58",
+              "typeDescriptions": {
+                "typeIdentifier": null,
+                "typeString": null
+              }
+            },
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/interfaces/IIntegrationRegistry.sol",
+        "file": "../../../interfaces/IIntegrationRegistry.sol",
+        "id": 5750,
+        "nodeType": "ImportDirective",
+        "scope": 5797,
+        "sourceUnit": 380,
+        "src": "747:84:58",
+        "symbolAliases": [
+          {
+            "foreign": {
+              "argumentTypes": null,
+              "id": 5749,
+              "name": "IIntegrationRegistry",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": null,
+              "src": "756:20:58",
+              "typeDescriptions": {
+                "typeIdentifier": null,
+                "typeString": null
+              }
+            },
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/interfaces/IPriceOracle.sol",
+        "file": "../../../interfaces/IPriceOracle.sol",
+        "id": 5752,
+        "nodeType": "ImportDirective",
+        "scope": 5797,
+        "sourceUnit": 542,
+        "src": "832:68:58",
+        "symbolAliases": [
+          {
+            "foreign": {
+              "argumentTypes": null,
+              "id": 5751,
+              "name": "IPriceOracle",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": null,
+              "src": "841:12:58",
+              "typeDescriptions": {
+                "typeIdentifier": null,
+                "typeString": null
+              }
+            },
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/interfaces/ISetValuer.sol",
+        "file": "../../../interfaces/ISetValuer.sol",
+        "id": 5754,
+        "nodeType": "ImportDirective",
+        "scope": 5797,
+        "sourceUnit": 808,
+        "src": "901:64:58",
+        "symbolAliases": [
+          {
+            "foreign": {
+              "argumentTypes": null,
+              "id": 5753,
+              "name": "ISetValuer",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": null,
+              "src": "910:10:58",
+              "typeDescriptions": {
+                "typeIdentifier": null,
+                "typeString": null
+              }
+            },
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/protocol/lib/ResourceIdentifier.sol",
+        "file": "../../../protocol/lib/ResourceIdentifier.sol",
+        "id": 5756,
+        "nodeType": "ImportDirective",
+        "scope": 5797,
+        "sourceUnit": 13427,
+        "src": "966:82:58",
+        "symbolAliases": [
+          {
+            "foreign": {
+              "argumentTypes": null,
+              "id": 5755,
+              "name": "ResourceIdentifier",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": null,
+              "src": "975:18:58",
+              "typeDescriptions": {
+                "typeIdentifier": null,
+                "typeString": null
+              }
+            },
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 5796,
+        "linearizedBaseContracts": [
+          5796
+        ],
+        "name": "ResourceIdentifierMock",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 5768,
+              "nodeType": "Block",
+              "src": "1251:87:58",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 5765,
+                        "name": "_controller",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5758,
+                        "src": "1319:11:58",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_IController_$250",
+                          "typeString": "contract IController"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_contract$_IController_$250",
+                          "typeString": "contract IController"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 5763,
+                        "name": "ResourceIdentifier",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 13426,
+                        "src": "1277:18:58",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_ResourceIdentifier_$13426_$",
+                          "typeString": "type(library ResourceIdentifier)"
+                        }
+                      },
+                      "id": 5764,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "getIntegrationRegistry",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 13393,
+                      "src": "1277:41:58",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_contract$_IController_$250_$returns$_t_contract$_IIntegrationRegistry_$379_$",
+                        "typeString": "function (contract IController) view returns (contract IIntegrationRegistry)"
+                      }
+                    },
+                    "id": 5766,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1277:54:58",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IIntegrationRegistry_$379",
+                      "typeString": "contract IIntegrationRegistry"
+                    }
+                  },
+                  "functionReturnParameters": 5762,
+                  "id": 5767,
+                  "nodeType": "Return",
+                  "src": "1270:61:58"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "4939a186",
+            "id": 5769,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "testGetIntegrationRegistry",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 5759,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5758,
+                  "mutability": "mutable",
+                  "name": "_controller",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 5769,
+                  "src": "1181:23:58",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IController_$250",
+                    "typeString": "contract IController"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 5757,
+                    "name": "IController",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 250,
+                    "src": "1181:11:58",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IController_$250",
+                      "typeString": "contract IController"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1180:25:58"
+            },
+            "returnParameters": {
+              "id": 5762,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5761,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 5769,
+                  "src": "1229:20:58",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IIntegrationRegistry_$379",
+                    "typeString": "contract IIntegrationRegistry"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 5760,
+                    "name": "IIntegrationRegistry",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 379,
+                    "src": "1229:20:58",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IIntegrationRegistry_$379",
+                      "typeString": "contract IIntegrationRegistry"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1228:22:58"
+            },
+            "scope": 5796,
+            "src": "1145:193:58",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 5781,
+              "nodeType": "Block",
+              "src": "1434:70:58",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 5778,
+                        "name": "_controller",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5771,
+                        "src": "1485:11:58",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_IController_$250",
+                          "typeString": "contract IController"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_contract$_IController_$250",
+                          "typeString": "contract IController"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 5776,
+                        "name": "ResourceIdentifier",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 13426,
+                        "src": "1451:18:58",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_ResourceIdentifier_$13426_$",
+                          "typeString": "type(library ResourceIdentifier)"
+                        }
+                      },
+                      "id": 5777,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "getPriceOracle",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 13409,
+                      "src": "1451:33:58",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_contract$_IController_$250_$returns$_t_contract$_IPriceOracle_$541_$",
+                        "typeString": "function (contract IController) view returns (contract IPriceOracle)"
+                      }
+                    },
+                    "id": 5779,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1451:46:58",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IPriceOracle_$541",
+                      "typeString": "contract IPriceOracle"
+                    }
+                  },
+                  "functionReturnParameters": 5775,
+                  "id": 5780,
+                  "nodeType": "Return",
+                  "src": "1444:53:58"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "b565b9d8",
+            "id": 5782,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "testGetPriceOracle",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 5772,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5771,
+                  "mutability": "mutable",
+                  "name": "_controller",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 5782,
+                  "src": "1372:23:58",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IController_$250",
+                    "typeString": "contract IController"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 5770,
+                    "name": "IController",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 250,
+                    "src": "1372:11:58",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IController_$250",
+                      "typeString": "contract IController"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1371:25:58"
+            },
+            "returnParameters": {
+              "id": 5775,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5774,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 5782,
+                  "src": "1420:12:58",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IPriceOracle_$541",
+                    "typeString": "contract IPriceOracle"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 5773,
+                    "name": "IPriceOracle",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 541,
+                    "src": "1420:12:58",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IPriceOracle_$541",
+                      "typeString": "contract IPriceOracle"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1419:14:58"
+            },
+            "scope": 5796,
+            "src": "1344:160:58",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 5794,
+              "nodeType": "Block",
+              "src": "1596:68:58",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 5791,
+                        "name": "_controller",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5784,
+                        "src": "1645:11:58",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_IController_$250",
+                          "typeString": "contract IController"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_contract$_IController_$250",
+                          "typeString": "contract IController"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 5789,
+                        "name": "ResourceIdentifier",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 13426,
+                        "src": "1613:18:58",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_ResourceIdentifier_$13426_$",
+                          "typeString": "type(library ResourceIdentifier)"
+                        }
+                      },
+                      "id": 5790,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "getSetValuer",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 13425,
+                      "src": "1613:31:58",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_contract$_IController_$250_$returns$_t_contract$_ISetValuer_$807_$",
+                        "typeString": "function (contract IController) view returns (contract ISetValuer)"
+                      }
+                    },
+                    "id": 5792,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1613:44:58",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_ISetValuer_$807",
+                      "typeString": "contract ISetValuer"
+                    }
+                  },
+                  "functionReturnParameters": 5788,
+                  "id": 5793,
+                  "nodeType": "Return",
+                  "src": "1606:51:58"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "91d47662",
+            "id": 5795,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "testGetSetValuer",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 5785,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5784,
+                  "mutability": "mutable",
+                  "name": "_controller",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 5795,
+                  "src": "1536:23:58",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IController_$250",
+                    "typeString": "contract IController"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 5783,
+                    "name": "IController",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 250,
+                    "src": "1536:11:58",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IController_$250",
+                      "typeString": "contract IController"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1535:25:58"
+            },
+            "returnParameters": {
+              "id": 5788,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5787,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 5795,
+                  "src": "1584:10:58",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_ISetValuer_$807",
+                    "typeString": "contract ISetValuer"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 5786,
+                    "name": "ISetValuer",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 807,
+                    "src": "1584:10:58",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_ISetValuer_$807",
+                      "typeString": "contract ISetValuer"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1583:12:58"
+            },
+            "scope": 5796,
+            "src": "1510:154:58",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 5797,
+        "src": "1050:616:58"
+      }
+    ],
+    "src": "655:1011:58"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.10+commit.00c0fcaf.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.2.1",
+  "updatedAt": "2021-01-21T08:20:37.627Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

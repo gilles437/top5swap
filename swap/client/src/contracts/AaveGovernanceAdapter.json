@@ -1,0 +1,4332 @@
+{
+  "contractName": "AaveGovernanceAdapter",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_aaveProtoGovernance",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_aaveToken",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [],
+      "name": "VOTE_AGAINST",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "VOTE_FOR",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "aaveProtoGovernance",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "aaveToken",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_proposalId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bool",
+          "name": "_support",
+          "type": "bool"
+        },
+        {
+          "internalType": "bytes",
+          "name": "_data",
+          "type": "bytes"
+        }
+      ],
+      "name": "getVoteCalldata",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes",
+          "name": "",
+          "type": "bytes"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "getDelegateCalldata",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes",
+          "name": "",
+          "type": "bytes"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "getRegisterCalldata",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes",
+          "name": "",
+          "type": "bytes"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getRevokeCalldata",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes",
+          "name": "",
+          "type": "bytes"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes",
+          "name": "",
+          "type": "bytes"
+        }
+      ],
+      "name": "getProposeCalldata",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes",
+          "name": "",
+          "type": "bytes"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.10+commit.00c0fcaf\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_aaveProtoGovernance\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_aaveToken\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[],\"name\":\"VOTE_AGAINST\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"VOTE_FOR\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"aaveProtoGovernance\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"aaveToken\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"getDelegateCalldata\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"}],\"name\":\"getProposeCalldata\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"getRegisterCalldata\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getRevokeCalldata\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_proposalId\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"_support\",\"type\":\"bool\"},{\"internalType\":\"bytes\",\"name\":\"_data\",\"type\":\"bytes\"}],\"name\":\"getVoteCalldata\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"Set Protocol Governance adapter for Aave governance that returns data for voting\",\"methods\":{\"constructor\":{\"params\":{\"_aaveProtoGovernance\":\"Address of AAVE proto governance contract\",\"_aaveToken\":\"Address of AAVE token\"}},\"getVoteCalldata(uint256,bool,bytes)\":{\"params\":{\"_data\":\"Byte data containing the asset to vote with\",\"_proposalId\":\"ID of the proposal to vote on\",\"_support\":\"Boolean indicating whether to support proposal\"},\"returns\":{\"_0\":\"address              Target contract address\",\"_1\":\"uint256              Total quantity of ETH (Set to 0)\",\"_2\":\"bytes                Propose calldata\"}}},\"title\":\"AaveGovernanceAdapter\"},\"userdoc\":{\"methods\":{\"constructor\":\"Set state variables\",\"getDelegateCalldata(address)\":{\"notice\":\"Reverts as AAVE currently does not have a delegation mechanism in governance\"},\"getProposeCalldata(bytes)\":{\"notice\":\"Reverts as creating a proposal is only available to AAVE genesis team\"},\"getRegisterCalldata(address)\":{\"notice\":\"Reverts as AAVE currently does not have a register mechanism in governance\"},\"getRevokeCalldata()\":{\"notice\":\"Reverts as AAVE currently does not have a revoke mechanism in governance\"},\"getVoteCalldata(uint256,bool,bytes)\":{\"notice\":\"Generates the calldata to vote on a proposal. If byte data is empty, then vote using AAVE token, otherwise, vote using the asset passed into the function\"}}}},\"settings\":{\"compilationTarget\":{\"/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/protocol/integration/AaveGovernanceAdapter.sol\":\"AaveGovernanceAdapter\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/protocol/integration/AaveGovernanceAdapter.sol\":{\"keccak256\":\"0x2eb5320a1522095b7edc64fa9d1e9f229aa8ca78ea2fcfe96f3fb9c5f1c4dbe4\",\"license\":\"Apache License\",\"urls\":[\"bzz-raw://a819f17bbcf7c1722fdce7827008815d6083313d29d7f9515b62c3fbba90da8c\",\"dweb:/ipfs/QmNt7oywReG844VzYaiKqimgH7DjwKp9X5z2vGaHNaLxN7\"]}},\"version\":1}",
+  "bytecode": "0x60c060405234801561001057600080fd5b50604051610c6d380380610c6d833981810160405281019061003291906100bc565b8173ffffffffffffffffffffffffffffffffffffffff1660808173ffffffffffffffffffffffffffffffffffffffff1660601b815250508073ffffffffffffffffffffffffffffffffffffffff1660a08173ffffffffffffffffffffffffffffffffffffffff1660601b815250505050610141565b6000815190506100b68161012a565b92915050565b600080604083850312156100cf57600080fd5b60006100dd858286016100a7565b92505060206100ee858286016100a7565b9150509250929050565b60006101038261010a565b9050919050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b610133816100f8565b811461013e57600080fd5b50565b60805160601c60a05160601c610af96101746000398061021e52806102c25250806101fa528061037c5250610af96000f3fe608060405234801561001057600080fd5b50600436106100935760003560e01c8063a4fed2ce11610066578063a4fed2ce14610124578063d0ae50ae14610156578063d1a75e0d14610188578063d3da53a4146101a6578063d5abba99146101d857610093565b806306344fe11461009857806306a3fe59146100b65780635cb8b5e3146100d45780635dfd327814610106575b600080fd5b6100a06101f8565b6040516100ad9190610809565b60405180910390f35b6100be61021c565b6040516100cb9190610809565b60405180910390f35b6100ee60048036038101906100e99190610572565b610240565b6040516100fd93929190610824565b60405180910390f35b61010e610280565b60405161011b91906108e2565b60405180910390f35b61013e600480360381019061013991906105b3565b610285565b60405161014d93929190610824565b60405180910390f35b610170600480360381019061016b9190610520565b6103b3565b60405161017f93929190610824565b60405180910390f35b6101906103f3565b60405161019d91906108e2565b60405180910390f35b6101c060048036038101906101bb9190610520565b6103f8565b6040516101cf93929190610824565b60405180910390f35b6101e0610438565b6040516101ef93929190610824565b60405180910390f35b7f000000000000000000000000000000000000000000000000000000000000000081565b7f000000000000000000000000000000000000000000000000000000000000000081565b60008060606040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401610277906108a2565b60405180910390fd5b600281565b600080606060008561029857600261029b565b60015b90506000808651146102c057858060200190518101906102bb9190610549565b6102e2565b7f00000000000000000000000000000000000000000000000000000000000000005b905060608883836040516024016102fb939291906108fd565b6040516020818303038152906040527ff50a990d000000000000000000000000000000000000000000000000000000007bffffffffffffffffffffffffffffffffffffffffffffffffffffffff19166020820180517bffffffffffffffffffffffffffffffffffffffffffffffffffffffff838183161783525050505090507f000000000000000000000000000000000000000000000000000000000000000060008281915095509550955050505093509350939050565b60008060606040517f08c379a00000000000000000000000000000000000000000000000000000000081526004016103ea90610862565b60405180910390fd5b600181565b60008060606040517f08c379a000000000000000000000000000000000000000000000000000000000815260040161042f906108c2565b60405180910390fd5b60008060606040517f08c379a000000000000000000000000000000000000000000000000000000000815260040161046f90610882565b60405180910390fd5b60008135905061048781610a67565b92915050565b60008151905061049c81610a7e565b92915050565b6000813590506104b181610a95565b92915050565b600082601f8301126104c857600080fd5b81356104db6104d682610961565b610934565b915080825260208301602083018583830111156104f757600080fd5b610502838284610a14565b50505092915050565b60008135905061051a81610aac565b92915050565b60006020828403121561053257600080fd5b600061054084828501610478565b91505092915050565b60006020828403121561055b57600080fd5b60006105698482850161048d565b91505092915050565b60006020828403121561058457600080fd5b600082013567ffffffffffffffff81111561059e57600080fd5b6105aa848285016104b7565b91505092915050565b6000806000606084860312156105c857600080fd5b60006105d68682870161050b565b93505060206105e7868287016104a2565b925050604084013567ffffffffffffffff81111561060457600080fd5b610610868287016104b7565b9150509250925092565b610623816109ba565b82525050565b60006106348261098d565b61063e8185610998565b935061064e818560208601610a23565b61065781610a56565b840191505092915050565b600061066f602a836109a9565b91507f4e6f2064656c65676174696f6e20617661696c61626c6520696e20414156452060008301527f676f7665726e616e6365000000000000000000000000000000000000000000006020830152604082019050919050565b60006106d56026836109a9565b91507f4e6f207265766f6b6520617661696c61626c6520696e204141564520676f766560008301527f726e616e636500000000000000000000000000000000000000000000000000006020830152604082019050919050565b600061073b603c836109a9565b91507f4372656174696f6e206f66206e65772070726f706f73616c206f6e6c7920617660008301527f61696c61626c6520746f20414156452067656e65736973207465616d000000006020830152604082019050919050565b60006107a16028836109a9565b91507f4e6f20726567697374657220617661696c61626c6520696e204141564520676f60008301527f7665726e616e63650000000000000000000000000000000000000000000000006020830152604082019050919050565b61080381610a0a565b82525050565b600060208201905061081e600083018461061a565b92915050565b6000606082019050610839600083018661061a565b61084660208301856107fa565b81810360408301526108588184610629565b9050949350505050565b6000602082019050818103600083015261087b81610662565b9050919050565b6000602082019050818103600083015261089b816106c8565b9050919050565b600060208201905081810360008301526108bb8161072e565b9050919050565b600060208201905081810360008301526108db81610794565b9050919050565b60006020820190506108f760008301846107fa565b92915050565b600060608201905061091260008301866107fa565b61091f60208301856107fa565b61092c604083018461061a565b949350505050565b6000604051905081810181811067ffffffffffffffff8211171561095757600080fd5b8060405250919050565b600067ffffffffffffffff82111561097857600080fd5b601f19601f8301169050602081019050919050565b600081519050919050565b600082825260208201905092915050565b600082825260208201905092915050565b60006109c5826109ea565b9050919050565b60006109d7826109ea565b9050919050565b60008115159050919050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b6000819050919050565b82818337600083830152505050565b60005b83811015610a41578082015181840152602081019050610a26565b83811115610a50576000848401525b50505050565b6000601f19601f8301169050919050565b610a70816109ba565b8114610a7b57600080fd5b50565b610a87816109cc565b8114610a9257600080fd5b50565b610a9e816109de565b8114610aa957600080fd5b50565b610ab581610a0a565b8114610ac057600080fd5b5056fea264697066735822122002461891f63a290eea2e835af7f70a4eab8957ac550b65b944c0a8592fb63e7764736f6c634300060a0033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100935760003560e01c8063a4fed2ce11610066578063a4fed2ce14610124578063d0ae50ae14610156578063d1a75e0d14610188578063d3da53a4146101a6578063d5abba99146101d857610093565b806306344fe11461009857806306a3fe59146100b65780635cb8b5e3146100d45780635dfd327814610106575b600080fd5b6100a06101f8565b6040516100ad9190610809565b60405180910390f35b6100be61021c565b6040516100cb9190610809565b60405180910390f35b6100ee60048036038101906100e99190610572565b610240565b6040516100fd93929190610824565b60405180910390f35b61010e610280565b60405161011b91906108e2565b60405180910390f35b61013e600480360381019061013991906105b3565b610285565b60405161014d93929190610824565b60405180910390f35b610170600480360381019061016b9190610520565b6103b3565b60405161017f93929190610824565b60405180910390f35b6101906103f3565b60405161019d91906108e2565b60405180910390f35b6101c060048036038101906101bb9190610520565b6103f8565b6040516101cf93929190610824565b60405180910390f35b6101e0610438565b6040516101ef93929190610824565b60405180910390f35b7f000000000000000000000000000000000000000000000000000000000000000081565b7f000000000000000000000000000000000000000000000000000000000000000081565b60008060606040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401610277906108a2565b60405180910390fd5b600281565b600080606060008561029857600261029b565b60015b90506000808651146102c057858060200190518101906102bb9190610549565b6102e2565b7f00000000000000000000000000000000000000000000000000000000000000005b905060608883836040516024016102fb939291906108fd565b6040516020818303038152906040527ff50a990d000000000000000000000000000000000000000000000000000000007bffffffffffffffffffffffffffffffffffffffffffffffffffffffff19166020820180517bffffffffffffffffffffffffffffffffffffffffffffffffffffffff838183161783525050505090507f000000000000000000000000000000000000000000000000000000000000000060008281915095509550955050505093509350939050565b60008060606040517f08c379a00000000000000000000000000000000000000000000000000000000081526004016103ea90610862565b60405180910390fd5b600181565b60008060606040517f08c379a000000000000000000000000000000000000000000000000000000000815260040161042f906108c2565b60405180910390fd5b60008060606040517f08c379a000000000000000000000000000000000000000000000000000000000815260040161046f90610882565b60405180910390fd5b60008135905061048781610a67565b92915050565b60008151905061049c81610a7e565b92915050565b6000813590506104b181610a95565b92915050565b600082601f8301126104c857600080fd5b81356104db6104d682610961565b610934565b915080825260208301602083018583830111156104f757600080fd5b610502838284610a14565b50505092915050565b60008135905061051a81610aac565b92915050565b60006020828403121561053257600080fd5b600061054084828501610478565b91505092915050565b60006020828403121561055b57600080fd5b60006105698482850161048d565b91505092915050565b60006020828403121561058457600080fd5b600082013567ffffffffffffffff81111561059e57600080fd5b6105aa848285016104b7565b91505092915050565b6000806000606084860312156105c857600080fd5b60006105d68682870161050b565b93505060206105e7868287016104a2565b925050604084013567ffffffffffffffff81111561060457600080fd5b610610868287016104b7565b9150509250925092565b610623816109ba565b82525050565b60006106348261098d565b61063e8185610998565b935061064e818560208601610a23565b61065781610a56565b840191505092915050565b600061066f602a836109a9565b91507f4e6f2064656c65676174696f6e20617661696c61626c6520696e20414156452060008301527f676f7665726e616e6365000000000000000000000000000000000000000000006020830152604082019050919050565b60006106d56026836109a9565b91507f4e6f207265766f6b6520617661696c61626c6520696e204141564520676f766560008301527f726e616e636500000000000000000000000000000000000000000000000000006020830152604082019050919050565b600061073b603c836109a9565b91507f4372656174696f6e206f66206e65772070726f706f73616c206f6e6c7920617660008301527f61696c61626c6520746f20414156452067656e65736973207465616d000000006020830152604082019050919050565b60006107a16028836109a9565b91507f4e6f20726567697374657220617661696c61626c6520696e204141564520676f60008301527f7665726e616e63650000000000000000000000000000000000000000000000006020830152604082019050919050565b61080381610a0a565b82525050565b600060208201905061081e600083018461061a565b92915050565b6000606082019050610839600083018661061a565b61084660208301856107fa565b81810360408301526108588184610629565b9050949350505050565b6000602082019050818103600083015261087b81610662565b9050919050565b6000602082019050818103600083015261089b816106c8565b9050919050565b600060208201905081810360008301526108bb8161072e565b9050919050565b600060208201905081810360008301526108db81610794565b9050919050565b60006020820190506108f760008301846107fa565b92915050565b600060608201905061091260008301866107fa565b61091f60208301856107fa565b61092c604083018461061a565b949350505050565b6000604051905081810181811067ffffffffffffffff8211171561095757600080fd5b8060405250919050565b600067ffffffffffffffff82111561097857600080fd5b601f19601f8301169050602081019050919050565b600081519050919050565b600082825260208201905092915050565b600082825260208201905092915050565b60006109c5826109ea565b9050919050565b60006109d7826109ea565b9050919050565b60008115159050919050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b6000819050919050565b82818337600083830152505050565b60005b83811015610a41578082015181840152602081019050610a26565b83811115610a50576000848401525b50505050565b6000601f19601f8301169050919050565b610a70816109ba565b8114610a7b57600080fd5b50565b610a87816109cc565b8114610a9257600080fd5b50565b610a9e816109de565b8114610aa957600080fd5b50565b610ab581610a0a565b8114610ac057600080fd5b5056fea264697066735822122002461891f63a290eea2e835af7f70a4eab8957ac550b65b944c0a8592fb63e7764736f6c634300060a0033",
+  "immutableReferences": {
+    "10645": [
+      {
+        "length": 32,
+        "start": 506
+      },
+      {
+        "length": 32,
+        "start": 892
+      }
+    ],
+    "10647": [
+      {
+        "length": 32,
+        "start": 542
+      },
+      {
+        "length": 32,
+        "start": 706
+      }
+    ]
+  },
+  "sourceMap": "855:3230:74:-:0;;;1566:160;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1667:20;1645:42;;;;;;;;;;;;1709:10;1697:22;;;;;;;;;;;;1566:160;;855:3230;;5:134:-1;;89:6;83:13;74:22;;101:33;128:5;101:33;;;68:71;;;;;146:399;;;278:2;266:9;257:7;253:23;249:32;246:2;;;294:1;291;284:12;246:2;329:1;346:64;402:7;393:6;382:9;378:22;346:64;;;336:74;;308:108;447:2;465:64;521:7;512:6;501:9;497:22;465:64;;;455:74;;426:109;240:305;;;;;;552:91;;614:24;632:5;614:24;;;603:35;;597:46;;;;650:121;;723:42;716:5;712:54;701:65;;695:76;;;;778:117;847:24;865:5;847:24;;;840:5;837:35;827:2;;886:1;883;876:12;827:2;821:74;;855:3230:74;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "855:3230:74:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1206:44;;;:::i;:::-;;;;;;;;;;;;;;;;1286:34;;;:::i;:::-;;;;;;;;;;;;;;;;3879:204;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;1057:40;;;:::i;:::-;;;;;;;;;;;;;;;;2404:560;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;3070:179;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;971:36;;;:::i;:::-;;;;;;;;;;;;;;;;3353:176;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;3631:149;;;:::i;:::-;;;;;;;;;;;;;;;;;;1206:44;;;:::o;1286:34::-;;;:::o;3879:204::-;3964:7;3973;3982:12;4006:70;;;;;;;;;;;;;;;;;;;1057:40;1096:1;1057:40;:::o;2404:560::-;2508:7;2517;2526:12;2550:17;2570:8;:34;;1096:1;2570:34;;;1006:1;2570:34;2550:54;;2614:13;2646:1;2630:5;:12;:17;:60;;2673:5;2662:28;;;;;;;;;;;;;;2630:60;;;2650:9;2630:60;2614:76;;2781:21;2875:11;2888:9;2899:5;2805:100;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2781:124;;2924:19;2945:1;2948:8;2916:41;;;;;;;;;;;;2404:560;;;;;;;:::o;3070:179::-;3148:7;3157;3166:12;3190:52;;;;;;;;;;;;;;;;;;;971:36;1006:1;971:36;:::o;3353:176::-;3430:7;3439;3448:12;3472:50;;;;;;;;;;;;;;;;;;;3631:149;3683:7;3692;3701:12;3725:48;;;;;;;;;;;;;;;;;;;5:130:-1;;85:6;72:20;63:29;;97:33;124:5;97:33;;;57:78;;;;;142:150;;234:6;228:13;219:22;;246:41;281:5;246:41;;;213:79;;;;;299:124;;376:6;363:20;354:29;;388:30;412:5;388:30;;;348:75;;;;;431:440;;532:3;525:4;517:6;513:17;509:27;499:2;;550:1;547;540:12;499:2;587:6;574:20;609:64;624:48;665:6;624:48;;;609:64;;;600:73;;693:6;686:5;679:21;729:4;721:6;717:17;762:4;755:5;751:16;797:3;788:6;783:3;779:16;776:25;773:2;;;814:1;811;804:12;773:2;824:41;858:6;853:3;848;824:41;;;492:379;;;;;;;;879:130;;959:6;946:20;937:29;;971:33;998:5;971:33;;;931:78;;;;;1016:241;;1120:2;1108:9;1099:7;1095:23;1091:32;1088:2;;;1136:1;1133;1126:12;1088:2;1171:1;1188:53;1233:7;1224:6;1213:9;1209:22;1188:53;;;1178:63;;1150:97;1082:175;;;;;1264:279;;1387:2;1375:9;1366:7;1362:23;1358:32;1355:2;;;1403:1;1400;1393:12;1355:2;1438:1;1455:72;1519:7;1510:6;1499:9;1495:22;1455:72;;;1445:82;;1417:116;1349:194;;;;;1550:345;;1663:2;1651:9;1642:7;1638:23;1634:32;1631:2;;;1679:1;1676;1669:12;1631:2;1742:1;1731:9;1727:17;1714:31;1765:18;1757:6;1754:30;1751:2;;;1797:1;1794;1787:12;1751:2;1817:62;1871:7;1862:6;1851:9;1847:22;1817:62;;;1807:72;;1693:192;1625:270;;;;;1902:589;;;;2046:2;2034:9;2025:7;2021:23;2017:32;2014:2;;;2062:1;2059;2052:12;2014:2;2097:1;2114:53;2159:7;2150:6;2139:9;2135:22;2114:53;;;2104:63;;2076:97;2204:2;2222:50;2264:7;2255:6;2244:9;2240:22;2222:50;;;2212:60;;2183:95;2337:2;2326:9;2322:18;2309:32;2361:18;2353:6;2350:30;2347:2;;;2393:1;2390;2383:12;2347:2;2413:62;2467:7;2458:6;2447:9;2443:22;2413:62;;;2403:72;;2288:193;2008:483;;;;;;2498:113;2581:24;2599:5;2581:24;;;2576:3;2569:37;2563:48;;;2618:343;;2728:38;2760:5;2728:38;;;2778:70;2841:6;2836:3;2778:70;;;2771:77;;2853:52;2898:6;2893:3;2886:4;2879:5;2875:16;2853:52;;;2926:29;2948:6;2926:29;;;2921:3;2917:39;2910:46;;2708:253;;;;;;2969:379;;3129:67;3193:2;3188:3;3129:67;;;3122:74;;3229:34;3225:1;3220:3;3216:11;3209:55;3298:12;3293:2;3288:3;3284:12;3277:34;3339:2;3334:3;3330:12;3323:19;;3115:233;;;;3357:375;;3517:67;3581:2;3576:3;3517:67;;;3510:74;;3617:34;3613:1;3608:3;3604:11;3597:55;3686:8;3681:2;3676:3;3672:12;3665:30;3723:2;3718:3;3714:12;3707:19;;3503:229;;;;3741:397;;3901:67;3965:2;3960:3;3901:67;;;3894:74;;4001:34;3997:1;3992:3;3988:11;3981:55;4070:30;4065:2;4060:3;4056:12;4049:52;4129:2;4124:3;4120:12;4113:19;;3887:251;;;;4147:377;;4307:67;4371:2;4366:3;4307:67;;;4300:74;;4407:34;4403:1;4398:3;4394:11;4387:55;4476:10;4471:2;4466:3;4462:12;4455:32;4515:2;4510:3;4506:12;4499:19;;4293:231;;;;4532:113;4615:24;4633:5;4615:24;;;4610:3;4603:37;4597:48;;;4652:222;;4779:2;4768:9;4764:18;4756:26;;4793:71;4861:1;4850:9;4846:17;4837:6;4793:71;;;4750:124;;;;;4881:528;;5082:2;5071:9;5067:18;5059:26;;5096:71;5164:1;5153:9;5149:17;5140:6;5096:71;;;5178:72;5246:2;5235:9;5231:18;5222:6;5178:72;;;5298:9;5292:4;5288:20;5283:2;5272:9;5268:18;5261:48;5323:76;5394:4;5385:6;5323:76;;;5315:84;;5053:356;;;;;;;5416:416;;5616:2;5605:9;5601:18;5593:26;;5666:9;5660:4;5656:20;5652:1;5641:9;5637:17;5630:47;5691:131;5817:4;5691:131;;;5683:139;;5587:245;;;;5839:416;;6039:2;6028:9;6024:18;6016:26;;6089:9;6083:4;6079:20;6075:1;6064:9;6060:17;6053:47;6114:131;6240:4;6114:131;;;6106:139;;6010:245;;;;6262:416;;6462:2;6451:9;6447:18;6439:26;;6512:9;6506:4;6502:20;6498:1;6487:9;6483:17;6476:47;6537:131;6663:4;6537:131;;;6529:139;;6433:245;;;;6685:416;;6885:2;6874:9;6870:18;6862:26;;6935:9;6929:4;6925:20;6921:1;6910:9;6906:17;6899:47;6960:131;7086:4;6960:131;;;6952:139;;6856:245;;;;7108:222;;7235:2;7224:9;7220:18;7212:26;;7249:71;7317:1;7306:9;7302:17;7293:6;7249:71;;;7206:124;;;;;7337:444;;7520:2;7509:9;7505:18;7497:26;;7534:71;7602:1;7591:9;7587:17;7578:6;7534:71;;;7616:72;7684:2;7673:9;7669:18;7660:6;7616:72;;;7699;7767:2;7756:9;7752:18;7743:6;7699:72;;;7491:290;;;;;;;7788:256;;7850:2;7844:9;7834:19;;7888:4;7880:6;7876:17;7987:6;7975:10;7972:22;7951:18;7939:10;7936:34;7933:62;7930:2;;;8008:1;8005;7998:12;7930:2;8028:10;8024:2;8017:22;7828:216;;;;;8051:321;;8194:18;8186:6;8183:30;8180:2;;;8226:1;8223;8216:12;8180:2;8293:4;8289:9;8282:4;8274:6;8270:17;8266:33;8258:41;;8357:4;8351;8347:15;8339:23;;8117:255;;;;8379:121;;8472:5;8466:12;8456:22;;8437:63;;;;8508:162;;8622:6;8617:3;8610:19;8659:4;8654:3;8650:14;8635:29;;8603:67;;;;;8679:163;;8794:6;8789:3;8782:19;8831:4;8826:3;8822:14;8807:29;;8775:67;;;;;8850:91;;8912:24;8930:5;8912:24;;;8901:35;;8895:46;;;;8948:99;;9018:24;9036:5;9018:24;;;9007:35;;9001:46;;;;9054:85;;9127:5;9120:13;9113:21;9102:32;;9096:43;;;;9146:121;;9219:42;9212:5;9208:54;9197:65;;9191:76;;;;9274:72;;9336:5;9325:16;;9319:27;;;;9354:145;9435:6;9430:3;9425;9412:30;9491:1;9482:6;9477:3;9473:16;9466:27;9405:94;;;;9508:268;9573:1;9580:101;9594:6;9591:1;9588:13;9580:101;;;9670:1;9665:3;9661:11;9655:18;9651:1;9646:3;9642:11;9635:39;9616:2;9613:1;9609:10;9604:15;;9580:101;;;9696:6;9693:1;9690:13;9687:2;;;9761:1;9752:6;9747:3;9743:16;9736:27;9687:2;9557:219;;;;;9784:97;;9872:2;9868:7;9863:2;9856:5;9852:14;9848:28;9838:38;;9832:49;;;;9889:117;9958:24;9976:5;9958:24;;;9951:5;9948:35;9938:2;;9997:1;9994;9987:12;9938:2;9932:74;;10013:133;10090:32;10116:5;10090:32;;;10083:5;10080:43;10070:2;;10137:1;10134;10127:12;10070:2;10064:82;;10153:111;10219:21;10234:5;10219:21;;;10212:5;10209:32;10199:2;;10255:1;10252;10245:12;10199:2;10193:71;;10271:117;10340:24;10358:5;10340:24;;;10333:5;10330:35;10320:2;;10379:1;10376;10369:12;10320:2;10314:74;",
+  "source": "/*\n    Copyright 2020 Set Labs Inc.\n\n    Licensed under the Apache License, Version 2.0 (the \"License\");\n    you may not use this file except in compliance with the License.\n    You may obtain a copy of the License at\n\n    http://www.apache.org/licenses/LICENSE-2.0\n\n    Unless required by applicable law or agreed to in writing, software\n    distributed under the License is distributed on an \"AS IS\" BASIS,\n    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n    See the License for the specific language governing permissions and\n    limitations under the License.\n\n    SPDX-License-Identifier: Apache License, Version 2.0\n*/\n\npragma solidity 0.6.10;\npragma experimental \"ABIEncoderV2\";\n\n\n/**\n * @title AaveGovernanceAdapter\n * @author Set Protocol\n *\n * Governance adapter for Aave governance that returns data for voting\n */\ncontract AaveGovernanceAdapter {\n\n    /* ============ Constants ============ */\n\n    // 1 is a vote for in AAVE\n    uint256 public constant VOTE_FOR = 1;\n\n    // 2 represents a vote against in AAVE\n    uint256 public constant VOTE_AGAINST = 2;\n\n    /* ============ State Variables ============ */\n\n    // Address of Aave proto governance contract\n    address public immutable aaveProtoGovernance;\n\n    // Address of Aave token\n    address public immutable aaveToken;\n\n    /* ============ Constructor ============ */\n\n    /**\n     * Set state variables\n     *\n     * @param _aaveProtoGovernance    Address of AAVE proto governance contract\n     * @param _aaveToken              Address of AAVE token\n     */\n    constructor(address _aaveProtoGovernance, address _aaveToken) public {\n        aaveProtoGovernance = _aaveProtoGovernance;\n        aaveToken = _aaveToken;\n    }\n\n    /* ============ External Getter Functions ============ */\n\n    /**\n     * Generates the calldata to vote on a proposal. If byte data is empty, then vote using AAVE token, otherwise, vote using the asset passed\n     * into the function\n     *\n     * @param _proposalId           ID of the proposal to vote on\n     * @param _support              Boolean indicating whether to support proposal\n     * @param _data                 Byte data containing the asset to vote with\n     *\n     * @return address              Target contract address\n     * @return uint256              Total quantity of ETH (Set to 0)\n     * @return bytes                Propose calldata\n     */\n    function getVoteCalldata(uint256 _proposalId, bool _support, bytes memory _data) external view returns (address, uint256, bytes memory) {\n        uint256 voteValue = _support ? VOTE_FOR : VOTE_AGAINST;\n        address asset = _data.length == 0 ? aaveToken : abi.decode(_data, (address));\n\n        // submitVoteByVoter(uint256 _proposalId, uint256 _vote, IERC20 _asset)\n        bytes memory callData = abi.encodeWithSignature(\"submitVoteByVoter(uint256,uint256,address)\", _proposalId, voteValue, asset);\n\n        return (aaveProtoGovernance, 0, callData);\n    }\n\n    /**\n     * Reverts as AAVE currently does not have a delegation mechanism in governance\n     */\n    function getDelegateCalldata(address /* _delegatee */) external view returns (address, uint256, bytes memory) {\n        revert(\"No delegation available in AAVE governance\");\n    }\n\n    /**\n     * Reverts as AAVE currently does not have a register mechanism in governance\n     */\n    function getRegisterCalldata(address /* _setToken */) external view returns (address, uint256, bytes memory) {\n        revert(\"No register available in AAVE governance\");\n    }\n\n    /**\n     * Reverts as AAVE currently does not have a revoke mechanism in governance\n     */\n    function getRevokeCalldata() external view returns (address, uint256, bytes memory) {\n        revert(\"No revoke available in AAVE governance\");\n    }\n\n    /**\n     * Reverts as creating a proposal is only available to AAVE genesis team\n     */\n    function getProposeCalldata(bytes memory /* _proposalData */) external view returns (address, uint256, bytes memory) {\n        revert(\"Creation of new proposal only available to AAVE genesis team\");\n    }\n}\n",
+  "sourcePath": "/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/protocol/integration/AaveGovernanceAdapter.sol",
+  "ast": {
+    "absolutePath": "/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/protocol/integration/AaveGovernanceAdapter.sol",
+    "exportedSymbols": {
+      "AaveGovernanceAdapter": [
+        10786
+      ]
+    },
+    "id": 10787,
+    "license": "Apache License",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 10635,
+        "literals": [
+          "solidity",
+          "0.6",
+          ".10"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "655:23:74"
+      },
+      {
+        "id": 10636,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "679:35:74"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": {
+          "id": 10637,
+          "nodeType": "StructuredDocumentation",
+          "src": "717:137:74",
+          "text": " @title AaveGovernanceAdapter\n @author Set Protocol\n Governance adapter for Aave governance that returns data for voting"
+        },
+        "fullyImplemented": true,
+        "id": 10786,
+        "linearizedBaseContracts": [
+          10786
+        ],
+        "name": "AaveGovernanceAdapter",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": true,
+            "functionSelector": "d1a75e0d",
+            "id": 10640,
+            "mutability": "constant",
+            "name": "VOTE_FOR",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 10786,
+            "src": "971:36:74",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 10638,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "971:7:74",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "31",
+              "id": 10639,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "1006:1:74",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_1_by_1",
+                "typeString": "int_const 1"
+              },
+              "value": "1"
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": true,
+            "functionSelector": "5dfd3278",
+            "id": 10643,
+            "mutability": "constant",
+            "name": "VOTE_AGAINST",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 10786,
+            "src": "1057:40:74",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 10641,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "1057:7:74",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "32",
+              "id": 10642,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "1096:1:74",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_2_by_1",
+                "typeString": "int_const 2"
+              },
+              "value": "2"
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "functionSelector": "06344fe1",
+            "id": 10645,
+            "mutability": "immutable",
+            "name": "aaveProtoGovernance",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 10786,
+            "src": "1206:44:74",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 10644,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "1206:7:74",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "functionSelector": "06a3fe59",
+            "id": 10647,
+            "mutability": "immutable",
+            "name": "aaveToken",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 10786,
+            "src": "1286:34:74",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 10646,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "1286:7:74",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 10663,
+              "nodeType": "Block",
+              "src": "1635:91:74",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 10657,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 10655,
+                      "name": "aaveProtoGovernance",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 10645,
+                      "src": "1645:19:74",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 10656,
+                      "name": "_aaveProtoGovernance",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 10650,
+                      "src": "1667:20:74",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "1645:42:74",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 10658,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1645:42:74"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 10661,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 10659,
+                      "name": "aaveToken",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 10647,
+                      "src": "1697:9:74",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 10660,
+                      "name": "_aaveToken",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 10652,
+                      "src": "1709:10:74",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "1697:22:74",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 10662,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1697:22:74"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 10648,
+              "nodeType": "StructuredDocumentation",
+              "src": "1376:185:74",
+              "text": " Set state variables\n @param _aaveProtoGovernance    Address of AAVE proto governance contract\n @param _aaveToken              Address of AAVE token"
+            },
+            "id": 10664,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 10653,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10650,
+                  "mutability": "mutable",
+                  "name": "_aaveProtoGovernance",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10664,
+                  "src": "1578:28:74",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10649,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1578:7:74",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 10652,
+                  "mutability": "mutable",
+                  "name": "_aaveToken",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10664,
+                  "src": "1608:18:74",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10651,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1608:7:74",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1577:50:74"
+            },
+            "returnParameters": {
+              "id": 10654,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1635:0:74"
+            },
+            "scope": 10786,
+            "src": "1566:160:74",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 10718,
+              "nodeType": "Block",
+              "src": "2540:424:74",
+              "statements": [
+                {
+                  "assignments": [
+                    10681
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 10681,
+                      "mutability": "mutable",
+                      "name": "voteValue",
+                      "nodeType": "VariableDeclaration",
+                      "overrides": null,
+                      "scope": 10718,
+                      "src": "2550:17:74",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "typeName": {
+                        "id": 10680,
+                        "name": "uint256",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "2550:7:74",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 10686,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "condition": {
+                      "argumentTypes": null,
+                      "id": 10682,
+                      "name": "_support",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 10669,
+                      "src": "2570:8:74",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "falseExpression": {
+                      "argumentTypes": null,
+                      "id": 10684,
+                      "name": "VOTE_AGAINST",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 10643,
+                      "src": "2592:12:74",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 10685,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "Conditional",
+                    "src": "2570:34:74",
+                    "trueExpression": {
+                      "argumentTypes": null,
+                      "id": 10683,
+                      "name": "VOTE_FOR",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 10640,
+                      "src": "2581:8:74",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "2550:54:74"
+                },
+                {
+                  "assignments": [
+                    10688
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 10688,
+                      "mutability": "mutable",
+                      "name": "asset",
+                      "nodeType": "VariableDeclaration",
+                      "overrides": null,
+                      "scope": 10718,
+                      "src": "2614:13:74",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      },
+                      "typeName": {
+                        "id": 10687,
+                        "name": "address",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "2614:7:74",
+                        "stateMutability": "nonpayable",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 10702,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "condition": {
+                      "argumentTypes": null,
+                      "commonType": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "id": 10692,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "leftExpression": {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 10689,
+                          "name": "_data",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 10671,
+                          "src": "2630:5:74",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bytes_memory_ptr",
+                            "typeString": "bytes memory"
+                          }
+                        },
+                        "id": 10690,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "length",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "2630:12:74",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "nodeType": "BinaryOperation",
+                      "operator": "==",
+                      "rightExpression": {
+                        "argumentTypes": null,
+                        "hexValue": "30",
+                        "id": 10691,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "2646:1:74",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_0_by_1",
+                          "typeString": "int_const 0"
+                        },
+                        "value": "0"
+                      },
+                      "src": "2630:17:74",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "falseExpression": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 10696,
+                          "name": "_data",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 10671,
+                          "src": "2673:5:74",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bytes_memory_ptr",
+                            "typeString": "bytes memory"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "components": [
+                            {
+                              "argumentTypes": null,
+                              "id": 10698,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "nodeType": "ElementaryTypeNameExpression",
+                              "src": "2681:7:74",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_type$_t_address_$",
+                                "typeString": "type(address)"
+                              },
+                              "typeName": {
+                                "id": 10697,
+                                "name": "address",
+                                "nodeType": "ElementaryTypeName",
+                                "src": "2681:7:74",
+                                "typeDescriptions": {
+                                  "typeIdentifier": null,
+                                  "typeString": null
+                                }
+                              }
+                            }
+                          ],
+                          "id": 10699,
+                          "isConstant": false,
+                          "isInlineArray": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "nodeType": "TupleExpression",
+                          "src": "2680:9:74",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_address_$",
+                            "typeString": "type(address)"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_bytes_memory_ptr",
+                            "typeString": "bytes memory"
+                          },
+                          {
+                            "typeIdentifier": "t_type$_t_address_$",
+                            "typeString": "type(address)"
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 10694,
+                          "name": "abi",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": -1,
+                          "src": "2662:3:74",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_abi",
+                            "typeString": "abi"
+                          }
+                        },
+                        "id": 10695,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "memberName": "decode",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "2662:10:74",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_abidecode_pure$__$returns$__$",
+                          "typeString": "function () pure"
+                        }
+                      },
+                      "id": 10700,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "2662:28:74",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "id": 10701,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "Conditional",
+                    "src": "2630:60:74",
+                    "trueExpression": {
+                      "argumentTypes": null,
+                      "id": 10693,
+                      "name": "aaveToken",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 10647,
+                      "src": "2650:9:74",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "2614:76:74"
+                },
+                {
+                  "assignments": [
+                    10704
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 10704,
+                      "mutability": "mutable",
+                      "name": "callData",
+                      "nodeType": "VariableDeclaration",
+                      "overrides": null,
+                      "scope": 10718,
+                      "src": "2781:21:74",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes_memory_ptr",
+                        "typeString": "bytes"
+                      },
+                      "typeName": {
+                        "id": 10703,
+                        "name": "bytes",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "2781:5:74",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_storage_ptr",
+                          "typeString": "bytes"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 10712,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "7375626d6974566f74654279566f7465722875696e743235362c75696e743235362c6164647265737329",
+                        "id": 10707,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "2829:44:74",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_f50a990dc321346618d9fa679b0176ee7419d4a0b06826b93fa7479aaab807ad",
+                          "typeString": "literal_string \"submitVoteByVoter(uint256,uint256,address)\""
+                        },
+                        "value": "submitVoteByVoter(uint256,uint256,address)"
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 10708,
+                        "name": "_proposalId",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 10667,
+                        "src": "2875:11:74",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 10709,
+                        "name": "voteValue",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 10681,
+                        "src": "2888:9:74",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 10710,
+                        "name": "asset",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 10688,
+                        "src": "2899:5:74",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_stringliteral_f50a990dc321346618d9fa679b0176ee7419d4a0b06826b93fa7479aaab807ad",
+                          "typeString": "literal_string \"submitVoteByVoter(uint256,uint256,address)\""
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 10705,
+                        "name": "abi",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": -1,
+                        "src": "2805:3:74",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_abi",
+                          "typeString": "abi"
+                        }
+                      },
+                      "id": 10706,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "memberName": "encodeWithSignature",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "2805:23:74",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_abiencodewithsignature_pure$_t_string_memory_ptr_$returns$_t_bytes_memory_ptr_$",
+                        "typeString": "function (string memory) pure returns (bytes memory)"
+                      }
+                    },
+                    "id": 10711,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "2805:100:74",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_memory_ptr",
+                      "typeString": "bytes memory"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "2781:124:74"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "components": [
+                      {
+                        "argumentTypes": null,
+                        "id": 10713,
+                        "name": "aaveProtoGovernance",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 10645,
+                        "src": "2924:19:74",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "30",
+                        "id": 10714,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "2945:1:74",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_0_by_1",
+                          "typeString": "int_const 0"
+                        },
+                        "value": "0"
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 10715,
+                        "name": "callData",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 10704,
+                        "src": "2948:8:74",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      }
+                    ],
+                    "id": 10716,
+                    "isConstant": false,
+                    "isInlineArray": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "TupleExpression",
+                    "src": "2923:34:74",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$_t_address_$_t_rational_0_by_1_$_t_bytes_memory_ptr_$",
+                      "typeString": "tuple(address,int_const 0,bytes memory)"
+                    }
+                  },
+                  "functionReturnParameters": 10679,
+                  "id": 10717,
+                  "nodeType": "Return",
+                  "src": "2916:41:74"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 10665,
+              "nodeType": "StructuredDocumentation",
+              "src": "1795:604:74",
+              "text": " Generates the calldata to vote on a proposal. If byte data is empty, then vote using AAVE token, otherwise, vote using the asset passed\n into the function\n @param _proposalId           ID of the proposal to vote on\n @param _support              Boolean indicating whether to support proposal\n @param _data                 Byte data containing the asset to vote with\n @return address              Target contract address\n @return uint256              Total quantity of ETH (Set to 0)\n @return bytes                Propose calldata"
+            },
+            "functionSelector": "a4fed2ce",
+            "id": 10719,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getVoteCalldata",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 10672,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10667,
+                  "mutability": "mutable",
+                  "name": "_proposalId",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10719,
+                  "src": "2429:19:74",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 10666,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2429:7:74",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 10669,
+                  "mutability": "mutable",
+                  "name": "_support",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10719,
+                  "src": "2450:13:74",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 10668,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2450:4:74",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 10671,
+                  "mutability": "mutable",
+                  "name": "_data",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10719,
+                  "src": "2465:18:74",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 10670,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2465:5:74",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2428:56:74"
+            },
+            "returnParameters": {
+              "id": 10679,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10674,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10719,
+                  "src": "2508:7:74",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10673,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2508:7:74",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 10676,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10719,
+                  "src": "2517:7:74",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 10675,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2517:7:74",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 10678,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10719,
+                  "src": "2526:12:74",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 10677,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2526:5:74",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2507:32:74"
+            },
+            "scope": 10786,
+            "src": "2404:560:74",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 10735,
+              "nodeType": "Block",
+              "src": "3180:69:74",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "4e6f2064656c65676174696f6e20617661696c61626c6520696e204141564520676f7665726e616e6365",
+                        "id": 10732,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "3197:44:74",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_5cfe90159dd708aa4fb716327387374ca1ced8fbd2a3dbb7d3c63b6b2209013f",
+                          "typeString": "literal_string \"No delegation available in AAVE governance\""
+                        },
+                        "value": "No delegation available in AAVE governance"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_stringliteral_5cfe90159dd708aa4fb716327387374ca1ced8fbd2a3dbb7d3c63b6b2209013f",
+                          "typeString": "literal_string \"No delegation available in AAVE governance\""
+                        }
+                      ],
+                      "id": 10731,
+                      "name": "revert",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        -19,
+                        -19
+                      ],
+                      "referencedDeclaration": -19,
+                      "src": "3190:6:74",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_revert_pure$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (string memory) pure"
+                      }
+                    },
+                    "id": 10733,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "3190:52:74",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 10734,
+                  "nodeType": "ExpressionStatement",
+                  "src": "3190:52:74"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 10720,
+              "nodeType": "StructuredDocumentation",
+              "src": "2970:95:74",
+              "text": " Reverts as AAVE currently does not have a delegation mechanism in governance"
+            },
+            "functionSelector": "d0ae50ae",
+            "id": 10736,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getDelegateCalldata",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 10723,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10722,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10736,
+                  "src": "3099:7:74",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10721,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3099:7:74",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3098:26:74"
+            },
+            "returnParameters": {
+              "id": 10730,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10725,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10736,
+                  "src": "3148:7:74",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10724,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3148:7:74",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 10727,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10736,
+                  "src": "3157:7:74",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 10726,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3157:7:74",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 10729,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10736,
+                  "src": "3166:12:74",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 10728,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3166:5:74",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3147:32:74"
+            },
+            "scope": 10786,
+            "src": "3070:179:74",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 10752,
+              "nodeType": "Block",
+              "src": "3462:67:74",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "4e6f20726567697374657220617661696c61626c6520696e204141564520676f7665726e616e6365",
+                        "id": 10749,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "3479:42:74",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_f7e3a13fd3392c7bc2bc6ca9f16d70896156eaf1a4ff1179d659c00665c7ac8e",
+                          "typeString": "literal_string \"No register available in AAVE governance\""
+                        },
+                        "value": "No register available in AAVE governance"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_stringliteral_f7e3a13fd3392c7bc2bc6ca9f16d70896156eaf1a4ff1179d659c00665c7ac8e",
+                          "typeString": "literal_string \"No register available in AAVE governance\""
+                        }
+                      ],
+                      "id": 10748,
+                      "name": "revert",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        -19,
+                        -19
+                      ],
+                      "referencedDeclaration": -19,
+                      "src": "3472:6:74",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_revert_pure$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (string memory) pure"
+                      }
+                    },
+                    "id": 10750,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "3472:50:74",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 10751,
+                  "nodeType": "ExpressionStatement",
+                  "src": "3472:50:74"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 10737,
+              "nodeType": "StructuredDocumentation",
+              "src": "3255:93:74",
+              "text": " Reverts as AAVE currently does not have a register mechanism in governance"
+            },
+            "functionSelector": "d3da53a4",
+            "id": 10753,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getRegisterCalldata",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 10740,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10739,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10753,
+                  "src": "3382:7:74",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10738,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3382:7:74",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3381:25:74"
+            },
+            "returnParameters": {
+              "id": 10747,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10742,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10753,
+                  "src": "3430:7:74",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10741,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3430:7:74",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 10744,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10753,
+                  "src": "3439:7:74",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 10743,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3439:7:74",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 10746,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10753,
+                  "src": "3448:12:74",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 10745,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3448:5:74",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3429:32:74"
+            },
+            "scope": 10786,
+            "src": "3353:176:74",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 10767,
+              "nodeType": "Block",
+              "src": "3715:65:74",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "4e6f207265766f6b6520617661696c61626c6520696e204141564520676f7665726e616e6365",
+                        "id": 10764,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "3732:40:74",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_bfca77a7eea8b8885993c539b7642924dbe2977336b5fd0b54ec1c0918a13bbe",
+                          "typeString": "literal_string \"No revoke available in AAVE governance\""
+                        },
+                        "value": "No revoke available in AAVE governance"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_stringliteral_bfca77a7eea8b8885993c539b7642924dbe2977336b5fd0b54ec1c0918a13bbe",
+                          "typeString": "literal_string \"No revoke available in AAVE governance\""
+                        }
+                      ],
+                      "id": 10763,
+                      "name": "revert",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        -19,
+                        -19
+                      ],
+                      "referencedDeclaration": -19,
+                      "src": "3725:6:74",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_revert_pure$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (string memory) pure"
+                      }
+                    },
+                    "id": 10765,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "3725:48:74",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 10766,
+                  "nodeType": "ExpressionStatement",
+                  "src": "3725:48:74"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 10754,
+              "nodeType": "StructuredDocumentation",
+              "src": "3535:91:74",
+              "text": " Reverts as AAVE currently does not have a revoke mechanism in governance"
+            },
+            "functionSelector": "d5abba99",
+            "id": 10768,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getRevokeCalldata",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 10755,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3657:2:74"
+            },
+            "returnParameters": {
+              "id": 10762,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10757,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10768,
+                  "src": "3683:7:74",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10756,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3683:7:74",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 10759,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10768,
+                  "src": "3692:7:74",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 10758,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3692:7:74",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 10761,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10768,
+                  "src": "3701:12:74",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 10760,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3701:5:74",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3682:32:74"
+            },
+            "scope": 10786,
+            "src": "3631:149:74",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 10784,
+              "nodeType": "Block",
+              "src": "3996:87:74",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "4372656174696f6e206f66206e65772070726f706f73616c206f6e6c7920617661696c61626c6520746f20414156452067656e65736973207465616d",
+                        "id": 10781,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "4013:62:74",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_c4d85c3d2981db171dd48e6277e3bf9893c2f4b2d7420d1257d8eeae37f1d415",
+                          "typeString": "literal_string \"Creation of new proposal only available to AAVE genesis team\""
+                        },
+                        "value": "Creation of new proposal only available to AAVE genesis team"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_stringliteral_c4d85c3d2981db171dd48e6277e3bf9893c2f4b2d7420d1257d8eeae37f1d415",
+                          "typeString": "literal_string \"Creation of new proposal only available to AAVE genesis team\""
+                        }
+                      ],
+                      "id": 10780,
+                      "name": "revert",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        -19,
+                        -19
+                      ],
+                      "referencedDeclaration": -19,
+                      "src": "4006:6:74",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_revert_pure$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (string memory) pure"
+                      }
+                    },
+                    "id": 10782,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "4006:70:74",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 10783,
+                  "nodeType": "ExpressionStatement",
+                  "src": "4006:70:74"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 10769,
+              "nodeType": "StructuredDocumentation",
+              "src": "3786:88:74",
+              "text": " Reverts as creating a proposal is only available to AAVE genesis team"
+            },
+            "functionSelector": "5cb8b5e3",
+            "id": 10785,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getProposeCalldata",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 10772,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10771,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10785,
+                  "src": "3907:12:74",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 10770,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3907:5:74",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3906:34:74"
+            },
+            "returnParameters": {
+              "id": 10779,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10774,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10785,
+                  "src": "3964:7:74",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10773,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3964:7:74",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 10776,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10785,
+                  "src": "3973:7:74",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 10775,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3973:7:74",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 10778,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10785,
+                  "src": "3982:12:74",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 10777,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3982:5:74",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3963:32:74"
+            },
+            "scope": 10786,
+            "src": "3879:204:74",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 10787,
+        "src": "855:3230:74"
+      }
+    ],
+    "src": "655:3431:74"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/protocol/integration/AaveGovernanceAdapter.sol",
+    "exportedSymbols": {
+      "AaveGovernanceAdapter": [
+        10786
+      ]
+    },
+    "id": 10787,
+    "license": "Apache License",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 10635,
+        "literals": [
+          "solidity",
+          "0.6",
+          ".10"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "655:23:74"
+      },
+      {
+        "id": 10636,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "679:35:74"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": {
+          "id": 10637,
+          "nodeType": "StructuredDocumentation",
+          "src": "717:137:74",
+          "text": " @title AaveGovernanceAdapter\n @author Set Protocol\n Governance adapter for Aave governance that returns data for voting"
+        },
+        "fullyImplemented": true,
+        "id": 10786,
+        "linearizedBaseContracts": [
+          10786
+        ],
+        "name": "AaveGovernanceAdapter",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": true,
+            "functionSelector": "d1a75e0d",
+            "id": 10640,
+            "mutability": "constant",
+            "name": "VOTE_FOR",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 10786,
+            "src": "971:36:74",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 10638,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "971:7:74",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "31",
+              "id": 10639,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "1006:1:74",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_1_by_1",
+                "typeString": "int_const 1"
+              },
+              "value": "1"
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": true,
+            "functionSelector": "5dfd3278",
+            "id": 10643,
+            "mutability": "constant",
+            "name": "VOTE_AGAINST",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 10786,
+            "src": "1057:40:74",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 10641,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "1057:7:74",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "32",
+              "id": 10642,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "1096:1:74",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_2_by_1",
+                "typeString": "int_const 2"
+              },
+              "value": "2"
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "functionSelector": "06344fe1",
+            "id": 10645,
+            "mutability": "immutable",
+            "name": "aaveProtoGovernance",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 10786,
+            "src": "1206:44:74",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 10644,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "1206:7:74",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "functionSelector": "06a3fe59",
+            "id": 10647,
+            "mutability": "immutable",
+            "name": "aaveToken",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 10786,
+            "src": "1286:34:74",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 10646,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "1286:7:74",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 10663,
+              "nodeType": "Block",
+              "src": "1635:91:74",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 10657,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 10655,
+                      "name": "aaveProtoGovernance",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 10645,
+                      "src": "1645:19:74",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 10656,
+                      "name": "_aaveProtoGovernance",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 10650,
+                      "src": "1667:20:74",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "1645:42:74",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 10658,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1645:42:74"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 10661,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 10659,
+                      "name": "aaveToken",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 10647,
+                      "src": "1697:9:74",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 10660,
+                      "name": "_aaveToken",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 10652,
+                      "src": "1709:10:74",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "1697:22:74",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 10662,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1697:22:74"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 10648,
+              "nodeType": "StructuredDocumentation",
+              "src": "1376:185:74",
+              "text": " Set state variables\n @param _aaveProtoGovernance    Address of AAVE proto governance contract\n @param _aaveToken              Address of AAVE token"
+            },
+            "id": 10664,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 10653,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10650,
+                  "mutability": "mutable",
+                  "name": "_aaveProtoGovernance",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10664,
+                  "src": "1578:28:74",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10649,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1578:7:74",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 10652,
+                  "mutability": "mutable",
+                  "name": "_aaveToken",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10664,
+                  "src": "1608:18:74",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10651,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1608:7:74",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1577:50:74"
+            },
+            "returnParameters": {
+              "id": 10654,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1635:0:74"
+            },
+            "scope": 10786,
+            "src": "1566:160:74",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 10718,
+              "nodeType": "Block",
+              "src": "2540:424:74",
+              "statements": [
+                {
+                  "assignments": [
+                    10681
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 10681,
+                      "mutability": "mutable",
+                      "name": "voteValue",
+                      "nodeType": "VariableDeclaration",
+                      "overrides": null,
+                      "scope": 10718,
+                      "src": "2550:17:74",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "typeName": {
+                        "id": 10680,
+                        "name": "uint256",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "2550:7:74",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 10686,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "condition": {
+                      "argumentTypes": null,
+                      "id": 10682,
+                      "name": "_support",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 10669,
+                      "src": "2570:8:74",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "falseExpression": {
+                      "argumentTypes": null,
+                      "id": 10684,
+                      "name": "VOTE_AGAINST",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 10643,
+                      "src": "2592:12:74",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 10685,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "Conditional",
+                    "src": "2570:34:74",
+                    "trueExpression": {
+                      "argumentTypes": null,
+                      "id": 10683,
+                      "name": "VOTE_FOR",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 10640,
+                      "src": "2581:8:74",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "2550:54:74"
+                },
+                {
+                  "assignments": [
+                    10688
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 10688,
+                      "mutability": "mutable",
+                      "name": "asset",
+                      "nodeType": "VariableDeclaration",
+                      "overrides": null,
+                      "scope": 10718,
+                      "src": "2614:13:74",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      },
+                      "typeName": {
+                        "id": 10687,
+                        "name": "address",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "2614:7:74",
+                        "stateMutability": "nonpayable",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 10702,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "condition": {
+                      "argumentTypes": null,
+                      "commonType": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "id": 10692,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "leftExpression": {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 10689,
+                          "name": "_data",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 10671,
+                          "src": "2630:5:74",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bytes_memory_ptr",
+                            "typeString": "bytes memory"
+                          }
+                        },
+                        "id": 10690,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "length",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "2630:12:74",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "nodeType": "BinaryOperation",
+                      "operator": "==",
+                      "rightExpression": {
+                        "argumentTypes": null,
+                        "hexValue": "30",
+                        "id": 10691,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "2646:1:74",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_0_by_1",
+                          "typeString": "int_const 0"
+                        },
+                        "value": "0"
+                      },
+                      "src": "2630:17:74",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "falseExpression": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 10696,
+                          "name": "_data",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 10671,
+                          "src": "2673:5:74",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bytes_memory_ptr",
+                            "typeString": "bytes memory"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "components": [
+                            {
+                              "argumentTypes": null,
+                              "id": 10698,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "nodeType": "ElementaryTypeNameExpression",
+                              "src": "2681:7:74",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_type$_t_address_$",
+                                "typeString": "type(address)"
+                              },
+                              "typeName": {
+                                "id": 10697,
+                                "name": "address",
+                                "nodeType": "ElementaryTypeName",
+                                "src": "2681:7:74",
+                                "typeDescriptions": {
+                                  "typeIdentifier": null,
+                                  "typeString": null
+                                }
+                              }
+                            }
+                          ],
+                          "id": 10699,
+                          "isConstant": false,
+                          "isInlineArray": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "nodeType": "TupleExpression",
+                          "src": "2680:9:74",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_address_$",
+                            "typeString": "type(address)"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_bytes_memory_ptr",
+                            "typeString": "bytes memory"
+                          },
+                          {
+                            "typeIdentifier": "t_type$_t_address_$",
+                            "typeString": "type(address)"
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 10694,
+                          "name": "abi",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": -1,
+                          "src": "2662:3:74",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_abi",
+                            "typeString": "abi"
+                          }
+                        },
+                        "id": 10695,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "memberName": "decode",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "2662:10:74",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_abidecode_pure$__$returns$__$",
+                          "typeString": "function () pure"
+                        }
+                      },
+                      "id": 10700,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "2662:28:74",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "id": 10701,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "Conditional",
+                    "src": "2630:60:74",
+                    "trueExpression": {
+                      "argumentTypes": null,
+                      "id": 10693,
+                      "name": "aaveToken",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 10647,
+                      "src": "2650:9:74",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "2614:76:74"
+                },
+                {
+                  "assignments": [
+                    10704
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 10704,
+                      "mutability": "mutable",
+                      "name": "callData",
+                      "nodeType": "VariableDeclaration",
+                      "overrides": null,
+                      "scope": 10718,
+                      "src": "2781:21:74",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes_memory_ptr",
+                        "typeString": "bytes"
+                      },
+                      "typeName": {
+                        "id": 10703,
+                        "name": "bytes",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "2781:5:74",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_storage_ptr",
+                          "typeString": "bytes"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 10712,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "7375626d6974566f74654279566f7465722875696e743235362c75696e743235362c6164647265737329",
+                        "id": 10707,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "2829:44:74",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_f50a990dc321346618d9fa679b0176ee7419d4a0b06826b93fa7479aaab807ad",
+                          "typeString": "literal_string \"submitVoteByVoter(uint256,uint256,address)\""
+                        },
+                        "value": "submitVoteByVoter(uint256,uint256,address)"
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 10708,
+                        "name": "_proposalId",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 10667,
+                        "src": "2875:11:74",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 10709,
+                        "name": "voteValue",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 10681,
+                        "src": "2888:9:74",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 10710,
+                        "name": "asset",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 10688,
+                        "src": "2899:5:74",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_stringliteral_f50a990dc321346618d9fa679b0176ee7419d4a0b06826b93fa7479aaab807ad",
+                          "typeString": "literal_string \"submitVoteByVoter(uint256,uint256,address)\""
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 10705,
+                        "name": "abi",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": -1,
+                        "src": "2805:3:74",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_abi",
+                          "typeString": "abi"
+                        }
+                      },
+                      "id": 10706,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "memberName": "encodeWithSignature",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "2805:23:74",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_abiencodewithsignature_pure$_t_string_memory_ptr_$returns$_t_bytes_memory_ptr_$",
+                        "typeString": "function (string memory) pure returns (bytes memory)"
+                      }
+                    },
+                    "id": 10711,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "2805:100:74",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_memory_ptr",
+                      "typeString": "bytes memory"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "2781:124:74"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "components": [
+                      {
+                        "argumentTypes": null,
+                        "id": 10713,
+                        "name": "aaveProtoGovernance",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 10645,
+                        "src": "2924:19:74",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "30",
+                        "id": 10714,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "2945:1:74",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_0_by_1",
+                          "typeString": "int_const 0"
+                        },
+                        "value": "0"
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 10715,
+                        "name": "callData",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 10704,
+                        "src": "2948:8:74",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      }
+                    ],
+                    "id": 10716,
+                    "isConstant": false,
+                    "isInlineArray": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "TupleExpression",
+                    "src": "2923:34:74",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$_t_address_$_t_rational_0_by_1_$_t_bytes_memory_ptr_$",
+                      "typeString": "tuple(address,int_const 0,bytes memory)"
+                    }
+                  },
+                  "functionReturnParameters": 10679,
+                  "id": 10717,
+                  "nodeType": "Return",
+                  "src": "2916:41:74"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 10665,
+              "nodeType": "StructuredDocumentation",
+              "src": "1795:604:74",
+              "text": " Generates the calldata to vote on a proposal. If byte data is empty, then vote using AAVE token, otherwise, vote using the asset passed\n into the function\n @param _proposalId           ID of the proposal to vote on\n @param _support              Boolean indicating whether to support proposal\n @param _data                 Byte data containing the asset to vote with\n @return address              Target contract address\n @return uint256              Total quantity of ETH (Set to 0)\n @return bytes                Propose calldata"
+            },
+            "functionSelector": "a4fed2ce",
+            "id": 10719,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getVoteCalldata",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 10672,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10667,
+                  "mutability": "mutable",
+                  "name": "_proposalId",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10719,
+                  "src": "2429:19:74",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 10666,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2429:7:74",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 10669,
+                  "mutability": "mutable",
+                  "name": "_support",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10719,
+                  "src": "2450:13:74",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 10668,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2450:4:74",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 10671,
+                  "mutability": "mutable",
+                  "name": "_data",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10719,
+                  "src": "2465:18:74",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 10670,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2465:5:74",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2428:56:74"
+            },
+            "returnParameters": {
+              "id": 10679,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10674,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10719,
+                  "src": "2508:7:74",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10673,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2508:7:74",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 10676,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10719,
+                  "src": "2517:7:74",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 10675,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2517:7:74",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 10678,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10719,
+                  "src": "2526:12:74",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 10677,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2526:5:74",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2507:32:74"
+            },
+            "scope": 10786,
+            "src": "2404:560:74",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 10735,
+              "nodeType": "Block",
+              "src": "3180:69:74",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "4e6f2064656c65676174696f6e20617661696c61626c6520696e204141564520676f7665726e616e6365",
+                        "id": 10732,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "3197:44:74",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_5cfe90159dd708aa4fb716327387374ca1ced8fbd2a3dbb7d3c63b6b2209013f",
+                          "typeString": "literal_string \"No delegation available in AAVE governance\""
+                        },
+                        "value": "No delegation available in AAVE governance"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_stringliteral_5cfe90159dd708aa4fb716327387374ca1ced8fbd2a3dbb7d3c63b6b2209013f",
+                          "typeString": "literal_string \"No delegation available in AAVE governance\""
+                        }
+                      ],
+                      "id": 10731,
+                      "name": "revert",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        -19,
+                        -19
+                      ],
+                      "referencedDeclaration": -19,
+                      "src": "3190:6:74",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_revert_pure$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (string memory) pure"
+                      }
+                    },
+                    "id": 10733,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "3190:52:74",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 10734,
+                  "nodeType": "ExpressionStatement",
+                  "src": "3190:52:74"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 10720,
+              "nodeType": "StructuredDocumentation",
+              "src": "2970:95:74",
+              "text": " Reverts as AAVE currently does not have a delegation mechanism in governance"
+            },
+            "functionSelector": "d0ae50ae",
+            "id": 10736,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getDelegateCalldata",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 10723,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10722,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10736,
+                  "src": "3099:7:74",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10721,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3099:7:74",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3098:26:74"
+            },
+            "returnParameters": {
+              "id": 10730,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10725,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10736,
+                  "src": "3148:7:74",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10724,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3148:7:74",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 10727,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10736,
+                  "src": "3157:7:74",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 10726,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3157:7:74",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 10729,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10736,
+                  "src": "3166:12:74",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 10728,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3166:5:74",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3147:32:74"
+            },
+            "scope": 10786,
+            "src": "3070:179:74",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 10752,
+              "nodeType": "Block",
+              "src": "3462:67:74",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "4e6f20726567697374657220617661696c61626c6520696e204141564520676f7665726e616e6365",
+                        "id": 10749,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "3479:42:74",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_f7e3a13fd3392c7bc2bc6ca9f16d70896156eaf1a4ff1179d659c00665c7ac8e",
+                          "typeString": "literal_string \"No register available in AAVE governance\""
+                        },
+                        "value": "No register available in AAVE governance"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_stringliteral_f7e3a13fd3392c7bc2bc6ca9f16d70896156eaf1a4ff1179d659c00665c7ac8e",
+                          "typeString": "literal_string \"No register available in AAVE governance\""
+                        }
+                      ],
+                      "id": 10748,
+                      "name": "revert",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        -19,
+                        -19
+                      ],
+                      "referencedDeclaration": -19,
+                      "src": "3472:6:74",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_revert_pure$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (string memory) pure"
+                      }
+                    },
+                    "id": 10750,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "3472:50:74",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 10751,
+                  "nodeType": "ExpressionStatement",
+                  "src": "3472:50:74"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 10737,
+              "nodeType": "StructuredDocumentation",
+              "src": "3255:93:74",
+              "text": " Reverts as AAVE currently does not have a register mechanism in governance"
+            },
+            "functionSelector": "d3da53a4",
+            "id": 10753,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getRegisterCalldata",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 10740,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10739,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10753,
+                  "src": "3382:7:74",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10738,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3382:7:74",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3381:25:74"
+            },
+            "returnParameters": {
+              "id": 10747,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10742,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10753,
+                  "src": "3430:7:74",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10741,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3430:7:74",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 10744,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10753,
+                  "src": "3439:7:74",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 10743,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3439:7:74",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 10746,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10753,
+                  "src": "3448:12:74",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 10745,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3448:5:74",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3429:32:74"
+            },
+            "scope": 10786,
+            "src": "3353:176:74",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 10767,
+              "nodeType": "Block",
+              "src": "3715:65:74",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "4e6f207265766f6b6520617661696c61626c6520696e204141564520676f7665726e616e6365",
+                        "id": 10764,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "3732:40:74",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_bfca77a7eea8b8885993c539b7642924dbe2977336b5fd0b54ec1c0918a13bbe",
+                          "typeString": "literal_string \"No revoke available in AAVE governance\""
+                        },
+                        "value": "No revoke available in AAVE governance"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_stringliteral_bfca77a7eea8b8885993c539b7642924dbe2977336b5fd0b54ec1c0918a13bbe",
+                          "typeString": "literal_string \"No revoke available in AAVE governance\""
+                        }
+                      ],
+                      "id": 10763,
+                      "name": "revert",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        -19,
+                        -19
+                      ],
+                      "referencedDeclaration": -19,
+                      "src": "3725:6:74",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_revert_pure$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (string memory) pure"
+                      }
+                    },
+                    "id": 10765,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "3725:48:74",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 10766,
+                  "nodeType": "ExpressionStatement",
+                  "src": "3725:48:74"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 10754,
+              "nodeType": "StructuredDocumentation",
+              "src": "3535:91:74",
+              "text": " Reverts as AAVE currently does not have a revoke mechanism in governance"
+            },
+            "functionSelector": "d5abba99",
+            "id": 10768,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getRevokeCalldata",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 10755,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3657:2:74"
+            },
+            "returnParameters": {
+              "id": 10762,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10757,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10768,
+                  "src": "3683:7:74",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10756,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3683:7:74",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 10759,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10768,
+                  "src": "3692:7:74",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 10758,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3692:7:74",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 10761,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10768,
+                  "src": "3701:12:74",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 10760,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3701:5:74",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3682:32:74"
+            },
+            "scope": 10786,
+            "src": "3631:149:74",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 10784,
+              "nodeType": "Block",
+              "src": "3996:87:74",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "4372656174696f6e206f66206e65772070726f706f73616c206f6e6c7920617661696c61626c6520746f20414156452067656e65736973207465616d",
+                        "id": 10781,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "4013:62:74",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_c4d85c3d2981db171dd48e6277e3bf9893c2f4b2d7420d1257d8eeae37f1d415",
+                          "typeString": "literal_string \"Creation of new proposal only available to AAVE genesis team\""
+                        },
+                        "value": "Creation of new proposal only available to AAVE genesis team"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_stringliteral_c4d85c3d2981db171dd48e6277e3bf9893c2f4b2d7420d1257d8eeae37f1d415",
+                          "typeString": "literal_string \"Creation of new proposal only available to AAVE genesis team\""
+                        }
+                      ],
+                      "id": 10780,
+                      "name": "revert",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        -19,
+                        -19
+                      ],
+                      "referencedDeclaration": -19,
+                      "src": "4006:6:74",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_revert_pure$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (string memory) pure"
+                      }
+                    },
+                    "id": 10782,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "4006:70:74",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 10783,
+                  "nodeType": "ExpressionStatement",
+                  "src": "4006:70:74"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 10769,
+              "nodeType": "StructuredDocumentation",
+              "src": "3786:88:74",
+              "text": " Reverts as creating a proposal is only available to AAVE genesis team"
+            },
+            "functionSelector": "5cb8b5e3",
+            "id": 10785,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getProposeCalldata",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 10772,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10771,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10785,
+                  "src": "3907:12:74",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 10770,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3907:5:74",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3906:34:74"
+            },
+            "returnParameters": {
+              "id": 10779,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10774,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10785,
+                  "src": "3964:7:74",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10773,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3964:7:74",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 10776,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10785,
+                  "src": "3973:7:74",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 10775,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3973:7:74",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 10778,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10785,
+                  "src": "3982:12:74",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 10777,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3982:5:74",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3963:32:74"
+            },
+            "scope": 10786,
+            "src": "3879:204:74",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 10787,
+        "src": "855:3230:74"
+      }
+    ],
+    "src": "655:3431:74"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.10+commit.00c0fcaf.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.2.1",
+  "updatedAt": "2021-01-21T08:20:37.687Z",
+  "devdoc": {
+    "author": "Set Protocol Governance adapter for Aave governance that returns data for voting",
+    "methods": {
+      "constructor": {
+        "params": {
+          "_aaveProtoGovernance": "Address of AAVE proto governance contract",
+          "_aaveToken": "Address of AAVE token"
+        }
+      },
+      "getVoteCalldata(uint256,bool,bytes)": {
+        "params": {
+          "_data": "Byte data containing the asset to vote with",
+          "_proposalId": "ID of the proposal to vote on",
+          "_support": "Boolean indicating whether to support proposal"
+        },
+        "returns": {
+          "_0": "address              Target contract address",
+          "_1": "uint256              Total quantity of ETH (Set to 0)",
+          "_2": "bytes                Propose calldata"
+        }
+      }
+    },
+    "title": "AaveGovernanceAdapter"
+  },
+  "userdoc": {
+    "methods": {
+      "constructor": "Set state variables",
+      "getDelegateCalldata(address)": {
+        "notice": "Reverts as AAVE currently does not have a delegation mechanism in governance"
+      },
+      "getProposeCalldata(bytes)": {
+        "notice": "Reverts as creating a proposal is only available to AAVE genesis team"
+      },
+      "getRegisterCalldata(address)": {
+        "notice": "Reverts as AAVE currently does not have a register mechanism in governance"
+      },
+      "getRevokeCalldata()": {
+        "notice": "Reverts as AAVE currently does not have a revoke mechanism in governance"
+      },
+      "getVoteCalldata(uint256,bool,bytes)": {
+        "notice": "Generates the calldata to vote on a proposal. If byte data is empty, then vote using AAVE token, otherwise, vote using the asset passed into the function"
+      }
+    }
+  }
+}

@@ -1,0 +1,2365 @@
+{
+  "contractName": "StreamingFeeModuleViewer",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "contract IStreamingFeeModule",
+          "name": "_streamingFeeModule",
+          "type": "address"
+        },
+        {
+          "internalType": "contract ISetToken[]",
+          "name": "_setTokens",
+          "type": "address[]"
+        }
+      ],
+      "name": "batchFetchStreamingFeeInfo",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "feeRecipient",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "streamingFeePercentage",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "unaccruedFees",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct StreamingFeeModuleViewer.StreamingFeeInfo[]",
+          "name": "",
+          "type": "tuple[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.10+commit.00c0fcaf\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"contract IStreamingFeeModule\",\"name\":\"_streamingFeeModule\",\"type\":\"address\"},{\"internalType\":\"contract ISetToken[]\",\"name\":\"_setTokens\",\"type\":\"address[]\"}],\"name\":\"batchFetchStreamingFeeInfo\",\"outputs\":[{\"components\":[{\"internalType\":\"address\",\"name\":\"feeRecipient\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"streamingFeePercentage\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"unaccruedFees\",\"type\":\"uint256\"}],\"internalType\":\"struct StreamingFeeModuleViewer.StreamingFeeInfo[]\",\"name\":\"\",\"type\":\"tuple[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"Set Protocol StreamingFeeModuleViewer enables batch queries of StreamingFeeModule state.\",\"methods\":{},\"title\":\"StreamingFeeModuleViewer\"},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/protocol-viewers/StreamingFeeModuleViewer.sol\":\"StreamingFeeModuleViewer\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/interfaces/IController.sol\":{\"keccak256\":\"0x8deb2f94e24e9524ce4de88804c98694781d8f38fbadccc3207d28b8e0ce4911\",\"license\":\"Apache License\",\"urls\":[\"bzz-raw://755f656a314737b0eeffbee1b7dc257b751c0764d70f008beb6cccececaeb2d7\",\"dweb:/ipfs/QmUmFs1ukqWUmfcm5irGYHYZnv8NwMYGD3EUuoA5BvbhER\"]},\"/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/interfaces/IIntegrationRegistry.sol\":{\"keccak256\":\"0xb9a2f67aa926694fcfa6b9f2300423a253162078b12e3ff0b8c864c5a143c975\",\"license\":\"Apache License\",\"urls\":[\"bzz-raw://2448da2adc2ca3c858e2413a0833f7a384e4a9430af0a923411d0d0ff1c5076d\",\"dweb:/ipfs/QmTEdnKViq2riEoDzfLwuXxtWdieLL8ZfRL7WanfQwXxHf\"]},\"/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/interfaces/IModule.sol\":{\"keccak256\":\"0xc6fea62e0c2fe10548cb32ff8188b7f036cd072ea2048b664e90b3570ce538fb\",\"license\":\"Apache License\",\"urls\":[\"bzz-raw://2a7594ef174c6bce3a502d34269dccf4e7f7382fc521aa9421bf31d000ca3525\",\"dweb:/ipfs/QmRBnDZnMrsEm45nhTAjzvb7znsKXdVTWy8f6FX1CiH8cu\"]},\"/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/interfaces/IPriceOracle.sol\":{\"keccak256\":\"0xe7882bdc45986d01ebdbe189ac7b2b42de6ba06d070a331c2de61668ac805a62\",\"license\":\"Apache License\",\"urls\":[\"bzz-raw://ad37f4650905c70d415ddc8836e363e8a386f30a9764bb6b3f9fb0e183d73703\",\"dweb:/ipfs/QmNpk6Q3nAZmh4GDsdPaU56yLR4vuAwnoqQuQzBndDJTVq\"]},\"/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/interfaces/ISetToken.sol\":{\"keccak256\":\"0x2f24b90ffc5e6bb97b169482fa915e9016fadbaade011a73d352201b396ebe12\",\"license\":\"Apache License\",\"urls\":[\"bzz-raw://8fbcd20954a2c646a953586e4a0a1cca0b968b3726c24c304dc3f6a4ce632f72\",\"dweb:/ipfs/QmQRHbqemSeohZuMWDaNrUaoQUUbP9i9UUdwn4Pph4ayAj\"]},\"/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/interfaces/ISetValuer.sol\":{\"keccak256\":\"0xcd73631200f53273d0825796bc29b268c6195b9ef3fff81663b28edce3de6a28\",\"license\":\"Apache License\",\"urls\":[\"bzz-raw://8f97e64b5264a51dba7361052d37c58668fe2331d04051d982ad43112d3f1b0c\",\"dweb:/ipfs/QmYQvzUzsMZ7mk9j3pGBchiBf7FAB2nXWGcNzJ2V4wKpwN\"]},\"/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/interfaces/IStreamingFeeModule.sol\":{\"keccak256\":\"0xfbb9e36b76451d5571251a8e5a64fb9bb97df52d47968d89f5a251b81084d8b4\",\"license\":\"Apache License\",\"urls\":[\"bzz-raw://66c3d5bc840bd145f485c6f1b3b240f1784d3fd805e207fce081ac0c6385e442\",\"dweb:/ipfs/QmYoS1usqM9VHCnsXNY5r6JpeYVRwgUuGRexLK7Dt5Cu5n\"]},\"/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/lib/ExplicitERC20.sol\":{\"keccak256\":\"0x6b68bb213cffd51cbece27b1c7235240d84cc0f6da7a9f2ffeb07e65b3e82299\",\"license\":\"Apache License\",\"urls\":[\"bzz-raw://8362c95ef29efaed3cb3f90b623661c2d1b5c20aef58bd9d3ecd375f123b74f1\",\"dweb:/ipfs/QmfBG1JW7PrjsWf3Zib6hF9UdgPLmpghGSssTh7SAQVUKh\"]},\"/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/lib/PreciseUnitMath.sol\":{\"keccak256\":\"0x3b9bad1db3dff62ac253d40bf65e06cf42a1a6dac114888c5aef79ede32d8e82\",\"license\":\"Apache License\",\"urls\":[\"bzz-raw://c0ad06068cf3e4a4069f335c667a8d8dc02902ad2427b983e0508e03b71666df\",\"dweb:/ipfs/QmQ4MurA7M1tDyZuVUX1nN5ak2vN1edQ4rSRxq227Pw2rm\"]},\"/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/protocol-viewers/StreamingFeeModuleViewer.sol\":{\"keccak256\":\"0x5eba95064f6d49b249f5f984ffd6067ac8d2c8fe69b3f05976e4ef7a776ac3f5\",\"license\":\"Apache License\",\"urls\":[\"bzz-raw://da31a68de54bec9481aaecf6f863a771204097dc3a1913eef4fb22f3c4656b60\",\"dweb:/ipfs/Qmb1wzDfGYsHm2md3fFdvHQnxf57attFJFFbE7YdE33xwT\"]},\"/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/protocol/lib/Invoke.sol\":{\"keccak256\":\"0x9dcceb24866055df08edd163889ef299fab75386a5fb87c0f64a1392cea409cd\",\"license\":\"Apache License\",\"urls\":[\"bzz-raw://92f040f3d97622532e297e9921d230e00642d26125c87366c489f6ebda6123d6\",\"dweb:/ipfs/QmRgi822f7GnnMx3C7cGftdpWE53PfVzyFJ6MrNX5cwtU2\"]},\"/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/protocol/lib/ModuleBase.sol\":{\"keccak256\":\"0x01789b1ac3f59746f64d821d5aac9e8a2b73189f005c8c05794c5b3fd2f5bd92\",\"license\":\"Apache License\",\"urls\":[\"bzz-raw://8c18918f9849c03d7a2f8a057e781b0e435232e6b495f4b8ba6fad84a4f8372b\",\"dweb:/ipfs/QmdqWx58ef3QapA8AttqZrqoWvLhWYa6X8zc1hvonoZEPm\"]},\"/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/protocol/lib/ResourceIdentifier.sol\":{\"keccak256\":\"0xd6d2b5d95b71305088a90913f1a4ef9fffc14c50f5a02b6eff7b5a8d211b3a2d\",\"license\":\"Apache License\",\"urls\":[\"bzz-raw://775c80b5d1ef43f00ce88f674c15ec79645fa1171f8ae40d2514a8da436444b1\",\"dweb:/ipfs/QmdKQUSqduKpcSJMvt2NMRtDZW3GkjoZQkXUSWCRZzojLN\"]},\"/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/protocol/modules/StreamingFeeModule.sol\":{\"keccak256\":\"0xc1d848009bf965438efcc42f7e5d19e743c07d0519dbee75d2887747374ea907\",\"license\":\"Apache License\",\"urls\":[\"bzz-raw://cf7f66e857358b801c07b243948e4d1858af960510add8ce5ab5c7fa3b31f65d\",\"dweb:/ipfs/QmS1fXGtM9hJLTThce9mehfp9CRGpVRfTxxePaFArFZknZ\"]},\"@openzeppelin/contracts/math/SafeMath.sol\":{\"keccak256\":\"0x3b21f2c8d626de3b9925ae33e972d8bf5c8b1bffb3f4ee94daeed7d0679036e6\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://7f8d45329fecbf0836ad7543330c3ecd0f8d0ffa42d4016278c3eb2215fdcdfe\",\"dweb:/ipfs/QmXWLT7GcnHtA5NiD6MFi2CV3EWJY4wv5mLNnypqYDrxL3\"]},\"@openzeppelin/contracts/math/SignedSafeMath.sol\":{\"keccak256\":\"0xd17ac7e1d8f83d20d80e652adfed83da122f3a3c7b69fefa2985d85aebf0a3e9\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://64e13936e5e7382737f9c12918f5365fd9e68bf96e83d66f3323f47b1d7162c7\",\"dweb:/ipfs/Qmd2qkUCFdpAXJ6NNTkPxmkKaPzYYmeBhDey8N8XN39wqw\"]},\"@openzeppelin/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x5f02220344881ce43204ae4a6281145a67bc52c2bb1290a791857df3d19d78f5\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://24427744bd3e6cb73c17010119af12a318289c0253a4d9acb8576c9fb3797b08\",\"dweb:/ipfs/QmTLDqpKRBuxGxRAmjgXt9AkXyACW3MtKzi7PYjm5iMfGC\"]},\"@openzeppelin/contracts/token/ERC20/SafeERC20.sol\":{\"keccak256\":\"0xf12dfbe97e6276980b83d2830bb0eb75e0cf4f3e626c2471137f82158ae6a0fc\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://b3a849c2d95e85463909e5b5c920b13e7a11216ca14127085e16d22b9379d52a\",\"dweb:/ipfs/QmUg3CZDbCCcQdroEpexBy5ZFd5vD1UWijWQq9qHZjtJNQ\"]},\"@openzeppelin/contracts/utils/Address.sol\":{\"keccak256\":\"0xa6a15ddddcbf29d2922a1e0d4151b5d2d33da24b93cc9ebc12390e0d855532f8\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://7c119bcaecfa853d564ac88d312777f75fa1126a3bca88a3371adb0ad9f35cb0\",\"dweb:/ipfs/QmY9UPuXeSKq86Zh38fE43VGQPhKMN34mkuFSFqPcr6nvZ\"]},\"@openzeppelin/contracts/utils/ReentrancyGuard.sol\":{\"keccak256\":\"0x8bbbc2f5c10065ee272592ae0a7a6ceb23de2fbd81564ee0bb015ecf404d5f61\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://b95e56c1640d0ef789fc5c16269e141e992f6c8ac97cc6d377bd3825e9cab182\",\"dweb:/ipfs/QmVzaxJZY51EhagrcNnkxoU6Uq17RhATe7aHvtkC6wUkgK\"]},\"@openzeppelin/contracts/utils/SafeCast.sol\":{\"keccak256\":\"0x7b2b8baa20fd60ab4a328c8e34c64a353651b80ba4b5b157cbb61813f6f85d55\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://125b7f9efa390e663d630c62b97ae4e0707f31623bea989ef94c97ca9d777dd2\",\"dweb:/ipfs/QmaaLSuwvqK7wqcgyS3utHgfmB7RntcvP7eJSuvQod8Z9P\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506107a3806100206000396000f3fe608060405234801561001057600080fd5b506004361061002b5760003560e01c8063429d506f14610030575b600080fd5b61004a60048036038101906100459190610437565b610060565b60405161005791906105c2565b60405180910390f35b606080825167ffffffffffffffff8111801561007b57600080fd5b506040519080825280602002602001820160405280156100b557816020015b6100a2610277565b81526020019060019003908161009a5790505b50905060008090505b835181101561026c576100cf6102ae565b8573ffffffffffffffffffffffffffffffffffffffff16638e7bdd488684815181106100f757fe5b60200260200101516040518263ffffffff1660e01b815260040161011b91906105e4565b60806040518083038186803b15801561013357600080fd5b505afa158015610147573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061016b919061048b565b905060008673ffffffffffffffffffffffffffffffffffffffff1663b88c914887858151811061019757fe5b60200260200101516040518263ffffffff1660e01b81526004016101bb91906105e4565b60206040518083038186803b1580156101d357600080fd5b505afa1580156101e7573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061020b91906104b4565b90506040518060600160405280836000015173ffffffffffffffffffffffffffffffffffffffff168152602001836040015181526020018281525084848151811061025257fe5b6020026020010181905250505080806001019150506100be565b508091505092915050565b6040518060600160405280600073ffffffffffffffffffffffffffffffffffffffff16815260200160008152602001600081525090565b6040518060800160405280600073ffffffffffffffffffffffffffffffffffffffff1681526020016000815260200160008152602001600081525090565b6000815190506102fb81610711565b92915050565b600082601f83011261031257600080fd5b81356103256103208261062c565b6105ff565b9150818183526020840193506020810190508385602084028201111561034a57600080fd5b60005b8381101561037a57816103608882610384565b84526020840193506020830192505060018101905061034d565b5050505092915050565b60008135905061039381610728565b92915050565b6000813590506103a88161073f565b92915050565b6000608082840312156103c057600080fd5b6103ca60806105ff565b905060006103da848285016102ec565b60008301525060206103ee84828501610422565b602083015250604061040284828501610422565b604083015250606061041684828501610422565b60608301525092915050565b60008151905061043181610756565b92915050565b6000806040838503121561044a57600080fd5b600061045885828601610399565b925050602083013567ffffffffffffffff81111561047557600080fd5b61048185828601610301565b9150509250929050565b60006080828403121561049d57600080fd5b60006104ab848285016103ae565b91505092915050565b6000602082840312156104c657600080fd5b60006104d484828501610422565b91505092915050565b60006104e98383610571565b60608301905092915050565b6104fe8161068d565b82525050565b600061050f82610664565b610519818561067c565b935061052483610654565b8060005b8381101561055557815161053c88826104dd565b97506105478361066f565b925050600181019050610528565b5085935050505092915050565b61056b816106ed565b82525050565b60608201600082015161058760008501826104f5565b50602082015161059a60208501826105b3565b5060408201516105ad60408501826105b3565b50505050565b6105bc816106e3565b82525050565b600060208201905081810360008301526105dc8184610504565b905092915050565b60006020820190506105f96000830184610562565b92915050565b6000604051905081810181811067ffffffffffffffff8211171561062257600080fd5b8060405250919050565b600067ffffffffffffffff82111561064357600080fd5b602082029050602081019050919050565b6000819050602082019050919050565b600081519050919050565b6000602082019050919050565b600082825260208201905092915050565b6000610698826106c3565b9050919050565b60006106aa8261068d565b9050919050565b60006106bc8261068d565b9050919050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b6000819050919050565b60006106f8826106ff565b9050919050565b600061070a826106c3565b9050919050565b61071a8161068d565b811461072557600080fd5b50565b6107318161069f565b811461073c57600080fd5b50565b610748816106b1565b811461075357600080fd5b50565b61075f816106e3565b811461076a57600080fd5b5056fea264697066735822122054ed3f922b34b65d076ad8250b8c82769ab1d4e1570bb0414ae8abf3dd4b81fd64736f6c634300060a0033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061002b5760003560e01c8063429d506f14610030575b600080fd5b61004a60048036038101906100459190610437565b610060565b60405161005791906105c2565b60405180910390f35b606080825167ffffffffffffffff8111801561007b57600080fd5b506040519080825280602002602001820160405280156100b557816020015b6100a2610277565b81526020019060019003908161009a5790505b50905060008090505b835181101561026c576100cf6102ae565b8573ffffffffffffffffffffffffffffffffffffffff16638e7bdd488684815181106100f757fe5b60200260200101516040518263ffffffff1660e01b815260040161011b91906105e4565b60806040518083038186803b15801561013357600080fd5b505afa158015610147573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061016b919061048b565b905060008673ffffffffffffffffffffffffffffffffffffffff1663b88c914887858151811061019757fe5b60200260200101516040518263ffffffff1660e01b81526004016101bb91906105e4565b60206040518083038186803b1580156101d357600080fd5b505afa1580156101e7573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061020b91906104b4565b90506040518060600160405280836000015173ffffffffffffffffffffffffffffffffffffffff168152602001836040015181526020018281525084848151811061025257fe5b6020026020010181905250505080806001019150506100be565b508091505092915050565b6040518060600160405280600073ffffffffffffffffffffffffffffffffffffffff16815260200160008152602001600081525090565b6040518060800160405280600073ffffffffffffffffffffffffffffffffffffffff1681526020016000815260200160008152602001600081525090565b6000815190506102fb81610711565b92915050565b600082601f83011261031257600080fd5b81356103256103208261062c565b6105ff565b9150818183526020840193506020810190508385602084028201111561034a57600080fd5b60005b8381101561037a57816103608882610384565b84526020840193506020830192505060018101905061034d565b5050505092915050565b60008135905061039381610728565b92915050565b6000813590506103a88161073f565b92915050565b6000608082840312156103c057600080fd5b6103ca60806105ff565b905060006103da848285016102ec565b60008301525060206103ee84828501610422565b602083015250604061040284828501610422565b604083015250606061041684828501610422565b60608301525092915050565b60008151905061043181610756565b92915050565b6000806040838503121561044a57600080fd5b600061045885828601610399565b925050602083013567ffffffffffffffff81111561047557600080fd5b61048185828601610301565b9150509250929050565b60006080828403121561049d57600080fd5b60006104ab848285016103ae565b91505092915050565b6000602082840312156104c657600080fd5b60006104d484828501610422565b91505092915050565b60006104e98383610571565b60608301905092915050565b6104fe8161068d565b82525050565b600061050f82610664565b610519818561067c565b935061052483610654565b8060005b8381101561055557815161053c88826104dd565b97506105478361066f565b925050600181019050610528565b5085935050505092915050565b61056b816106ed565b82525050565b60608201600082015161058760008501826104f5565b50602082015161059a60208501826105b3565b5060408201516105ad60408501826105b3565b50505050565b6105bc816106e3565b82525050565b600060208201905081810360008301526105dc8184610504565b905092915050565b60006020820190506105f96000830184610562565b92915050565b6000604051905081810181811067ffffffffffffffff8211171561062257600080fd5b8060405250919050565b600067ffffffffffffffff82111561064357600080fd5b602082029050602081019050919050565b6000819050602082019050919050565b600081519050919050565b6000602082019050919050565b600082825260208201905092915050565b6000610698826106c3565b9050919050565b60006106aa8261068d565b9050919050565b60006106bc8261068d565b9050919050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b6000819050919050565b60006106f8826106ff565b9050919050565b600061070a826106c3565b9050919050565b61071a8161068d565b811461072557600080fd5b50565b6107318161069f565b811461073c57600080fd5b50565b610748816106b1565b811461075357600080fd5b50565b61075f816106e3565b811461076a57600080fd5b5056fea264697066735822122054ed3f922b34b65d076ad8250b8c82769ab1d4e1570bb0414ae8abf3dd4b81fd64736f6c634300060a0033",
+  "immutableReferences": {},
+  "sourceMap": "1082:992:67:-:0;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "1082:992:67:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1261:811;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;1438:25;1479:33;1538:10;:17;1515:41;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;1479:77;;1572:9;1584:1;1572:13;;1567:474;1591:10;:17;1587:1;:21;1567:474;;;1629:43;;:::i;:::-;1675:19;:29;;;1705:10;1716:1;1705:13;;;;;;;;;;;;;;1675:44;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1629:90;;1733:21;1757:19;:26;;;1784:10;1795:1;1784:13;;;;;;;;;;;;;;1757:41;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1733:65;;1826:204;;;;;;;;1875:8;:21;;;1826:204;;;;;;1938:8;:31;;;1826:204;;;;2002:13;1826:204;;;1813:7;1821:1;1813:10;;;;;;;;;;;;;:217;;;;1567:474;;1610:3;;;;;;;1567:474;;;;2058:7;2051:14;;;1261:811;;;;:::o;-1:-1:-1:-;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;5:134::-;;89:6;83:13;74:22;;101:33;128:5;101:33;;;68:71;;;;;175:758;;309:3;302:4;294:6;290:17;286:27;276:2;;327:1;324;317:12;276:2;364:6;351:20;386:97;401:81;475:6;401:81;;;386:97;;;377:106;;500:5;525:6;518:5;511:21;555:4;547:6;543:17;533:27;;577:4;572:3;568:14;561:21;;630:6;677:3;669:4;661:6;657:17;652:3;648:27;645:36;642:2;;;694:1;691;684:12;642:2;719:1;704:223;729:6;726:1;723:13;704:223;;;787:3;809:54;859:3;847:10;809:54;;;804:3;797:67;887:4;882:3;878:14;871:21;;915:4;910:3;906:14;899:21;;761:166;751:1;748;744:9;739:14;;704:223;;;708:14;269:664;;;;;;;;941:164;;1038:6;1025:20;1016:29;;1050:50;1094:5;1050:50;;;1010:95;;;;;1112:184;;1219:6;1206:20;1197:29;;1231:60;1285:5;1231:60;;;1191:105;;;;;1344:880;;1471:4;1459:9;1454:3;1450:19;1446:30;1443:2;;;1489:1;1486;1479:12;1443:2;1507:20;1522:4;1507:20;;;1498:29;;1585:1;1617:60;1673:3;1664:6;1653:9;1649:22;1617:60;;;1610:4;1603:5;1599:16;1592:86;1537:152;1760:2;1793:60;1849:3;1840:6;1829:9;1825:22;1793:60;;;1786:4;1779:5;1775:16;1768:86;1699:166;1933:2;1966:60;2022:3;2013:6;2002:9;1998:22;1966:60;;;1959:4;1952:5;1948:16;1941:86;1875:163;2109:2;2142:60;2198:3;2189:6;2178:9;2174:22;2142:60;;;2135:4;2128:5;2124:16;2117:86;2048:166;1437:787;;;;;2231:134;;2315:6;2309:13;2300:22;;2327:33;2354:5;2327:33;;;2294:71;;;;;2372:590;;;2562:2;2550:9;2541:7;2537:23;2533:32;2530:2;;;2578:1;2575;2568:12;2530:2;2613:1;2630:80;2702:7;2693:6;2682:9;2678:22;2630:80;;;2620:90;;2592:124;2775:2;2764:9;2760:18;2747:32;2799:18;2791:6;2788:30;2785:2;;;2831:1;2828;2821:12;2785:2;2851:95;2938:7;2929:6;2918:9;2914:22;2851:95;;;2841:105;;2726:226;2524:438;;;;;;2969:318;;3111:3;3099:9;3090:7;3086:23;3082:33;3079:2;;;3128:1;3125;3118:12;3079:2;3163:1;3180:91;3263:7;3254:6;3243:9;3239:22;3180:91;;;3170:101;;3142:135;3073:214;;;;;3294:263;;3409:2;3397:9;3388:7;3384:23;3380:32;3377:2;;;3425:1;3422;3415:12;3377:2;3460:1;3477:64;3533:7;3524:6;3513:9;3509:22;3477:64;;;3467:74;;3439:108;3371:186;;;;;3565:309;;3720:114;3830:3;3822:6;3720:114;;;3863:4;3858:3;3854:14;3840:28;;3713:161;;;;;3882:103;3955:24;3973:5;3955:24;;;3950:3;3943:37;3937:48;;;4105:962;;4318:88;4400:5;4318:88;;;4419:120;4532:6;4527:3;4419:120;;;4412:127;;4560:90;4644:5;4560:90;;;4670:7;4698:1;4683:362;4708:6;4705:1;4702:13;4683:362;;;4775:6;4769:13;4796:131;4923:3;4908:13;4796:131;;;4789:138;;4944:94;5031:6;4944:94;;;4934:104;;4740:305;4730:1;4727;4723:9;4718:14;;4683:362;;;4687:14;5058:3;5051:10;;4297:770;;;;;;;;5075:160;5175:54;5223:5;5175:54;;;5170:3;5163:67;5157:78;;;5349:673;5500:4;5495:3;5491:14;5591:4;5584:5;5580:16;5574:23;5603:63;5660:4;5655:3;5651:14;5637:12;5603:63;;;5520:152;5763:4;5756:5;5752:16;5746:23;5775:63;5832:4;5827:3;5823:14;5809:12;5775:63;;;5682:162;5926:4;5919:5;5915:16;5909:23;5938:63;5995:4;5990:3;5986:14;5972:12;5938:63;;;5854:153;5473:549;;;;6029:103;6102:24;6120:5;6102:24;;;6097:3;6090:37;6084:48;;;6139:506;;6384:2;6373:9;6369:18;6361:26;;6434:9;6428:4;6424:20;6420:1;6409:9;6405:17;6398:47;6459:176;6630:4;6621:6;6459:176;;;6451:184;;6355:290;;;;;6652:256;;6796:2;6785:9;6781:18;6773:26;;6810:88;6895:1;6884:9;6880:17;6871:6;6810:88;;;6767:141;;;;;6915:256;;6977:2;6971:9;6961:19;;7015:4;7007:6;7003:17;7114:6;7102:10;7099:22;7078:18;7066:10;7063:34;7060:62;7057:2;;;7135:1;7132;7125:12;7057:2;7155:10;7151:2;7144:22;6955:216;;;;;7178:321;;7354:18;7346:6;7343:30;7340:2;;;7386:1;7383;7376:12;7340:2;7421:4;7413:6;7409:17;7401:25;;7484:4;7478;7474:15;7466:23;;7277:222;;;;7506:185;;7626:3;7618:11;;7664:4;7659:3;7655:14;7647:22;;7612:79;;;;7698:171;;7841:5;7835:12;7825:22;;7806:63;;;;7876:142;;8008:4;8003:3;7999:14;7991:22;;7985:33;;;;8026:212;;8190:6;8185:3;8178:19;8227:4;8222:3;8218:14;8203:29;;8171:67;;;;;8246:91;;8308:24;8326:5;8308:24;;;8297:35;;8291:46;;;;8344:108;;8423:24;8441:5;8423:24;;;8412:35;;8406:46;;;;8459:118;;8548:24;8566:5;8548:24;;;8537:35;;8531:46;;;;8584:121;;8657:42;8650:5;8646:54;8635:65;;8629:76;;;;8712:72;;8774:5;8763:16;;8757:27;;;;8791:155;;8887:54;8935:5;8887:54;;;8874:67;;8868:78;;;;8953:125;;9049:24;9067:5;9049:24;;;9036:37;;9030:48;;;;9085:117;9154:24;9172:5;9154:24;;;9147:5;9144:35;9134:2;;9193:1;9190;9183:12;9134:2;9128:74;;9209:151;9295:41;9330:5;9295:41;;;9288:5;9285:52;9275:2;;9351:1;9348;9341:12;9275:2;9269:91;;9367:171;9463:51;9508:5;9463:51;;;9456:5;9453:62;9443:2;;9529:1;9526;9519:12;9443:2;9437:101;;9545:117;9614:24;9632:5;9614:24;;;9607:5;9604:35;9594:2;;9653:1;9650;9643:12;9594:2;9588:74;",
+  "source": "/*\n    Copyright 2020 Set Labs Inc.\n\n    Licensed under the Apache License, Version 2.0 (the \"License\");\n    you may not use this file except in compliance with the License.\n    You may obtain a copy of the License at\n\n    http://www.apache.org/licenses/LICENSE-2.0\n\n    Unless required by applicable law or agreed to in writing, software\n    distributed under the License is distributed on an \"AS IS\" BASIS,\n    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n    See the License for the specific language governing permissions and\n    limitations under the License.\n\n    SPDX-License-Identifier: Apache License, Version 2.0\n*/\npragma solidity 0.6.10;\npragma experimental \"ABIEncoderV2\";\n\n\nimport { ISetToken } from \"../interfaces/ISetToken.sol\";\nimport { IStreamingFeeModule } from \"../interfaces/IStreamingFeeModule.sol\";\nimport { StreamingFeeModule } from \"../protocol/modules/StreamingFeeModule.sol\";\n\n\n/**\n * @title StreamingFeeModuleViewer\n * @author Set Protocol\n *\n * StreamingFeeModuleViewer enables batch queries of StreamingFeeModule state.\n */\ncontract StreamingFeeModuleViewer {\n\n    struct StreamingFeeInfo {\n        address feeRecipient;\n        uint256 streamingFeePercentage;\n        uint256 unaccruedFees;\n    }\n\n    function batchFetchStreamingFeeInfo(\n        IStreamingFeeModule _streamingFeeModule,\n        ISetToken[] memory _setTokens\n    )\n        external\n        view\n        returns (StreamingFeeInfo[] memory)\n    {\n        StreamingFeeInfo[] memory feeInfo = new StreamingFeeInfo[](_setTokens.length);\n\n        for (uint256 i = 0; i < _setTokens.length; i++) {\n            StreamingFeeModule.FeeState memory feeState = _streamingFeeModule.feeStates(_setTokens[i]);\n            uint256 unaccruedFees = _streamingFeeModule.getFee(_setTokens[i]);\n\n            feeInfo[i] = StreamingFeeInfo({\n                feeRecipient: feeState.feeRecipient,\n                streamingFeePercentage: feeState.streamingFeePercentage,\n                unaccruedFees: unaccruedFees\n            });\n        }\n\n        return feeInfo;\n    }\n}",
+  "sourcePath": "/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/protocol-viewers/StreamingFeeModuleViewer.sol",
+  "ast": {
+    "absolutePath": "/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/protocol-viewers/StreamingFeeModuleViewer.sol",
+    "exportedSymbols": {
+      "StreamingFeeModuleViewer": [
+        6957
+      ]
+    },
+    "id": 6958,
+    "license": "Apache License",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 6871,
+        "literals": [
+          "solidity",
+          "0.6",
+          ".10"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "654:23:67"
+      },
+      {
+        "id": 6872,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "678:35:67"
+      },
+      {
+        "absolutePath": "/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/interfaces/ISetToken.sol",
+        "file": "../interfaces/ISetToken.sol",
+        "id": 6874,
+        "nodeType": "ImportDirective",
+        "scope": 6958,
+        "sourceUnit": 794,
+        "src": "716:56:67",
+        "symbolAliases": [
+          {
+            "foreign": {
+              "argumentTypes": null,
+              "id": 6873,
+              "name": "ISetToken",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": null,
+              "src": "725:9:67",
+              "typeDescriptions": {
+                "typeIdentifier": null,
+                "typeString": null
+              }
+            },
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/interfaces/IStreamingFeeModule.sol",
+        "file": "../interfaces/IStreamingFeeModule.sol",
+        "id": 6876,
+        "nodeType": "ImportDirective",
+        "scope": 6958,
+        "sourceUnit": 867,
+        "src": "773:76:67",
+        "symbolAliases": [
+          {
+            "foreign": {
+              "argumentTypes": null,
+              "id": 6875,
+              "name": "IStreamingFeeModule",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": null,
+              "src": "782:19:67",
+              "typeDescriptions": {
+                "typeIdentifier": null,
+                "typeString": null
+              }
+            },
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/protocol/modules/StreamingFeeModule.sol",
+        "file": "../protocol/modules/StreamingFeeModule.sol",
+        "id": 6878,
+        "nodeType": "ImportDirective",
+        "scope": 6958,
+        "sourceUnit": 22992,
+        "src": "850:80:67",
+        "symbolAliases": [
+          {
+            "foreign": {
+              "argumentTypes": null,
+              "id": 6877,
+              "name": "StreamingFeeModule",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": null,
+              "src": "859:18:67",
+              "typeDescriptions": {
+                "typeIdentifier": null,
+                "typeString": null
+              }
+            },
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": {
+          "id": 6879,
+          "nodeType": "StructuredDocumentation",
+          "src": "933:148:67",
+          "text": " @title StreamingFeeModuleViewer\n @author Set Protocol\n StreamingFeeModuleViewer enables batch queries of StreamingFeeModule state."
+        },
+        "fullyImplemented": true,
+        "id": 6957,
+        "linearizedBaseContracts": [
+          6957
+        ],
+        "name": "StreamingFeeModuleViewer",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "StreamingFeeModuleViewer.StreamingFeeInfo",
+            "id": 6886,
+            "members": [
+              {
+                "constant": false,
+                "id": 6881,
+                "mutability": "mutable",
+                "name": "feeRecipient",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 6886,
+                "src": "1157:20:67",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 6880,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1157:7:67",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6883,
+                "mutability": "mutable",
+                "name": "streamingFeePercentage",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 6886,
+                "src": "1187:30:67",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 6882,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1187:7:67",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6885,
+                "mutability": "mutable",
+                "name": "unaccruedFees",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 6886,
+                "src": "1227:21:67",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 6884,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1227:7:67",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "StreamingFeeInfo",
+            "nodeType": "StructDefinition",
+            "scope": 6957,
+            "src": "1123:132:67",
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 6955,
+              "nodeType": "Block",
+              "src": "1469:603:67",
+              "statements": [
+                {
+                  "assignments": [
+                    6900
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 6900,
+                      "mutability": "mutable",
+                      "name": "feeInfo",
+                      "nodeType": "VariableDeclaration",
+                      "overrides": null,
+                      "scope": 6955,
+                      "src": "1479:33:67",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_struct$_StreamingFeeInfo_$6886_memory_ptr_$dyn_memory_ptr",
+                        "typeString": "struct StreamingFeeModuleViewer.StreamingFeeInfo[]"
+                      },
+                      "typeName": {
+                        "baseType": {
+                          "contractScope": null,
+                          "id": 6898,
+                          "name": "StreamingFeeInfo",
+                          "nodeType": "UserDefinedTypeName",
+                          "referencedDeclaration": 6886,
+                          "src": "1479:16:67",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_StreamingFeeInfo_$6886_storage_ptr",
+                            "typeString": "struct StreamingFeeModuleViewer.StreamingFeeInfo"
+                          }
+                        },
+                        "id": 6899,
+                        "length": null,
+                        "nodeType": "ArrayTypeName",
+                        "src": "1479:18:67",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_struct$_StreamingFeeInfo_$6886_storage_$dyn_storage_ptr",
+                          "typeString": "struct StreamingFeeModuleViewer.StreamingFeeInfo[]"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 6907,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 6904,
+                          "name": "_setTokens",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 6891,
+                          "src": "1538:10:67",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_array$_t_contract$_ISetToken_$793_$dyn_memory_ptr",
+                            "typeString": "contract ISetToken[] memory"
+                          }
+                        },
+                        "id": 6905,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "length",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "1538:17:67",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "id": 6903,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "nodeType": "NewExpression",
+                      "src": "1515:22:67",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_objectcreation_pure$_t_uint256_$returns$_t_array$_t_struct$_StreamingFeeInfo_$6886_memory_ptr_$dyn_memory_ptr_$",
+                        "typeString": "function (uint256) pure returns (struct StreamingFeeModuleViewer.StreamingFeeInfo memory[] memory)"
+                      },
+                      "typeName": {
+                        "baseType": {
+                          "contractScope": null,
+                          "id": 6901,
+                          "name": "StreamingFeeInfo",
+                          "nodeType": "UserDefinedTypeName",
+                          "referencedDeclaration": 6886,
+                          "src": "1519:16:67",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_StreamingFeeInfo_$6886_storage_ptr",
+                            "typeString": "struct StreamingFeeModuleViewer.StreamingFeeInfo"
+                          }
+                        },
+                        "id": 6902,
+                        "length": null,
+                        "nodeType": "ArrayTypeName",
+                        "src": "1519:18:67",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_struct$_StreamingFeeInfo_$6886_storage_$dyn_storage_ptr",
+                          "typeString": "struct StreamingFeeModuleViewer.StreamingFeeInfo[]"
+                        }
+                      }
+                    },
+                    "id": 6906,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1515:41:67",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_StreamingFeeInfo_$6886_memory_ptr_$dyn_memory_ptr",
+                      "typeString": "struct StreamingFeeModuleViewer.StreamingFeeInfo memory[] memory"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "1479:77:67"
+                },
+                {
+                  "body": {
+                    "id": 6951,
+                    "nodeType": "Block",
+                    "src": "1615:426:67",
+                    "statements": [
+                      {
+                        "assignments": [
+                          6922
+                        ],
+                        "declarations": [
+                          {
+                            "constant": false,
+                            "id": 6922,
+                            "mutability": "mutable",
+                            "name": "feeState",
+                            "nodeType": "VariableDeclaration",
+                            "overrides": null,
+                            "scope": 6951,
+                            "src": "1629:43:67",
+                            "stateVariable": false,
+                            "storageLocation": "memory",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_struct$_FeeState_$22484_memory_ptr",
+                              "typeString": "struct StreamingFeeModule.FeeState"
+                            },
+                            "typeName": {
+                              "contractScope": null,
+                              "id": 6921,
+                              "name": "StreamingFeeModule.FeeState",
+                              "nodeType": "UserDefinedTypeName",
+                              "referencedDeclaration": 22484,
+                              "src": "1629:27:67",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_struct$_FeeState_$22484_storage_ptr",
+                                "typeString": "struct StreamingFeeModule.FeeState"
+                              }
+                            },
+                            "value": null,
+                            "visibility": "internal"
+                          }
+                        ],
+                        "id": 6929,
+                        "initialValue": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "baseExpression": {
+                                "argumentTypes": null,
+                                "id": 6925,
+                                "name": "_setTokens",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 6891,
+                                "src": "1705:10:67",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_array$_t_contract$_ISetToken_$793_$dyn_memory_ptr",
+                                  "typeString": "contract ISetToken[] memory"
+                                }
+                              },
+                              "id": 6927,
+                              "indexExpression": {
+                                "argumentTypes": null,
+                                "id": 6926,
+                                "name": "i",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 6909,
+                                "src": "1716:1:67",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              },
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "nodeType": "IndexAccess",
+                              "src": "1705:13:67",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_contract$_ISetToken_$793",
+                                "typeString": "contract ISetToken"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_contract$_ISetToken_$793",
+                                "typeString": "contract ISetToken"
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": null,
+                              "id": 6923,
+                              "name": "_streamingFeeModule",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 6888,
+                              "src": "1675:19:67",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_contract$_IStreamingFeeModule_$866",
+                                "typeString": "contract IStreamingFeeModule"
+                              }
+                            },
+                            "id": 6924,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "feeStates",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 858,
+                            "src": "1675:29:67",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_external_view$_t_contract$_ISetToken_$793_$returns$_t_struct$_FeeState_$22484_memory_ptr_$",
+                              "typeString": "function (contract ISetToken) view external returns (struct StreamingFeeModule.FeeState memory)"
+                            }
+                          },
+                          "id": 6928,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "1675:44:67",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_FeeState_$22484_memory_ptr",
+                            "typeString": "struct StreamingFeeModule.FeeState memory"
+                          }
+                        },
+                        "nodeType": "VariableDeclarationStatement",
+                        "src": "1629:90:67"
+                      },
+                      {
+                        "assignments": [
+                          6931
+                        ],
+                        "declarations": [
+                          {
+                            "constant": false,
+                            "id": 6931,
+                            "mutability": "mutable",
+                            "name": "unaccruedFees",
+                            "nodeType": "VariableDeclaration",
+                            "overrides": null,
+                            "scope": 6951,
+                            "src": "1733:21:67",
+                            "stateVariable": false,
+                            "storageLocation": "default",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            },
+                            "typeName": {
+                              "id": 6930,
+                              "name": "uint256",
+                              "nodeType": "ElementaryTypeName",
+                              "src": "1733:7:67",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            },
+                            "value": null,
+                            "visibility": "internal"
+                          }
+                        ],
+                        "id": 6938,
+                        "initialValue": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "baseExpression": {
+                                "argumentTypes": null,
+                                "id": 6934,
+                                "name": "_setTokens",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 6891,
+                                "src": "1784:10:67",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_array$_t_contract$_ISetToken_$793_$dyn_memory_ptr",
+                                  "typeString": "contract ISetToken[] memory"
+                                }
+                              },
+                              "id": 6936,
+                              "indexExpression": {
+                                "argumentTypes": null,
+                                "id": 6935,
+                                "name": "i",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 6909,
+                                "src": "1795:1:67",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              },
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "nodeType": "IndexAccess",
+                              "src": "1784:13:67",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_contract$_ISetToken_$793",
+                                "typeString": "contract ISetToken"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_contract$_ISetToken_$793",
+                                "typeString": "contract ISetToken"
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": null,
+                              "id": 6932,
+                              "name": "_streamingFeeModule",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 6888,
+                              "src": "1757:19:67",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_contract$_IStreamingFeeModule_$866",
+                                "typeString": "contract IStreamingFeeModule"
+                              }
+                            },
+                            "id": 6933,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "getFee",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 865,
+                            "src": "1757:26:67",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_external_view$_t_contract$_ISetToken_$793_$returns$_t_uint256_$",
+                              "typeString": "function (contract ISetToken) view external returns (uint256)"
+                            }
+                          },
+                          "id": 6937,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "1757:41:67",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "VariableDeclarationStatement",
+                        "src": "1733:65:67"
+                      },
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 6949,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftHandSide": {
+                            "argumentTypes": null,
+                            "baseExpression": {
+                              "argumentTypes": null,
+                              "id": 6939,
+                              "name": "feeInfo",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 6900,
+                              "src": "1813:7:67",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_array$_t_struct$_StreamingFeeInfo_$6886_memory_ptr_$dyn_memory_ptr",
+                                "typeString": "struct StreamingFeeModuleViewer.StreamingFeeInfo memory[] memory"
+                              }
+                            },
+                            "id": 6941,
+                            "indexExpression": {
+                              "argumentTypes": null,
+                              "id": 6940,
+                              "name": "i",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 6909,
+                              "src": "1821:1:67",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            },
+                            "isConstant": false,
+                            "isLValue": true,
+                            "isPure": false,
+                            "lValueRequested": true,
+                            "nodeType": "IndexAccess",
+                            "src": "1813:10:67",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_struct$_StreamingFeeInfo_$6886_memory_ptr",
+                              "typeString": "struct StreamingFeeModuleViewer.StreamingFeeInfo memory"
+                            }
+                          },
+                          "nodeType": "Assignment",
+                          "operator": "=",
+                          "rightHandSide": {
+                            "argumentTypes": null,
+                            "arguments": [
+                              {
+                                "argumentTypes": null,
+                                "expression": {
+                                  "argumentTypes": null,
+                                  "id": 6943,
+                                  "name": "feeState",
+                                  "nodeType": "Identifier",
+                                  "overloadedDeclarations": [],
+                                  "referencedDeclaration": 6922,
+                                  "src": "1875:8:67",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_struct$_FeeState_$22484_memory_ptr",
+                                    "typeString": "struct StreamingFeeModule.FeeState memory"
+                                  }
+                                },
+                                "id": 6944,
+                                "isConstant": false,
+                                "isLValue": true,
+                                "isPure": false,
+                                "lValueRequested": false,
+                                "memberName": "feeRecipient",
+                                "nodeType": "MemberAccess",
+                                "referencedDeclaration": 22477,
+                                "src": "1875:21:67",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_address",
+                                  "typeString": "address"
+                                }
+                              },
+                              {
+                                "argumentTypes": null,
+                                "expression": {
+                                  "argumentTypes": null,
+                                  "id": 6945,
+                                  "name": "feeState",
+                                  "nodeType": "Identifier",
+                                  "overloadedDeclarations": [],
+                                  "referencedDeclaration": 6922,
+                                  "src": "1938:8:67",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_struct$_FeeState_$22484_memory_ptr",
+                                    "typeString": "struct StreamingFeeModule.FeeState memory"
+                                  }
+                                },
+                                "id": 6946,
+                                "isConstant": false,
+                                "isLValue": true,
+                                "isPure": false,
+                                "lValueRequested": false,
+                                "memberName": "streamingFeePercentage",
+                                "nodeType": "MemberAccess",
+                                "referencedDeclaration": 22481,
+                                "src": "1938:31:67",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              },
+                              {
+                                "argumentTypes": null,
+                                "id": 6947,
+                                "name": "unaccruedFees",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 6931,
+                                "src": "2002:13:67",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_address",
+                                  "typeString": "address"
+                                },
+                                {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                },
+                                {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              ],
+                              "id": 6942,
+                              "name": "StreamingFeeInfo",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 6886,
+                              "src": "1826:16:67",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_type$_t_struct$_StreamingFeeInfo_$6886_storage_ptr_$",
+                                "typeString": "type(struct StreamingFeeModuleViewer.StreamingFeeInfo storage pointer)"
+                              }
+                            },
+                            "id": 6948,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "kind": "structConstructorCall",
+                            "lValueRequested": false,
+                            "names": [
+                              "feeRecipient",
+                              "streamingFeePercentage",
+                              "unaccruedFees"
+                            ],
+                            "nodeType": "FunctionCall",
+                            "src": "1826:204:67",
+                            "tryCall": false,
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_struct$_StreamingFeeInfo_$6886_memory_ptr",
+                              "typeString": "struct StreamingFeeModuleViewer.StreamingFeeInfo memory"
+                            }
+                          },
+                          "src": "1813:217:67",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_StreamingFeeInfo_$6886_memory_ptr",
+                            "typeString": "struct StreamingFeeModuleViewer.StreamingFeeInfo memory"
+                          }
+                        },
+                        "id": 6950,
+                        "nodeType": "ExpressionStatement",
+                        "src": "1813:217:67"
+                      }
+                    ]
+                  },
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 6915,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "id": 6912,
+                      "name": "i",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6909,
+                      "src": "1587:1:67",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "<",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 6913,
+                        "name": "_setTokens",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 6891,
+                        "src": "1591:10:67",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_contract$_ISetToken_$793_$dyn_memory_ptr",
+                          "typeString": "contract ISetToken[] memory"
+                        }
+                      },
+                      "id": 6914,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "length",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "1591:17:67",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "1587:21:67",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 6952,
+                  "initializationExpression": {
+                    "assignments": [
+                      6909
+                    ],
+                    "declarations": [
+                      {
+                        "constant": false,
+                        "id": 6909,
+                        "mutability": "mutable",
+                        "name": "i",
+                        "nodeType": "VariableDeclaration",
+                        "overrides": null,
+                        "scope": 6952,
+                        "src": "1572:9:67",
+                        "stateVariable": false,
+                        "storageLocation": "default",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "typeName": {
+                          "id": 6908,
+                          "name": "uint256",
+                          "nodeType": "ElementaryTypeName",
+                          "src": "1572:7:67",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "value": null,
+                        "visibility": "internal"
+                      }
+                    ],
+                    "id": 6911,
+                    "initialValue": {
+                      "argumentTypes": null,
+                      "hexValue": "30",
+                      "id": 6910,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1584:1:67",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "nodeType": "VariableDeclarationStatement",
+                    "src": "1572:13:67"
+                  },
+                  "loopExpression": {
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 6917,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "UnaryOperation",
+                      "operator": "++",
+                      "prefix": false,
+                      "src": "1610:3:67",
+                      "subExpression": {
+                        "argumentTypes": null,
+                        "id": 6916,
+                        "name": "i",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 6909,
+                        "src": "1610:1:67",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 6918,
+                    "nodeType": "ExpressionStatement",
+                    "src": "1610:3:67"
+                  },
+                  "nodeType": "ForStatement",
+                  "src": "1567:474:67"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 6953,
+                    "name": "feeInfo",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 6900,
+                    "src": "2058:7:67",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_StreamingFeeInfo_$6886_memory_ptr_$dyn_memory_ptr",
+                      "typeString": "struct StreamingFeeModuleViewer.StreamingFeeInfo memory[] memory"
+                    }
+                  },
+                  "functionReturnParameters": 6896,
+                  "id": 6954,
+                  "nodeType": "Return",
+                  "src": "2051:14:67"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "429d506f",
+            "id": 6956,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "batchFetchStreamingFeeInfo",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 6892,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6888,
+                  "mutability": "mutable",
+                  "name": "_streamingFeeModule",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 6956,
+                  "src": "1306:39:67",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IStreamingFeeModule_$866",
+                    "typeString": "contract IStreamingFeeModule"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 6887,
+                    "name": "IStreamingFeeModule",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 866,
+                    "src": "1306:19:67",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IStreamingFeeModule_$866",
+                      "typeString": "contract IStreamingFeeModule"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6891,
+                  "mutability": "mutable",
+                  "name": "_setTokens",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 6956,
+                  "src": "1355:29:67",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_contract$_ISetToken_$793_$dyn_memory_ptr",
+                    "typeString": "contract ISetToken[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "contractScope": null,
+                      "id": 6889,
+                      "name": "ISetToken",
+                      "nodeType": "UserDefinedTypeName",
+                      "referencedDeclaration": 793,
+                      "src": "1355:9:67",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_ISetToken_$793",
+                        "typeString": "contract ISetToken"
+                      }
+                    },
+                    "id": 6890,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1355:11:67",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_contract$_ISetToken_$793_$dyn_storage_ptr",
+                      "typeString": "contract ISetToken[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1296:94:67"
+            },
+            "returnParameters": {
+              "id": 6896,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6895,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 6956,
+                  "src": "1438:25:67",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_StreamingFeeInfo_$6886_memory_ptr_$dyn_memory_ptr",
+                    "typeString": "struct StreamingFeeModuleViewer.StreamingFeeInfo[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "contractScope": null,
+                      "id": 6893,
+                      "name": "StreamingFeeInfo",
+                      "nodeType": "UserDefinedTypeName",
+                      "referencedDeclaration": 6886,
+                      "src": "1438:16:67",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_StreamingFeeInfo_$6886_storage_ptr",
+                        "typeString": "struct StreamingFeeModuleViewer.StreamingFeeInfo"
+                      }
+                    },
+                    "id": 6894,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1438:18:67",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_StreamingFeeInfo_$6886_storage_$dyn_storage_ptr",
+                      "typeString": "struct StreamingFeeModuleViewer.StreamingFeeInfo[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1437:27:67"
+            },
+            "scope": 6957,
+            "src": "1261:811:67",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 6958,
+        "src": "1082:992:67"
+      }
+    ],
+    "src": "654:1420:67"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/protocol-viewers/StreamingFeeModuleViewer.sol",
+    "exportedSymbols": {
+      "StreamingFeeModuleViewer": [
+        6957
+      ]
+    },
+    "id": 6958,
+    "license": "Apache License",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 6871,
+        "literals": [
+          "solidity",
+          "0.6",
+          ".10"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "654:23:67"
+      },
+      {
+        "id": 6872,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "678:35:67"
+      },
+      {
+        "absolutePath": "/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/interfaces/ISetToken.sol",
+        "file": "../interfaces/ISetToken.sol",
+        "id": 6874,
+        "nodeType": "ImportDirective",
+        "scope": 6958,
+        "sourceUnit": 794,
+        "src": "716:56:67",
+        "symbolAliases": [
+          {
+            "foreign": {
+              "argumentTypes": null,
+              "id": 6873,
+              "name": "ISetToken",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": null,
+              "src": "725:9:67",
+              "typeDescriptions": {
+                "typeIdentifier": null,
+                "typeString": null
+              }
+            },
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/interfaces/IStreamingFeeModule.sol",
+        "file": "../interfaces/IStreamingFeeModule.sol",
+        "id": 6876,
+        "nodeType": "ImportDirective",
+        "scope": 6958,
+        "sourceUnit": 867,
+        "src": "773:76:67",
+        "symbolAliases": [
+          {
+            "foreign": {
+              "argumentTypes": null,
+              "id": 6875,
+              "name": "IStreamingFeeModule",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": null,
+              "src": "782:19:67",
+              "typeDescriptions": {
+                "typeIdentifier": null,
+                "typeString": null
+              }
+            },
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/protocol/modules/StreamingFeeModule.sol",
+        "file": "../protocol/modules/StreamingFeeModule.sol",
+        "id": 6878,
+        "nodeType": "ImportDirective",
+        "scope": 6958,
+        "sourceUnit": 22992,
+        "src": "850:80:67",
+        "symbolAliases": [
+          {
+            "foreign": {
+              "argumentTypes": null,
+              "id": 6877,
+              "name": "StreamingFeeModule",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": null,
+              "src": "859:18:67",
+              "typeDescriptions": {
+                "typeIdentifier": null,
+                "typeString": null
+              }
+            },
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": {
+          "id": 6879,
+          "nodeType": "StructuredDocumentation",
+          "src": "933:148:67",
+          "text": " @title StreamingFeeModuleViewer\n @author Set Protocol\n StreamingFeeModuleViewer enables batch queries of StreamingFeeModule state."
+        },
+        "fullyImplemented": true,
+        "id": 6957,
+        "linearizedBaseContracts": [
+          6957
+        ],
+        "name": "StreamingFeeModuleViewer",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "StreamingFeeModuleViewer.StreamingFeeInfo",
+            "id": 6886,
+            "members": [
+              {
+                "constant": false,
+                "id": 6881,
+                "mutability": "mutable",
+                "name": "feeRecipient",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 6886,
+                "src": "1157:20:67",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 6880,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1157:7:67",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6883,
+                "mutability": "mutable",
+                "name": "streamingFeePercentage",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 6886,
+                "src": "1187:30:67",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 6882,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1187:7:67",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6885,
+                "mutability": "mutable",
+                "name": "unaccruedFees",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 6886,
+                "src": "1227:21:67",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 6884,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1227:7:67",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "StreamingFeeInfo",
+            "nodeType": "StructDefinition",
+            "scope": 6957,
+            "src": "1123:132:67",
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 6955,
+              "nodeType": "Block",
+              "src": "1469:603:67",
+              "statements": [
+                {
+                  "assignments": [
+                    6900
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 6900,
+                      "mutability": "mutable",
+                      "name": "feeInfo",
+                      "nodeType": "VariableDeclaration",
+                      "overrides": null,
+                      "scope": 6955,
+                      "src": "1479:33:67",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_struct$_StreamingFeeInfo_$6886_memory_ptr_$dyn_memory_ptr",
+                        "typeString": "struct StreamingFeeModuleViewer.StreamingFeeInfo[]"
+                      },
+                      "typeName": {
+                        "baseType": {
+                          "contractScope": null,
+                          "id": 6898,
+                          "name": "StreamingFeeInfo",
+                          "nodeType": "UserDefinedTypeName",
+                          "referencedDeclaration": 6886,
+                          "src": "1479:16:67",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_StreamingFeeInfo_$6886_storage_ptr",
+                            "typeString": "struct StreamingFeeModuleViewer.StreamingFeeInfo"
+                          }
+                        },
+                        "id": 6899,
+                        "length": null,
+                        "nodeType": "ArrayTypeName",
+                        "src": "1479:18:67",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_struct$_StreamingFeeInfo_$6886_storage_$dyn_storage_ptr",
+                          "typeString": "struct StreamingFeeModuleViewer.StreamingFeeInfo[]"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 6907,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 6904,
+                          "name": "_setTokens",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 6891,
+                          "src": "1538:10:67",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_array$_t_contract$_ISetToken_$793_$dyn_memory_ptr",
+                            "typeString": "contract ISetToken[] memory"
+                          }
+                        },
+                        "id": 6905,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "length",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "1538:17:67",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "id": 6903,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "nodeType": "NewExpression",
+                      "src": "1515:22:67",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_objectcreation_pure$_t_uint256_$returns$_t_array$_t_struct$_StreamingFeeInfo_$6886_memory_ptr_$dyn_memory_ptr_$",
+                        "typeString": "function (uint256) pure returns (struct StreamingFeeModuleViewer.StreamingFeeInfo memory[] memory)"
+                      },
+                      "typeName": {
+                        "baseType": {
+                          "contractScope": null,
+                          "id": 6901,
+                          "name": "StreamingFeeInfo",
+                          "nodeType": "UserDefinedTypeName",
+                          "referencedDeclaration": 6886,
+                          "src": "1519:16:67",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_StreamingFeeInfo_$6886_storage_ptr",
+                            "typeString": "struct StreamingFeeModuleViewer.StreamingFeeInfo"
+                          }
+                        },
+                        "id": 6902,
+                        "length": null,
+                        "nodeType": "ArrayTypeName",
+                        "src": "1519:18:67",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_struct$_StreamingFeeInfo_$6886_storage_$dyn_storage_ptr",
+                          "typeString": "struct StreamingFeeModuleViewer.StreamingFeeInfo[]"
+                        }
+                      }
+                    },
+                    "id": 6906,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1515:41:67",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_StreamingFeeInfo_$6886_memory_ptr_$dyn_memory_ptr",
+                      "typeString": "struct StreamingFeeModuleViewer.StreamingFeeInfo memory[] memory"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "1479:77:67"
+                },
+                {
+                  "body": {
+                    "id": 6951,
+                    "nodeType": "Block",
+                    "src": "1615:426:67",
+                    "statements": [
+                      {
+                        "assignments": [
+                          6922
+                        ],
+                        "declarations": [
+                          {
+                            "constant": false,
+                            "id": 6922,
+                            "mutability": "mutable",
+                            "name": "feeState",
+                            "nodeType": "VariableDeclaration",
+                            "overrides": null,
+                            "scope": 6951,
+                            "src": "1629:43:67",
+                            "stateVariable": false,
+                            "storageLocation": "memory",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_struct$_FeeState_$22484_memory_ptr",
+                              "typeString": "struct StreamingFeeModule.FeeState"
+                            },
+                            "typeName": {
+                              "contractScope": null,
+                              "id": 6921,
+                              "name": "StreamingFeeModule.FeeState",
+                              "nodeType": "UserDefinedTypeName",
+                              "referencedDeclaration": 22484,
+                              "src": "1629:27:67",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_struct$_FeeState_$22484_storage_ptr",
+                                "typeString": "struct StreamingFeeModule.FeeState"
+                              }
+                            },
+                            "value": null,
+                            "visibility": "internal"
+                          }
+                        ],
+                        "id": 6929,
+                        "initialValue": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "baseExpression": {
+                                "argumentTypes": null,
+                                "id": 6925,
+                                "name": "_setTokens",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 6891,
+                                "src": "1705:10:67",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_array$_t_contract$_ISetToken_$793_$dyn_memory_ptr",
+                                  "typeString": "contract ISetToken[] memory"
+                                }
+                              },
+                              "id": 6927,
+                              "indexExpression": {
+                                "argumentTypes": null,
+                                "id": 6926,
+                                "name": "i",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 6909,
+                                "src": "1716:1:67",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              },
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "nodeType": "IndexAccess",
+                              "src": "1705:13:67",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_contract$_ISetToken_$793",
+                                "typeString": "contract ISetToken"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_contract$_ISetToken_$793",
+                                "typeString": "contract ISetToken"
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": null,
+                              "id": 6923,
+                              "name": "_streamingFeeModule",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 6888,
+                              "src": "1675:19:67",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_contract$_IStreamingFeeModule_$866",
+                                "typeString": "contract IStreamingFeeModule"
+                              }
+                            },
+                            "id": 6924,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "feeStates",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 858,
+                            "src": "1675:29:67",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_external_view$_t_contract$_ISetToken_$793_$returns$_t_struct$_FeeState_$22484_memory_ptr_$",
+                              "typeString": "function (contract ISetToken) view external returns (struct StreamingFeeModule.FeeState memory)"
+                            }
+                          },
+                          "id": 6928,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "1675:44:67",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_FeeState_$22484_memory_ptr",
+                            "typeString": "struct StreamingFeeModule.FeeState memory"
+                          }
+                        },
+                        "nodeType": "VariableDeclarationStatement",
+                        "src": "1629:90:67"
+                      },
+                      {
+                        "assignments": [
+                          6931
+                        ],
+                        "declarations": [
+                          {
+                            "constant": false,
+                            "id": 6931,
+                            "mutability": "mutable",
+                            "name": "unaccruedFees",
+                            "nodeType": "VariableDeclaration",
+                            "overrides": null,
+                            "scope": 6951,
+                            "src": "1733:21:67",
+                            "stateVariable": false,
+                            "storageLocation": "default",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            },
+                            "typeName": {
+                              "id": 6930,
+                              "name": "uint256",
+                              "nodeType": "ElementaryTypeName",
+                              "src": "1733:7:67",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            },
+                            "value": null,
+                            "visibility": "internal"
+                          }
+                        ],
+                        "id": 6938,
+                        "initialValue": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "baseExpression": {
+                                "argumentTypes": null,
+                                "id": 6934,
+                                "name": "_setTokens",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 6891,
+                                "src": "1784:10:67",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_array$_t_contract$_ISetToken_$793_$dyn_memory_ptr",
+                                  "typeString": "contract ISetToken[] memory"
+                                }
+                              },
+                              "id": 6936,
+                              "indexExpression": {
+                                "argumentTypes": null,
+                                "id": 6935,
+                                "name": "i",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 6909,
+                                "src": "1795:1:67",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              },
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "nodeType": "IndexAccess",
+                              "src": "1784:13:67",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_contract$_ISetToken_$793",
+                                "typeString": "contract ISetToken"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_contract$_ISetToken_$793",
+                                "typeString": "contract ISetToken"
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": null,
+                              "id": 6932,
+                              "name": "_streamingFeeModule",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 6888,
+                              "src": "1757:19:67",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_contract$_IStreamingFeeModule_$866",
+                                "typeString": "contract IStreamingFeeModule"
+                              }
+                            },
+                            "id": 6933,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "getFee",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 865,
+                            "src": "1757:26:67",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_external_view$_t_contract$_ISetToken_$793_$returns$_t_uint256_$",
+                              "typeString": "function (contract ISetToken) view external returns (uint256)"
+                            }
+                          },
+                          "id": 6937,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "1757:41:67",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "VariableDeclarationStatement",
+                        "src": "1733:65:67"
+                      },
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 6949,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftHandSide": {
+                            "argumentTypes": null,
+                            "baseExpression": {
+                              "argumentTypes": null,
+                              "id": 6939,
+                              "name": "feeInfo",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 6900,
+                              "src": "1813:7:67",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_array$_t_struct$_StreamingFeeInfo_$6886_memory_ptr_$dyn_memory_ptr",
+                                "typeString": "struct StreamingFeeModuleViewer.StreamingFeeInfo memory[] memory"
+                              }
+                            },
+                            "id": 6941,
+                            "indexExpression": {
+                              "argumentTypes": null,
+                              "id": 6940,
+                              "name": "i",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 6909,
+                              "src": "1821:1:67",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            },
+                            "isConstant": false,
+                            "isLValue": true,
+                            "isPure": false,
+                            "lValueRequested": true,
+                            "nodeType": "IndexAccess",
+                            "src": "1813:10:67",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_struct$_StreamingFeeInfo_$6886_memory_ptr",
+                              "typeString": "struct StreamingFeeModuleViewer.StreamingFeeInfo memory"
+                            }
+                          },
+                          "nodeType": "Assignment",
+                          "operator": "=",
+                          "rightHandSide": {
+                            "argumentTypes": null,
+                            "arguments": [
+                              {
+                                "argumentTypes": null,
+                                "expression": {
+                                  "argumentTypes": null,
+                                  "id": 6943,
+                                  "name": "feeState",
+                                  "nodeType": "Identifier",
+                                  "overloadedDeclarations": [],
+                                  "referencedDeclaration": 6922,
+                                  "src": "1875:8:67",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_struct$_FeeState_$22484_memory_ptr",
+                                    "typeString": "struct StreamingFeeModule.FeeState memory"
+                                  }
+                                },
+                                "id": 6944,
+                                "isConstant": false,
+                                "isLValue": true,
+                                "isPure": false,
+                                "lValueRequested": false,
+                                "memberName": "feeRecipient",
+                                "nodeType": "MemberAccess",
+                                "referencedDeclaration": 22477,
+                                "src": "1875:21:67",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_address",
+                                  "typeString": "address"
+                                }
+                              },
+                              {
+                                "argumentTypes": null,
+                                "expression": {
+                                  "argumentTypes": null,
+                                  "id": 6945,
+                                  "name": "feeState",
+                                  "nodeType": "Identifier",
+                                  "overloadedDeclarations": [],
+                                  "referencedDeclaration": 6922,
+                                  "src": "1938:8:67",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_struct$_FeeState_$22484_memory_ptr",
+                                    "typeString": "struct StreamingFeeModule.FeeState memory"
+                                  }
+                                },
+                                "id": 6946,
+                                "isConstant": false,
+                                "isLValue": true,
+                                "isPure": false,
+                                "lValueRequested": false,
+                                "memberName": "streamingFeePercentage",
+                                "nodeType": "MemberAccess",
+                                "referencedDeclaration": 22481,
+                                "src": "1938:31:67",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              },
+                              {
+                                "argumentTypes": null,
+                                "id": 6947,
+                                "name": "unaccruedFees",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 6931,
+                                "src": "2002:13:67",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_address",
+                                  "typeString": "address"
+                                },
+                                {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                },
+                                {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              ],
+                              "id": 6942,
+                              "name": "StreamingFeeInfo",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 6886,
+                              "src": "1826:16:67",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_type$_t_struct$_StreamingFeeInfo_$6886_storage_ptr_$",
+                                "typeString": "type(struct StreamingFeeModuleViewer.StreamingFeeInfo storage pointer)"
+                              }
+                            },
+                            "id": 6948,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "kind": "structConstructorCall",
+                            "lValueRequested": false,
+                            "names": [
+                              "feeRecipient",
+                              "streamingFeePercentage",
+                              "unaccruedFees"
+                            ],
+                            "nodeType": "FunctionCall",
+                            "src": "1826:204:67",
+                            "tryCall": false,
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_struct$_StreamingFeeInfo_$6886_memory_ptr",
+                              "typeString": "struct StreamingFeeModuleViewer.StreamingFeeInfo memory"
+                            }
+                          },
+                          "src": "1813:217:67",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_StreamingFeeInfo_$6886_memory_ptr",
+                            "typeString": "struct StreamingFeeModuleViewer.StreamingFeeInfo memory"
+                          }
+                        },
+                        "id": 6950,
+                        "nodeType": "ExpressionStatement",
+                        "src": "1813:217:67"
+                      }
+                    ]
+                  },
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 6915,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "id": 6912,
+                      "name": "i",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6909,
+                      "src": "1587:1:67",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "<",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 6913,
+                        "name": "_setTokens",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 6891,
+                        "src": "1591:10:67",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_contract$_ISetToken_$793_$dyn_memory_ptr",
+                          "typeString": "contract ISetToken[] memory"
+                        }
+                      },
+                      "id": 6914,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "length",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "1591:17:67",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "1587:21:67",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 6952,
+                  "initializationExpression": {
+                    "assignments": [
+                      6909
+                    ],
+                    "declarations": [
+                      {
+                        "constant": false,
+                        "id": 6909,
+                        "mutability": "mutable",
+                        "name": "i",
+                        "nodeType": "VariableDeclaration",
+                        "overrides": null,
+                        "scope": 6952,
+                        "src": "1572:9:67",
+                        "stateVariable": false,
+                        "storageLocation": "default",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "typeName": {
+                          "id": 6908,
+                          "name": "uint256",
+                          "nodeType": "ElementaryTypeName",
+                          "src": "1572:7:67",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "value": null,
+                        "visibility": "internal"
+                      }
+                    ],
+                    "id": 6911,
+                    "initialValue": {
+                      "argumentTypes": null,
+                      "hexValue": "30",
+                      "id": 6910,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1584:1:67",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "nodeType": "VariableDeclarationStatement",
+                    "src": "1572:13:67"
+                  },
+                  "loopExpression": {
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 6917,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "UnaryOperation",
+                      "operator": "++",
+                      "prefix": false,
+                      "src": "1610:3:67",
+                      "subExpression": {
+                        "argumentTypes": null,
+                        "id": 6916,
+                        "name": "i",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 6909,
+                        "src": "1610:1:67",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 6918,
+                    "nodeType": "ExpressionStatement",
+                    "src": "1610:3:67"
+                  },
+                  "nodeType": "ForStatement",
+                  "src": "1567:474:67"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 6953,
+                    "name": "feeInfo",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 6900,
+                    "src": "2058:7:67",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_StreamingFeeInfo_$6886_memory_ptr_$dyn_memory_ptr",
+                      "typeString": "struct StreamingFeeModuleViewer.StreamingFeeInfo memory[] memory"
+                    }
+                  },
+                  "functionReturnParameters": 6896,
+                  "id": 6954,
+                  "nodeType": "Return",
+                  "src": "2051:14:67"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "429d506f",
+            "id": 6956,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "batchFetchStreamingFeeInfo",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 6892,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6888,
+                  "mutability": "mutable",
+                  "name": "_streamingFeeModule",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 6956,
+                  "src": "1306:39:67",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IStreamingFeeModule_$866",
+                    "typeString": "contract IStreamingFeeModule"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 6887,
+                    "name": "IStreamingFeeModule",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 866,
+                    "src": "1306:19:67",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IStreamingFeeModule_$866",
+                      "typeString": "contract IStreamingFeeModule"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6891,
+                  "mutability": "mutable",
+                  "name": "_setTokens",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 6956,
+                  "src": "1355:29:67",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_contract$_ISetToken_$793_$dyn_memory_ptr",
+                    "typeString": "contract ISetToken[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "contractScope": null,
+                      "id": 6889,
+                      "name": "ISetToken",
+                      "nodeType": "UserDefinedTypeName",
+                      "referencedDeclaration": 793,
+                      "src": "1355:9:67",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_ISetToken_$793",
+                        "typeString": "contract ISetToken"
+                      }
+                    },
+                    "id": 6890,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1355:11:67",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_contract$_ISetToken_$793_$dyn_storage_ptr",
+                      "typeString": "contract ISetToken[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1296:94:67"
+            },
+            "returnParameters": {
+              "id": 6896,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6895,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 6956,
+                  "src": "1438:25:67",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_StreamingFeeInfo_$6886_memory_ptr_$dyn_memory_ptr",
+                    "typeString": "struct StreamingFeeModuleViewer.StreamingFeeInfo[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "contractScope": null,
+                      "id": 6893,
+                      "name": "StreamingFeeInfo",
+                      "nodeType": "UserDefinedTypeName",
+                      "referencedDeclaration": 6886,
+                      "src": "1438:16:67",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_StreamingFeeInfo_$6886_storage_ptr",
+                        "typeString": "struct StreamingFeeModuleViewer.StreamingFeeInfo"
+                      }
+                    },
+                    "id": 6894,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1438:18:67",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_StreamingFeeInfo_$6886_storage_$dyn_storage_ptr",
+                      "typeString": "struct StreamingFeeModuleViewer.StreamingFeeInfo[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1437:27:67"
+            },
+            "scope": 6957,
+            "src": "1261:811:67",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 6958,
+        "src": "1082:992:67"
+      }
+    ],
+    "src": "654:1420:67"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.10+commit.00c0fcaf.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.2.1",
+  "updatedAt": "2021-01-21T08:20:37.645Z",
+  "devdoc": {
+    "author": "Set Protocol StreamingFeeModuleViewer enables batch queries of StreamingFeeModule state.",
+    "methods": {},
+    "title": "StreamingFeeModuleViewer"
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

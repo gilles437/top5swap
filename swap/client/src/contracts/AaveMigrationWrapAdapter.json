@@ -1,0 +1,3180 @@
+{
+  "contractName": "AaveMigrationWrapAdapter",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_lendToAaveMigrationProxy",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_lendToken",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_aaveToken",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [],
+      "name": "aaveToken",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "lendToAaveMigrationProxy",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "lendToken",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_underlyingToken",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_wrappedToken",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_underlyingUnits",
+          "type": "uint256"
+        }
+      ],
+      "name": "getWrapCallData",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes",
+          "name": "",
+          "type": "bytes"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "getUnwrapCallData",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes",
+          "name": "",
+          "type": "bytes"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "getSpenderAddress",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.10+commit.00c0fcaf\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_lendToAaveMigrationProxy\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_lendToken\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_aaveToken\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[],\"name\":\"aaveToken\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"getSpenderAddress\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"getUnwrapCallData\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_underlyingToken\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_wrappedToken\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_underlyingUnits\",\"type\":\"uint256\"}],\"name\":\"getWrapCallData\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"lendToAaveMigrationProxy\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"lendToken\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"Set Protocol Wrap adapter for one time token migration that returns data for wrapping LEND into AAVE\",\"methods\":{\"constructor\":{\"params\":{\"_aaveToken\":\"Address of AAVE token\",\"_lendToAaveMigrationProxy\":\"Address of Aave migration contract proxy\",\"_lendToken\":\"Address of LEND token\"}},\"getSpenderAddress(address,address)\":{\"returns\":{\"_0\":\"address        Address of the contract to approve tokens to\"}},\"getUnwrapCallData(address,address,uint256)\":{\"returns\":{\"_0\":\"address              Target contract address\",\"_1\":\"uint256              Total quantity of wrapped token units to unwrap. This will always be 0 for unwrapping\",\"_2\":\"bytes                Unwrap calldata\"}},\"getWrapCallData(address,address,uint256)\":{\"params\":{\"_underlyingToken\":\"Address of the component to be wrapped\",\"_underlyingUnits\":\"Total quantity of underlying units to wrap\",\"_wrappedToken\":\"Address of the wrapped component\"},\"returns\":{\"_0\":\"address              Target contract address\",\"_1\":\"uint256              Total quantity of underlying units (if underlying is ETH)\",\"_2\":\"bytes                Wrap calldata\"}}},\"title\":\"AaveMigrationWrapAdapter\"},\"userdoc\":{\"methods\":{\"constructor\":\"Set state variables\",\"getSpenderAddress(address,address)\":{\"notice\":\"Returns the address to approve source tokens for wrapping.\"},\"getUnwrapCallData(address,address,uint256)\":{\"notice\":\"Generates the calldata to unwrap a wrapped asset into its underlying. Note: Migration cannot be reversed. This function will revert.\"},\"getWrapCallData(address,address,uint256)\":{\"notice\":\"Generates the calldata to migrate LEND to AAVE.\"}}}},\"settings\":{\"compilationTarget\":{\"/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/protocol/integration/AaveMigrationWrapAdapter.sol\":\"AaveMigrationWrapAdapter\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/protocol/integration/AaveMigrationWrapAdapter.sol\":{\"keccak256\":\"0xb719e15fcc009a5b21acecc63a952a423e9d924cf69cbd2158fbba8495fecc66\",\"license\":\"Apache License\",\"urls\":[\"bzz-raw://fdf44cab6cb5ca6cae1fabac6b12e99434a25b49b0bd734dd81a37cd50d234d7\",\"dweb:/ipfs/QmSXTCEGvksFdqVPMBRmmKpCkVpwgUPTANsYtJ6LA2EUjp\"]}},\"version\":1}",
+  "bytecode": "0x60e060405234801561001057600080fd5b506040516109083803806109088339818101604052606081101561003357600080fd5b810190808051906020019092919080519060200190929190805190602001909291905050508273ffffffffffffffffffffffffffffffffffffffff1660808173ffffffffffffffffffffffffffffffffffffffff1660601b815250508173ffffffffffffffffffffffffffffffffffffffff1660a08173ffffffffffffffffffffffffffffffffffffffff1660601b815250508073ffffffffffffffffffffffffffffffffffffffff1660c08173ffffffffffffffffffffffffffffffffffffffff1660601b8152505050505060805160601c60a05160601c60c05160601c6107bf61014960003980610451528061055f525080610475528061049e52508061042d52806106b2528061074152506107bf6000f3fe608060405234801561001057600080fd5b50600436106100625760003560e01c806304bd95231461006757806306a3fe59146100b15780631d4b1519146100fb57806377b1aaf814610145578063a22fe98e14610266578063de68a3da14610387575b600080fd5b61006f61042b565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6100b961044f565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b610103610473565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6101b16004803603606081101561015b57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803573ffffffffffffffffffffffffffffffffffffffff16906020019092919080359060200190929190505050610497565b604051808473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200183815260200180602001828103825283818151815260200191508051906020019080838360005b8381101561022957808201518184015260208101905061020e565b50505050905090810190601f1680156102565780820380516001836020036101000a031916815260200191505b5094505050505060405180910390f35b6102d26004803603606081101561027c57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803590602001909291905050506106e7565b604051808473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200183815260200180602001828103825283818151815260200191508051906020019080838360005b8381101561034a57808201518184015260208101905061032f565b50505050905090810190601f1680156103775780820380516001836020036101000a031916815260200191505b5094505050505060405180910390f35b6103e96004803603604081101561039d57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803573ffffffffffffffffffffffffffffffffffffffff16906020019092919050505061073d565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b7f000000000000000000000000000000000000000000000000000000000000000081565b7f000000000000000000000000000000000000000000000000000000000000000081565b7f000000000000000000000000000000000000000000000000000000000000000081565b60008060607f000000000000000000000000000000000000000000000000000000000000000073ffffffffffffffffffffffffffffffffffffffff168673ffffffffffffffffffffffffffffffffffffffff161461055d576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260128152602001807f4d757374206265204c454e4420746f6b656e000000000000000000000000000081525060200191505060405180910390fd5b7f000000000000000000000000000000000000000000000000000000000000000073ffffffffffffffffffffffffffffffffffffffff168573ffffffffffffffffffffffffffffffffffffffff161461061e576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260128152602001807f4d757374206265204141564520746f6b656e000000000000000000000000000081525060200191505060405180910390fd5b606084604051602401808281526020019150506040516020818303038152906040527f682356c0000000000000000000000000000000000000000000000000000000007bffffffffffffffffffffffffffffffffffffffffffffffffffffffff19166020820180517bffffffffffffffffffffffffffffffffffffffffffffffffffffffff838183161783525050505090507f00000000000000000000000000000000000000000000000000000000000000006000828191509350935093505093509350939050565b60008060606040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260218152602001806107696021913960400191505060405180910390fd5b60007f000000000000000000000000000000000000000000000000000000000000000090509291505056fe41415645206d6967726174696f6e2063616e6e6f74206265207265766572736564a2646970667358221220364cd4089b095664b23f4804e866711c911938504d79bcf5d24c5e8473122c7d64736f6c634300060a0033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100625760003560e01c806304bd95231461006757806306a3fe59146100b15780631d4b1519146100fb57806377b1aaf814610145578063a22fe98e14610266578063de68a3da14610387575b600080fd5b61006f61042b565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6100b961044f565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b610103610473565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6101b16004803603606081101561015b57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803573ffffffffffffffffffffffffffffffffffffffff16906020019092919080359060200190929190505050610497565b604051808473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200183815260200180602001828103825283818151815260200191508051906020019080838360005b8381101561022957808201518184015260208101905061020e565b50505050905090810190601f1680156102565780820380516001836020036101000a031916815260200191505b5094505050505060405180910390f35b6102d26004803603606081101561027c57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803590602001909291905050506106e7565b604051808473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200183815260200180602001828103825283818151815260200191508051906020019080838360005b8381101561034a57808201518184015260208101905061032f565b50505050905090810190601f1680156103775780820380516001836020036101000a031916815260200191505b5094505050505060405180910390f35b6103e96004803603604081101561039d57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803573ffffffffffffffffffffffffffffffffffffffff16906020019092919050505061073d565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b7f000000000000000000000000000000000000000000000000000000000000000081565b7f000000000000000000000000000000000000000000000000000000000000000081565b7f000000000000000000000000000000000000000000000000000000000000000081565b60008060607f000000000000000000000000000000000000000000000000000000000000000073ffffffffffffffffffffffffffffffffffffffff168673ffffffffffffffffffffffffffffffffffffffff161461055d576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260128152602001807f4d757374206265204c454e4420746f6b656e000000000000000000000000000081525060200191505060405180910390fd5b7f000000000000000000000000000000000000000000000000000000000000000073ffffffffffffffffffffffffffffffffffffffff168573ffffffffffffffffffffffffffffffffffffffff161461061e576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260128152602001807f4d757374206265204141564520746f6b656e000000000000000000000000000081525060200191505060405180910390fd5b606084604051602401808281526020019150506040516020818303038152906040527f682356c0000000000000000000000000000000000000000000000000000000007bffffffffffffffffffffffffffffffffffffffffffffffffffffffff19166020820180517bffffffffffffffffffffffffffffffffffffffffffffffffffffffff838183161783525050505090507f00000000000000000000000000000000000000000000000000000000000000006000828191509350935093505093509350939050565b60008060606040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260218152602001806107696021913960400191505060405180910390fd5b60007f000000000000000000000000000000000000000000000000000000000000000090509291505056fe41415645206d6967726174696f6e2063616e6e6f74206265207265766572736564a2646970667358221220364cd4089b095664b23f4804e866711c911938504d79bcf5d24c5e8473122c7d64736f6c634300060a0033",
+  "immutableReferences": {
+    "10791": [
+      {
+        "length": 32,
+        "start": 1069
+      },
+      {
+        "length": 32,
+        "start": 1714
+      },
+      {
+        "length": 32,
+        "start": 1857
+      }
+    ],
+    "10793": [
+      {
+        "length": 32,
+        "start": 1141
+      },
+      {
+        "length": 32,
+        "start": 1182
+      }
+    ],
+    "10795": [
+      {
+        "length": 32,
+        "start": 1105
+      },
+      {
+        "length": 32,
+        "start": 1375
+      }
+    ]
+  },
+  "sourceMap": "841:3110:75:-:0;;;1495:269;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1668:25;1641:52;;;;;;;;;;;;1715:10;1703:22;;;;;;;;;;;;1747:10;1735:22;;;;;;;;;;;;1495:269;;;841:3110;;;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "841:3110:75:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;983:49;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;1138:34;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;1068;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;2345:562;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;3317:295;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;3782:167;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;983:49;;;:::o;1138:34::-;;;:::o;1068:::-;;;:::o;2345:562::-;2522:7;2531;2540:12;2596:9;2576:29;;:16;:29;;;2568:60;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2663:9;2646:26;;:13;:26;;;2638:57;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2750:21;2826:16;2774:69;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2750:93;;2862:24;2888:1;2891:8;2854:46;;;;;;;;;;2345:562;;;;;;;:::o;3317:295::-;3516:7;3525;3534:12;3562:43;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;3782:167;3892:7;3918:24;3911:31;;3782:167;;;;:::o",
+  "source": "/*\n    Copyright 2020 Set Labs Inc.\n\n    Licensed under the Apache License, Version 2.0 (the \"License\");\n    you may not use this file except in compliance with the License.\n    You may obtain a copy of the License at\n\n    http://www.apache.org/licenses/LICENSE-2.0\n\n    Unless required by applicable law or agreed to in writing, software\n    distributed under the License is distributed on an \"AS IS\" BASIS,\n    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n    See the License for the specific language governing permissions and\n    limitations under the License.\n\n    SPDX-License-Identifier: Apache License, Version 2.0\n*/\n\npragma solidity 0.6.10;\n\n/**\n * @title AaveMigrationWrapAdapter\n * @author Set Protocol\n *\n * Wrap adapter for one time token migration that returns data for wrapping LEND into AAVE\n */\ncontract AaveMigrationWrapAdapter {\n\n    /* ============ State Variables ============ */\n\n    // Address of Aave migration contract proxy\n    address public immutable lendToAaveMigrationProxy;\n\n    // Address of LEND token\n    address public immutable lendToken;\n\n    // Address of AAVE token\n    address public immutable aaveToken;\n\n    /* ============ Constructor ============ */\n\n    /**\n     * Set state variables\n     *\n     * @param _lendToAaveMigrationProxy     Address of Aave migration contract proxy\n     * @param _lendToken                    Address of LEND token\n     * @param _aaveToken                    Address of AAVE token\n     */\n    constructor(\n        address _lendToAaveMigrationProxy,\n        address _lendToken,\n        address _aaveToken\n    )\n        public\n    {\n        lendToAaveMigrationProxy = _lendToAaveMigrationProxy;\n        lendToken = _lendToken;\n        aaveToken = _aaveToken;\n    }\n\n    /* ============ External Getter Functions ============ */\n\n    /**\n     * Generates the calldata to migrate LEND to AAVE.\n     *\n     * @param _underlyingToken      Address of the component to be wrapped\n     * @param _wrappedToken         Address of the wrapped component\n     * @param _underlyingUnits      Total quantity of underlying units to wrap\n     *\n     * @return address              Target contract address\n     * @return uint256              Total quantity of underlying units (if underlying is ETH)\n     * @return bytes                Wrap calldata\n     */\n    function getWrapCallData(\n        address _underlyingToken,\n        address _wrappedToken,\n        uint256 _underlyingUnits\n    )\n        external\n        view\n        returns (address, uint256, bytes memory)\n    {\n        require(_underlyingToken == lendToken, \"Must be LEND token\");\n        require(_wrappedToken == aaveToken, \"Must be AAVE token\");\n\n        // migrateFromLEND(uint256 _amount)\n        bytes memory callData = abi.encodeWithSignature(\"migrateFromLEND(uint256)\", _underlyingUnits);\n\n        return (lendToAaveMigrationProxy, 0, callData);\n    }\n\n    /**\n     * Generates the calldata to unwrap a wrapped asset into its underlying. Note: Migration cannot be reversed. This function\n     * will revert.\n     *\n     * @return address              Target contract address\n     * @return uint256              Total quantity of wrapped token units to unwrap. This will always be 0 for unwrapping\n     * @return bytes                Unwrap calldata\n     */\n    function getUnwrapCallData(\n        address /* _underlyingToken */,\n        address /* _wrappedToken */,\n        uint256 /* _wrappedTokenUnits */\n    )\n        external\n        view\n        returns (address, uint256, bytes memory)\n    {\n        revert(\"AAVE migration cannot be reversed\");\n    }\n\n    /**\n     * Returns the address to approve source tokens for wrapping.\n     *\n     * @return address        Address of the contract to approve tokens to\n     */\n    function getSpenderAddress(address /* _underlyingToken */, address /* _wrappedToken */) external view returns(address) {\n        return lendToAaveMigrationProxy;\n    }\n}\n",
+  "sourcePath": "/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/protocol/integration/AaveMigrationWrapAdapter.sol",
+  "ast": {
+    "absolutePath": "/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/protocol/integration/AaveMigrationWrapAdapter.sol",
+    "exportedSymbols": {
+      "AaveMigrationWrapAdapter": [
+        10897
+      ]
+    },
+    "id": 10898,
+    "license": "Apache License",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 10788,
+        "literals": [
+          "solidity",
+          "0.6",
+          ".10"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "655:23:75"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": {
+          "id": 10789,
+          "nodeType": "StructuredDocumentation",
+          "src": "680:160:75",
+          "text": " @title AaveMigrationWrapAdapter\n @author Set Protocol\n Wrap adapter for one time token migration that returns data for wrapping LEND into AAVE"
+        },
+        "fullyImplemented": true,
+        "id": 10897,
+        "linearizedBaseContracts": [
+          10897
+        ],
+        "name": "AaveMigrationWrapAdapter",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "functionSelector": "04bd9523",
+            "id": 10791,
+            "mutability": "immutable",
+            "name": "lendToAaveMigrationProxy",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 10897,
+            "src": "983:49:75",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 10790,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "983:7:75",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "functionSelector": "1d4b1519",
+            "id": 10793,
+            "mutability": "immutable",
+            "name": "lendToken",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 10897,
+            "src": "1068:34:75",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 10792,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "1068:7:75",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "functionSelector": "06a3fe59",
+            "id": 10795,
+            "mutability": "immutable",
+            "name": "aaveToken",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 10897,
+            "src": "1138:34:75",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 10794,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "1138:7:75",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 10817,
+              "nodeType": "Block",
+              "src": "1631:133:75",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 10807,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 10805,
+                      "name": "lendToAaveMigrationProxy",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 10791,
+                      "src": "1641:24:75",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 10806,
+                      "name": "_lendToAaveMigrationProxy",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 10798,
+                      "src": "1668:25:75",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "1641:52:75",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 10808,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1641:52:75"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 10811,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 10809,
+                      "name": "lendToken",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 10793,
+                      "src": "1703:9:75",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 10810,
+                      "name": "_lendToken",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 10800,
+                      "src": "1715:10:75",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "1703:22:75",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 10812,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1703:22:75"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 10815,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 10813,
+                      "name": "aaveToken",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 10795,
+                      "src": "1735:9:75",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 10814,
+                      "name": "_aaveToken",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 10802,
+                      "src": "1747:10:75",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "1735:22:75",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 10816,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1735:22:75"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 10796,
+              "nodeType": "StructuredDocumentation",
+              "src": "1228:262:75",
+              "text": " Set state variables\n @param _lendToAaveMigrationProxy     Address of Aave migration contract proxy\n @param _lendToken                    Address of LEND token\n @param _aaveToken                    Address of AAVE token"
+            },
+            "id": 10818,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 10803,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10798,
+                  "mutability": "mutable",
+                  "name": "_lendToAaveMigrationProxy",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10818,
+                  "src": "1516:33:75",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10797,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1516:7:75",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 10800,
+                  "mutability": "mutable",
+                  "name": "_lendToken",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10818,
+                  "src": "1559:18:75",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10799,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1559:7:75",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 10802,
+                  "mutability": "mutable",
+                  "name": "_aaveToken",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10818,
+                  "src": "1587:18:75",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10801,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1587:7:75",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1506:105:75"
+            },
+            "returnParameters": {
+              "id": 10804,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1631:0:75"
+            },
+            "scope": 10897,
+            "src": "1495:269:75",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 10861,
+              "nodeType": "Block",
+              "src": "2558:349:75",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        "id": 10837,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "id": 10835,
+                          "name": "_underlyingToken",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 10821,
+                          "src": "2576:16:75",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "id": 10836,
+                          "name": "lendToken",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 10793,
+                          "src": "2596:9:75",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "src": "2576:29:75",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "4d757374206265204c454e4420746f6b656e",
+                        "id": 10838,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "2607:20:75",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_97a412559ed6bdebbaa89dc68e4d3d56bef11f26e0a765734926bc2fda9df231",
+                          "typeString": "literal_string \"Must be LEND token\""
+                        },
+                        "value": "Must be LEND token"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_97a412559ed6bdebbaa89dc68e4d3d56bef11f26e0a765734926bc2fda9df231",
+                          "typeString": "literal_string \"Must be LEND token\""
+                        }
+                      ],
+                      "id": 10834,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        -18,
+                        -18
+                      ],
+                      "referencedDeclaration": -18,
+                      "src": "2568:7:75",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 10839,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "2568:60:75",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 10840,
+                  "nodeType": "ExpressionStatement",
+                  "src": "2568:60:75"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        "id": 10844,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "id": 10842,
+                          "name": "_wrappedToken",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 10823,
+                          "src": "2646:13:75",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "id": 10843,
+                          "name": "aaveToken",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 10795,
+                          "src": "2663:9:75",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "src": "2646:26:75",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "4d757374206265204141564520746f6b656e",
+                        "id": 10845,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "2674:20:75",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_9cfb4627daaa2fab840320f7b66dc40be16296fb253f0ef026277ce0e7d4753e",
+                          "typeString": "literal_string \"Must be AAVE token\""
+                        },
+                        "value": "Must be AAVE token"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_9cfb4627daaa2fab840320f7b66dc40be16296fb253f0ef026277ce0e7d4753e",
+                          "typeString": "literal_string \"Must be AAVE token\""
+                        }
+                      ],
+                      "id": 10841,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        -18,
+                        -18
+                      ],
+                      "referencedDeclaration": -18,
+                      "src": "2638:7:75",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 10846,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "2638:57:75",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 10847,
+                  "nodeType": "ExpressionStatement",
+                  "src": "2638:57:75"
+                },
+                {
+                  "assignments": [
+                    10849
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 10849,
+                      "mutability": "mutable",
+                      "name": "callData",
+                      "nodeType": "VariableDeclaration",
+                      "overrides": null,
+                      "scope": 10861,
+                      "src": "2750:21:75",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes_memory_ptr",
+                        "typeString": "bytes"
+                      },
+                      "typeName": {
+                        "id": 10848,
+                        "name": "bytes",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "2750:5:75",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_storage_ptr",
+                          "typeString": "bytes"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 10855,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "6d69677261746546726f6d4c454e442875696e7432353629",
+                        "id": 10852,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "2798:26:75",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_682356c09e8f2bcd3d5ea0ce883551ffff7e06b66f1be7cf19258171b989b31b",
+                          "typeString": "literal_string \"migrateFromLEND(uint256)\""
+                        },
+                        "value": "migrateFromLEND(uint256)"
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 10853,
+                        "name": "_underlyingUnits",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 10825,
+                        "src": "2826:16:75",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_stringliteral_682356c09e8f2bcd3d5ea0ce883551ffff7e06b66f1be7cf19258171b989b31b",
+                          "typeString": "literal_string \"migrateFromLEND(uint256)\""
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 10850,
+                        "name": "abi",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": -1,
+                        "src": "2774:3:75",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_abi",
+                          "typeString": "abi"
+                        }
+                      },
+                      "id": 10851,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "memberName": "encodeWithSignature",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "2774:23:75",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_abiencodewithsignature_pure$_t_string_memory_ptr_$returns$_t_bytes_memory_ptr_$",
+                        "typeString": "function (string memory) pure returns (bytes memory)"
+                      }
+                    },
+                    "id": 10854,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "2774:69:75",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_memory_ptr",
+                      "typeString": "bytes memory"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "2750:93:75"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "components": [
+                      {
+                        "argumentTypes": null,
+                        "id": 10856,
+                        "name": "lendToAaveMigrationProxy",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 10791,
+                        "src": "2862:24:75",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "30",
+                        "id": 10857,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "2888:1:75",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_0_by_1",
+                          "typeString": "int_const 0"
+                        },
+                        "value": "0"
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 10858,
+                        "name": "callData",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 10849,
+                        "src": "2891:8:75",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      }
+                    ],
+                    "id": 10859,
+                    "isConstant": false,
+                    "isInlineArray": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "TupleExpression",
+                    "src": "2861:39:75",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$_t_address_$_t_rational_0_by_1_$_t_bytes_memory_ptr_$",
+                      "typeString": "tuple(address,int_const 0,bytes memory)"
+                    }
+                  },
+                  "functionReturnParameters": 10833,
+                  "id": 10860,
+                  "nodeType": "Return",
+                  "src": "2854:46:75"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 10819,
+              "nodeType": "StructuredDocumentation",
+              "src": "1833:507:75",
+              "text": " Generates the calldata to migrate LEND to AAVE.\n @param _underlyingToken      Address of the component to be wrapped\n @param _wrappedToken         Address of the wrapped component\n @param _underlyingUnits      Total quantity of underlying units to wrap\n @return address              Target contract address\n @return uint256              Total quantity of underlying units (if underlying is ETH)\n @return bytes                Wrap calldata"
+            },
+            "functionSelector": "77b1aaf8",
+            "id": 10862,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getWrapCallData",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 10826,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10821,
+                  "mutability": "mutable",
+                  "name": "_underlyingToken",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10862,
+                  "src": "2379:24:75",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10820,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2379:7:75",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 10823,
+                  "mutability": "mutable",
+                  "name": "_wrappedToken",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10862,
+                  "src": "2413:21:75",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10822,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2413:7:75",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 10825,
+                  "mutability": "mutable",
+                  "name": "_underlyingUnits",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10862,
+                  "src": "2444:24:75",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 10824,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2444:7:75",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2369:105:75"
+            },
+            "returnParameters": {
+              "id": 10833,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10828,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10862,
+                  "src": "2522:7:75",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10827,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2522:7:75",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 10830,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10862,
+                  "src": "2531:7:75",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 10829,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2531:7:75",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 10832,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10862,
+                  "src": "2540:12:75",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 10831,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2540:5:75",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2521:32:75"
+            },
+            "scope": 10897,
+            "src": "2345:562:75",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 10882,
+              "nodeType": "Block",
+              "src": "3552:60:75",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "41415645206d6967726174696f6e2063616e6e6f74206265207265766572736564",
+                        "id": 10879,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "3569:35:75",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_8d06478c4feced4b16d11c087e4874701a15da1dc09e70da37d865408b240890",
+                          "typeString": "literal_string \"AAVE migration cannot be reversed\""
+                        },
+                        "value": "AAVE migration cannot be reversed"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_stringliteral_8d06478c4feced4b16d11c087e4874701a15da1dc09e70da37d865408b240890",
+                          "typeString": "literal_string \"AAVE migration cannot be reversed\""
+                        }
+                      ],
+                      "id": 10878,
+                      "name": "revert",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        -19,
+                        -19
+                      ],
+                      "referencedDeclaration": -19,
+                      "src": "3562:6:75",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_revert_pure$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (string memory) pure"
+                      }
+                    },
+                    "id": 10880,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "3562:43:75",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 10881,
+                  "nodeType": "ExpressionStatement",
+                  "src": "3562:43:75"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 10863,
+              "nodeType": "StructuredDocumentation",
+              "src": "2913:399:75",
+              "text": " Generates the calldata to unwrap a wrapped asset into its underlying. Note: Migration cannot be reversed. This function\n will revert.\n @return address              Target contract address\n @return uint256              Total quantity of wrapped token units to unwrap. This will always be 0 for unwrapping\n @return bytes                Unwrap calldata"
+            },
+            "functionSelector": "a22fe98e",
+            "id": 10883,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getUnwrapCallData",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 10870,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10865,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10883,
+                  "src": "3353:7:75",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10864,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3353:7:75",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 10867,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10883,
+                  "src": "3393:7:75",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10866,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3393:7:75",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 10869,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10883,
+                  "src": "3430:7:75",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 10868,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3430:7:75",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3343:125:75"
+            },
+            "returnParameters": {
+              "id": 10877,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10872,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10883,
+                  "src": "3516:7:75",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10871,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3516:7:75",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 10874,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10883,
+                  "src": "3525:7:75",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 10873,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3525:7:75",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 10876,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10883,
+                  "src": "3534:12:75",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 10875,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3534:5:75",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3515:32:75"
+            },
+            "scope": 10897,
+            "src": "3317:295:75",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 10895,
+              "nodeType": "Block",
+              "src": "3901:48:75",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 10893,
+                    "name": "lendToAaveMigrationProxy",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 10791,
+                    "src": "3918:24:75",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "functionReturnParameters": 10892,
+                  "id": 10894,
+                  "nodeType": "Return",
+                  "src": "3911:31:75"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 10884,
+              "nodeType": "StructuredDocumentation",
+              "src": "3618:159:75",
+              "text": " Returns the address to approve source tokens for wrapping.\n @return address        Address of the contract to approve tokens to"
+            },
+            "functionSelector": "de68a3da",
+            "id": 10896,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getSpenderAddress",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 10889,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10886,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10896,
+                  "src": "3809:7:75",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10885,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3809:7:75",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 10888,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10896,
+                  "src": "3841:7:75",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10887,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3841:7:75",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3808:61:75"
+            },
+            "returnParameters": {
+              "id": 10892,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10891,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10896,
+                  "src": "3892:7:75",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10890,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3892:7:75",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3891:9:75"
+            },
+            "scope": 10897,
+            "src": "3782:167:75",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 10898,
+        "src": "841:3110:75"
+      }
+    ],
+    "src": "655:3297:75"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/tahadhailey/Documents/top5/top5swap/swap/contracts/protocol/integration/AaveMigrationWrapAdapter.sol",
+    "exportedSymbols": {
+      "AaveMigrationWrapAdapter": [
+        10897
+      ]
+    },
+    "id": 10898,
+    "license": "Apache License",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 10788,
+        "literals": [
+          "solidity",
+          "0.6",
+          ".10"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "655:23:75"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": {
+          "id": 10789,
+          "nodeType": "StructuredDocumentation",
+          "src": "680:160:75",
+          "text": " @title AaveMigrationWrapAdapter\n @author Set Protocol\n Wrap adapter for one time token migration that returns data for wrapping LEND into AAVE"
+        },
+        "fullyImplemented": true,
+        "id": 10897,
+        "linearizedBaseContracts": [
+          10897
+        ],
+        "name": "AaveMigrationWrapAdapter",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "functionSelector": "04bd9523",
+            "id": 10791,
+            "mutability": "immutable",
+            "name": "lendToAaveMigrationProxy",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 10897,
+            "src": "983:49:75",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 10790,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "983:7:75",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "functionSelector": "1d4b1519",
+            "id": 10793,
+            "mutability": "immutable",
+            "name": "lendToken",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 10897,
+            "src": "1068:34:75",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 10792,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "1068:7:75",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "functionSelector": "06a3fe59",
+            "id": 10795,
+            "mutability": "immutable",
+            "name": "aaveToken",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 10897,
+            "src": "1138:34:75",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 10794,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "1138:7:75",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 10817,
+              "nodeType": "Block",
+              "src": "1631:133:75",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 10807,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 10805,
+                      "name": "lendToAaveMigrationProxy",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 10791,
+                      "src": "1641:24:75",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 10806,
+                      "name": "_lendToAaveMigrationProxy",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 10798,
+                      "src": "1668:25:75",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "1641:52:75",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 10808,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1641:52:75"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 10811,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 10809,
+                      "name": "lendToken",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 10793,
+                      "src": "1703:9:75",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 10810,
+                      "name": "_lendToken",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 10800,
+                      "src": "1715:10:75",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "1703:22:75",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 10812,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1703:22:75"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 10815,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 10813,
+                      "name": "aaveToken",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 10795,
+                      "src": "1735:9:75",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 10814,
+                      "name": "_aaveToken",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 10802,
+                      "src": "1747:10:75",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "1735:22:75",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 10816,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1735:22:75"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 10796,
+              "nodeType": "StructuredDocumentation",
+              "src": "1228:262:75",
+              "text": " Set state variables\n @param _lendToAaveMigrationProxy     Address of Aave migration contract proxy\n @param _lendToken                    Address of LEND token\n @param _aaveToken                    Address of AAVE token"
+            },
+            "id": 10818,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 10803,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10798,
+                  "mutability": "mutable",
+                  "name": "_lendToAaveMigrationProxy",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10818,
+                  "src": "1516:33:75",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10797,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1516:7:75",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 10800,
+                  "mutability": "mutable",
+                  "name": "_lendToken",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10818,
+                  "src": "1559:18:75",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10799,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1559:7:75",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 10802,
+                  "mutability": "mutable",
+                  "name": "_aaveToken",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10818,
+                  "src": "1587:18:75",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10801,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1587:7:75",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1506:105:75"
+            },
+            "returnParameters": {
+              "id": 10804,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1631:0:75"
+            },
+            "scope": 10897,
+            "src": "1495:269:75",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 10861,
+              "nodeType": "Block",
+              "src": "2558:349:75",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        "id": 10837,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "id": 10835,
+                          "name": "_underlyingToken",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 10821,
+                          "src": "2576:16:75",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "id": 10836,
+                          "name": "lendToken",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 10793,
+                          "src": "2596:9:75",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "src": "2576:29:75",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "4d757374206265204c454e4420746f6b656e",
+                        "id": 10838,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "2607:20:75",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_97a412559ed6bdebbaa89dc68e4d3d56bef11f26e0a765734926bc2fda9df231",
+                          "typeString": "literal_string \"Must be LEND token\""
+                        },
+                        "value": "Must be LEND token"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_97a412559ed6bdebbaa89dc68e4d3d56bef11f26e0a765734926bc2fda9df231",
+                          "typeString": "literal_string \"Must be LEND token\""
+                        }
+                      ],
+                      "id": 10834,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        -18,
+                        -18
+                      ],
+                      "referencedDeclaration": -18,
+                      "src": "2568:7:75",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 10839,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "2568:60:75",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 10840,
+                  "nodeType": "ExpressionStatement",
+                  "src": "2568:60:75"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        "id": 10844,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "id": 10842,
+                          "name": "_wrappedToken",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 10823,
+                          "src": "2646:13:75",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "id": 10843,
+                          "name": "aaveToken",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 10795,
+                          "src": "2663:9:75",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "src": "2646:26:75",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "4d757374206265204141564520746f6b656e",
+                        "id": 10845,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "2674:20:75",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_9cfb4627daaa2fab840320f7b66dc40be16296fb253f0ef026277ce0e7d4753e",
+                          "typeString": "literal_string \"Must be AAVE token\""
+                        },
+                        "value": "Must be AAVE token"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_9cfb4627daaa2fab840320f7b66dc40be16296fb253f0ef026277ce0e7d4753e",
+                          "typeString": "literal_string \"Must be AAVE token\""
+                        }
+                      ],
+                      "id": 10841,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        -18,
+                        -18
+                      ],
+                      "referencedDeclaration": -18,
+                      "src": "2638:7:75",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 10846,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "2638:57:75",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 10847,
+                  "nodeType": "ExpressionStatement",
+                  "src": "2638:57:75"
+                },
+                {
+                  "assignments": [
+                    10849
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 10849,
+                      "mutability": "mutable",
+                      "name": "callData",
+                      "nodeType": "VariableDeclaration",
+                      "overrides": null,
+                      "scope": 10861,
+                      "src": "2750:21:75",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes_memory_ptr",
+                        "typeString": "bytes"
+                      },
+                      "typeName": {
+                        "id": 10848,
+                        "name": "bytes",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "2750:5:75",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_storage_ptr",
+                          "typeString": "bytes"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 10855,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "6d69677261746546726f6d4c454e442875696e7432353629",
+                        "id": 10852,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "2798:26:75",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_682356c09e8f2bcd3d5ea0ce883551ffff7e06b66f1be7cf19258171b989b31b",
+                          "typeString": "literal_string \"migrateFromLEND(uint256)\""
+                        },
+                        "value": "migrateFromLEND(uint256)"
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 10853,
+                        "name": "_underlyingUnits",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 10825,
+                        "src": "2826:16:75",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_stringliteral_682356c09e8f2bcd3d5ea0ce883551ffff7e06b66f1be7cf19258171b989b31b",
+                          "typeString": "literal_string \"migrateFromLEND(uint256)\""
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 10850,
+                        "name": "abi",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": -1,
+                        "src": "2774:3:75",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_abi",
+                          "typeString": "abi"
+                        }
+                      },
+                      "id": 10851,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "memberName": "encodeWithSignature",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "2774:23:75",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_abiencodewithsignature_pure$_t_string_memory_ptr_$returns$_t_bytes_memory_ptr_$",
+                        "typeString": "function (string memory) pure returns (bytes memory)"
+                      }
+                    },
+                    "id": 10854,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "2774:69:75",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_memory_ptr",
+                      "typeString": "bytes memory"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "2750:93:75"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "components": [
+                      {
+                        "argumentTypes": null,
+                        "id": 10856,
+                        "name": "lendToAaveMigrationProxy",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 10791,
+                        "src": "2862:24:75",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "30",
+                        "id": 10857,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "2888:1:75",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_0_by_1",
+                          "typeString": "int_const 0"
+                        },
+                        "value": "0"
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 10858,
+                        "name": "callData",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 10849,
+                        "src": "2891:8:75",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      }
+                    ],
+                    "id": 10859,
+                    "isConstant": false,
+                    "isInlineArray": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "TupleExpression",
+                    "src": "2861:39:75",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$_t_address_$_t_rational_0_by_1_$_t_bytes_memory_ptr_$",
+                      "typeString": "tuple(address,int_const 0,bytes memory)"
+                    }
+                  },
+                  "functionReturnParameters": 10833,
+                  "id": 10860,
+                  "nodeType": "Return",
+                  "src": "2854:46:75"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 10819,
+              "nodeType": "StructuredDocumentation",
+              "src": "1833:507:75",
+              "text": " Generates the calldata to migrate LEND to AAVE.\n @param _underlyingToken      Address of the component to be wrapped\n @param _wrappedToken         Address of the wrapped component\n @param _underlyingUnits      Total quantity of underlying units to wrap\n @return address              Target contract address\n @return uint256              Total quantity of underlying units (if underlying is ETH)\n @return bytes                Wrap calldata"
+            },
+            "functionSelector": "77b1aaf8",
+            "id": 10862,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getWrapCallData",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 10826,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10821,
+                  "mutability": "mutable",
+                  "name": "_underlyingToken",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10862,
+                  "src": "2379:24:75",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10820,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2379:7:75",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 10823,
+                  "mutability": "mutable",
+                  "name": "_wrappedToken",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10862,
+                  "src": "2413:21:75",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10822,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2413:7:75",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 10825,
+                  "mutability": "mutable",
+                  "name": "_underlyingUnits",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10862,
+                  "src": "2444:24:75",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 10824,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2444:7:75",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2369:105:75"
+            },
+            "returnParameters": {
+              "id": 10833,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10828,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10862,
+                  "src": "2522:7:75",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10827,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2522:7:75",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 10830,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10862,
+                  "src": "2531:7:75",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 10829,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2531:7:75",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 10832,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10862,
+                  "src": "2540:12:75",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 10831,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2540:5:75",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2521:32:75"
+            },
+            "scope": 10897,
+            "src": "2345:562:75",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 10882,
+              "nodeType": "Block",
+              "src": "3552:60:75",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "41415645206d6967726174696f6e2063616e6e6f74206265207265766572736564",
+                        "id": 10879,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "3569:35:75",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_8d06478c4feced4b16d11c087e4874701a15da1dc09e70da37d865408b240890",
+                          "typeString": "literal_string \"AAVE migration cannot be reversed\""
+                        },
+                        "value": "AAVE migration cannot be reversed"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_stringliteral_8d06478c4feced4b16d11c087e4874701a15da1dc09e70da37d865408b240890",
+                          "typeString": "literal_string \"AAVE migration cannot be reversed\""
+                        }
+                      ],
+                      "id": 10878,
+                      "name": "revert",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        -19,
+                        -19
+                      ],
+                      "referencedDeclaration": -19,
+                      "src": "3562:6:75",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_revert_pure$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (string memory) pure"
+                      }
+                    },
+                    "id": 10880,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "3562:43:75",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 10881,
+                  "nodeType": "ExpressionStatement",
+                  "src": "3562:43:75"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 10863,
+              "nodeType": "StructuredDocumentation",
+              "src": "2913:399:75",
+              "text": " Generates the calldata to unwrap a wrapped asset into its underlying. Note: Migration cannot be reversed. This function\n will revert.\n @return address              Target contract address\n @return uint256              Total quantity of wrapped token units to unwrap. This will always be 0 for unwrapping\n @return bytes                Unwrap calldata"
+            },
+            "functionSelector": "a22fe98e",
+            "id": 10883,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getUnwrapCallData",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 10870,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10865,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10883,
+                  "src": "3353:7:75",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10864,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3353:7:75",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 10867,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10883,
+                  "src": "3393:7:75",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10866,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3393:7:75",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 10869,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10883,
+                  "src": "3430:7:75",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 10868,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3430:7:75",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3343:125:75"
+            },
+            "returnParameters": {
+              "id": 10877,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10872,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10883,
+                  "src": "3516:7:75",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10871,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3516:7:75",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 10874,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10883,
+                  "src": "3525:7:75",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 10873,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3525:7:75",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 10876,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10883,
+                  "src": "3534:12:75",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 10875,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3534:5:75",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3515:32:75"
+            },
+            "scope": 10897,
+            "src": "3317:295:75",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 10895,
+              "nodeType": "Block",
+              "src": "3901:48:75",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 10893,
+                    "name": "lendToAaveMigrationProxy",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 10791,
+                    "src": "3918:24:75",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "functionReturnParameters": 10892,
+                  "id": 10894,
+                  "nodeType": "Return",
+                  "src": "3911:31:75"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 10884,
+              "nodeType": "StructuredDocumentation",
+              "src": "3618:159:75",
+              "text": " Returns the address to approve source tokens for wrapping.\n @return address        Address of the contract to approve tokens to"
+            },
+            "functionSelector": "de68a3da",
+            "id": 10896,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getSpenderAddress",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 10889,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10886,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10896,
+                  "src": "3809:7:75",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10885,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3809:7:75",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 10888,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10896,
+                  "src": "3841:7:75",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10887,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3841:7:75",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3808:61:75"
+            },
+            "returnParameters": {
+              "id": 10892,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10891,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10896,
+                  "src": "3892:7:75",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10890,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3892:7:75",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3891:9:75"
+            },
+            "scope": 10897,
+            "src": "3782:167:75",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 10898,
+        "src": "841:3110:75"
+      }
+    ],
+    "src": "655:3297:75"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.10+commit.00c0fcaf.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.2.1",
+  "updatedAt": "2021-01-21T08:20:37.689Z",
+  "devdoc": {
+    "author": "Set Protocol Wrap adapter for one time token migration that returns data for wrapping LEND into AAVE",
+    "methods": {
+      "constructor": {
+        "params": {
+          "_aaveToken": "Address of AAVE token",
+          "_lendToAaveMigrationProxy": "Address of Aave migration contract proxy",
+          "_lendToken": "Address of LEND token"
+        }
+      },
+      "getSpenderAddress(address,address)": {
+        "returns": {
+          "_0": "address        Address of the contract to approve tokens to"
+        }
+      },
+      "getUnwrapCallData(address,address,uint256)": {
+        "returns": {
+          "_0": "address              Target contract address",
+          "_1": "uint256              Total quantity of wrapped token units to unwrap. This will always be 0 for unwrapping",
+          "_2": "bytes                Unwrap calldata"
+        }
+      },
+      "getWrapCallData(address,address,uint256)": {
+        "params": {
+          "_underlyingToken": "Address of the component to be wrapped",
+          "_underlyingUnits": "Total quantity of underlying units to wrap",
+          "_wrappedToken": "Address of the wrapped component"
+        },
+        "returns": {
+          "_0": "address              Target contract address",
+          "_1": "uint256              Total quantity of underlying units (if underlying is ETH)",
+          "_2": "bytes                Wrap calldata"
+        }
+      }
+    },
+    "title": "AaveMigrationWrapAdapter"
+  },
+  "userdoc": {
+    "methods": {
+      "constructor": "Set state variables",
+      "getSpenderAddress(address,address)": {
+        "notice": "Returns the address to approve source tokens for wrapping."
+      },
+      "getUnwrapCallData(address,address,uint256)": {
+        "notice": "Generates the calldata to unwrap a wrapped asset into its underlying. Note: Migration cannot be reversed. This function will revert."
+      },
+      "getWrapCallData(address,address,uint256)": {
+        "notice": "Generates the calldata to migrate LEND to AAVE."
+      }
+    }
+  }
+}
