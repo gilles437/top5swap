@@ -1,75 +1,96 @@
-import React, { Component } from "react";
-import SimpleStorageContract from "./contracts/SimpleStorage.json";
+import React, { useEffect, useState } from "react";
+import { Component } from "react";
 import SetTokenCreator from "./contracts/SetTokenCreator.json";
 import getWeb3 from "./getWeb3";
 
 import "./App.css";
 
-class App extends Component {
-  state = { storageValue: 0, web3: null, accounts: null, contract: null };
 
-  componentDidMount = async () => {
+  const App = () => {
+  
+  const [account, setAccount] = useState("");
+
+  const loadBlockchainData = async () => {
     try {
-      // Get network provider and web3 instance.
-      const web3 = await getWeb3();
+     const web3 = await getWeb3();
 
-      // Use web3 to get the user's accounts.
-      const accounts = await web3.eth.getAccounts();
+    // Use web3 to get the user's accounts.
+    const accounts = await web3.eth.getAccounts();
 
-        // Get the contract instance.
-      const networkId = await web3.eth.net.getId();
-      const deployedNetwork = SetTokenCreator.networks[42];
-      const instance = new web3.eth.Contract(
+    setAccount(accounts[0]);
+
+    console.log({account})
+
+    const networkId = await web3.eth.net.getId();
+    const deployedNetwork = SetTokenCreator.networks[42];
+    const instance = new web3.eth.Contract(
         SetTokenCreator.abi,
         deployedNetwork && deployedNetwork.address,
       );
-     console.log(deployedNetwork)
-      // Set web3, accounts, and contract to the state, and then proceed with an
-      // example of interacting with the contract's methods.
-      this.setState({ web3, accounts, contract: instance }, this.runExample);
-    } catch (error) {
-      // Catch any errors for any of the above operations.
-      alert(
-        `Failed to load web3, accounts, or contract. Check console for details.`,
-      );
-      console.error(error);
-    }
-  };
+   console.log(accounts[0]);
 
-  // runExample = async () => {
-  //   const { accounts, contract } = this.state;
+
+    const components = [
+      //AAVE
+      "0x7Fc66500c84A76Ad7e9c93437bFc5Ac33E2DDaE9",
+      //UNI
+      "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
+      //BALANCER
+      "0xba100000625a3754423978a60c9317c58a424e3D",
+     //LOOPRING
+     "0xBBbbCA6A901c926F240b89EacB641d8Aec7AEafD",
+     //KYBER
+     "0xdd974D5C2e2928deA5F71b9825b8b646686BD200" 
+    ]
+    const units = [5*10^17, 5*10^17, 5*10^17, 5*10^17, 5*10^17,];
+
+    const modules = ["0x8a070235a4B9b477655Bf4Eb65a1dB81051B3cC1", "0xE038E59DEEC8657d105B6a3Fb5040b3a6189Dd51", "0x5dB52450a8C0eb5e0B777D4e08d7A93dA5a9c848", "0x936Ffda1C892a7c65777b14C1D71fD2C79222099", "0x6BD69bf1FE2B1464a3017Da50fe4ca7c1779F8f6", "0xC93c8CDE0eDf4963ea1eea156099B285A945210a"];
+
+    const manager = "0xa2CEE670D4b589D243B9B413C5F874724A6E0076";
+
+    const name = "SWAP";
+
+    const symbol = "SWP";
+    // Stores a given value, 5 by default.
+    await instance.methods.create(components,units, modules, manager, name, symbol ).send({ from: accounts[0] });
+
+  } catch(error) {
+    console.log(error)
+    }
+  }
+
+  // const createSet = async () => {
+
+  // }
+
+  useEffect(() => {
+    loadBlockchainData();
+   
+
+   
+    //esl
+  });
+
+
     
-  //   // Stores a given value, 5 by default.
-  //   await contract.methods.set(5).send({ from: accounts[0] });
-
-  //   // Get the value from the contract to prove it worked.
-  //   const response = await contract.methods.get().call();
-
-  //   // Update state with the result.
-  //   this.setState({ storageValue: response, accounts:accounts[0] });
-  // };
-
-  render() {
-    if (!this.state.web3) {
-      return <div>Loading Web3, accounts, and contract...</div>;
-    }
     return (
       <div className="App">
         <h1>Good to Go!</h1>
-        <p>Your Truffle Box is installed and ready.</p>
-        <h2>Smart Contract Example</h2>
+        
+        <h2>Create Token Set</h2>
         <p>
-          If your contracts compiled and migrated successfully, below will show
-          a stored value of 5 (by default).
+          Your Account : {account}
         </p>
         <p>
-          Try changing the value stored on <strong>line 40</strong> of App.js.
+          <button className="btn btn-primary">Create Set Token</button>
         </p>
-         <div>The stored value is: {this.state.storageValue}</div>
-        <div>The address is: {this.state.accounts}</div>
+       
       </div>
     );
-  }
-}
+  
+
+};
+
+
 
 export default App;
