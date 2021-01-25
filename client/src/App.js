@@ -7,6 +7,7 @@ import ExpandedViewCard from './Components/ExpandedViewCard/ExpandedViewCard';
 import PopupCard from './Components/PopupCard/PopupCard';
 import {BrowserRouter as Router,Switch, Route} from 'react-router-dom';
 import Modal from './Components/Modal/Modal';
+import React,{useState,useEffect} from "react";
 
 
 //gilles 
@@ -15,12 +16,12 @@ require('dotenv').config()
 const Web3 = require('web3')
 const axios = require('axios')
 const moment = require('moment-timezone')
-const numeral = require('numeral')
+const numeral = require("numeral");
 const _ = require('lodash')
 
 const CONTRACT_ADDRESS = "0xf202b7F8c45A91D0a4FC5530504b62f1f1Bc264c"
 
-console.log('REACT_APP_RPC_URL', process.env.REACT_APP_RPC_URL, 'REACT_APP_PRIVATE_KEY', process.env.REACT_APP_PRIVATE_KEY)
+console.log('**@ REACT_APP_RPC_URL', process.env.REACT_APP_RPC_URL, 'REACT_APP_PRIVATE_KEY', process.env.REACT_APP_PRIVATE_KEY)
 //  WEB3 CONFIG
 const web3 = new Web3("https://kovan.infura.io/v3/dab4ad30f66346bf9eeca8a731cc89d5")
 web3.eth.accounts.wallet.add("0xb93f68250da8380a65bc89b8337dd8a8fe723cadc72a39e0eb7aab3cdae7ce52")
@@ -99,6 +100,8 @@ const ASSET_ADDRESSES = {
 }
 
 
+
+
 // TRADING FUNCTIONS
 const ONE_SPLIT_PARTS = 10
 const ONE_SPLIT_FLAGS = 0
@@ -108,12 +111,49 @@ async function fetchOneSplitData(args) {
   try {
      data = await oneSplitContract.methods.getExpectedReturn(fromToken, toToken, amount, ONE_SPLIT_PARTS, ONE_SPLIT_FLAGS).call()
   } catch (error) {
-   console.log('fetchOneSplitData problem!')
+   console.log(' **@ fetchOneSplitData problem!')
     console.error(error)
   }
   return(data)
 }
 
+const sortData = function(arr,type,limit){
+let temp=[]
+
+let types={
+  "Lending":0,
+  "Assets":1,
+  "DEXes":2,
+  "Payments":3,
+  "Derivatives":4,
+}
+
+  for(let i=0;i<arr.data.length;i++){
+
+    if((types[arr.data[i].category]==type)&&(temp.length<limit)){
+      temp.push(arr.data[i]);
+
+    }
+  }
+  // console.log("**@ sorted array is , ",temp);
+  return temp;
+
+
+}
+
+
+
+function App() {
+
+// use state variables here
+const[assets,setAssets]=useState([]);
+const [dexes,setDexes]=useState([]);
+const [payments,setPayments]=useState([]);
+const[derivatives,setDerivatives]=useState([]);
+const [lendings,setLendings]=useState([]);
+
+
+// functions here
 async function checkRate() {
 
   //var oneSplitData;
@@ -121,46 +161,79 @@ async function checkRate() {
   try {
 
   // Fetch 1Split Data
-   const getProject = await axios.get(`https://data-api.defipulse.com/api/v1/defipulse/api/GetProjects?api-key=db84e1509032bc4cc4f96d1c8791d92b667d28adc606bda9480c9a616310`)
+   const getProject = await axios.get(`https://data-api.defipulse.com/api/v1/defipulse/api/GetProjects?api-key=b0aacad3a543e89be2d0a3a4add148b1f9b2cdc2040b18544a463e3629e8`);
+   console.log("**@ getproject whole data is ,",getProject);
+
+   const lendings= sortData(getProject,0,5);
+   console.log("**@ lendings list  is , ",lendings);
+   setLendings(lendings);
+
+   const assets= sortData(getProject,1,5);
+   console.log("**@ assets list is , ",assets);
+   setAssets(assets);
+
+   const dexes= sortData(getProject,2,5);
+   console.log("**@ dexes data is , ",dexes);
+   setDexes(dexes);
+
+   const payments= sortData(getProject,3,5);
+   console.log("**@ payments are , ",payments);
+   setPayments(payments);
+
+   const derivatives= sortData(getProject,4,5);
+   console.log("**@ derivatives data is , ",derivatives);
+   setDerivatives(derivatives);
+
    const getProjectCategory1 = getProject.data[0].category;
    const getProjectCategory2 = getProject.data[1].category;
    const getProjectCategory3 = getProject.data[2].category;
    const getProjectCategory4 = getProject.data[3].category;
 //   const myGasPrice = (ethGasStationData.fastest / 10) * 1.0 //adding 10%
 
-  console.log('getProjectCategory',getProject.data.length, getProjectCategory1, getProjectCategory2, getProjectCategory3, getProjectCategory4)
+  console.log('**@ getProjectCategory is ',getProject.data.length, getProjectCategory1, getProjectCategory2, getProjectCategory3, getProjectCategory4)
 
   var i;
   for (i=0; i < getProject.data.length;i++) {
-  console.log(getProject.data[i].category, getProject.data[i].name, getProject.data[i].value.tvl.USD.value)
+  console.log(" **@ for loop entry is , ",getProject.data[i].category, getProject.data[i].name, getProject.data[i].value.tvl.USD.value)
 
   }
 
+//  ****************** getting rates here
+  // this.setState({myText})
 
-  this.setState({myText})
+  //  totalDefiPulseTokens = getProject.data.length;
+  //  console.log('**@ totalDefiPulseTokens',totalDefiPulseTokens)
+  //  this.setState({totalDefiPulseTokens});
 
-   totalDefiPulseTokens = getProject.data.length;
-   console.log('totalDefiPulseTokens',totalDefiPulseTokens)
-   this.setState({totalDefiPulseTokens});
-
-   const wethLinkRate = await axios.get(`https://api.1inch.exchange/v2.0/quote?fromTokenAddress=${ASSET_ADDRESSES['WETH']}&toTokenAddress=${ASSET_ADDRESSES['LINK']}&amount=10000000000000000000`)
-   const toTokenAmnt = wethLinkRate.data.toTokenAmount
+  //  const wethLinkRate = await axios.get(`https://api.1inch.exchange/v2.0/quote?fromTokenAddress=${ASSET_ADDRESSES['WETH']}&toTokenAddress=${ASSET_ADDRESSES['LINK']}&amount=10000000000000000000`)
+  //  const toTokenAmnt = wethLinkRate.data.toTokenAmount
 
 
  
-   // This becomes the outputAssetAmount
-    //  outputAssetAmount = oneSplitData.returnAmount
-    console.log('toTokenAmnt', toTokenAmnt)
+  //  // This becomes the outputAssetAmount
+  //   //  outputAssetAmount = oneSplitData.returnAmount
+  //   console.log('**@ toTokenAmnt', toTokenAmnt)
  }  
  catch (error) {
-   console.log('calling fetchOneSplitData is the problem!')
+   console.log('**@ calling fetchOneSplitData is the problem!')
     console.error(error)
 
  }
 }
 
-function App() {
-  checkRate()
+// useEffect 
+useEffect(()=>{
+  const init=async ()=>{
+    await checkRate();
+  }
+
+
+
+  init();
+},[])
+
+// checkRate();
+  
   return (
     <Router >
       <div className="App">
@@ -174,7 +247,13 @@ function App() {
         <Route path='/' >
 
         <Header content={myText}/>
-      < AllSimpleViews />
+      < AllSimpleViews
+      assets={assets}
+      lendings={lendings}
+      payments={payments}
+      derivatives={derivatives} 
+      dexes={dexes}
+      />
       {/* <Modal /> */}
      {/* < PopupCard />*/}
 

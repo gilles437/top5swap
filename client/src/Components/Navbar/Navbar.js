@@ -7,7 +7,7 @@ import {Link} from 'react-router-dom';
 import {getWeb3} from '../../Utils/Utils';
 // import {auth} from './firebase';
 
-import logo from '../../top5-swap-logo.png' 
+import logo from  '../LOGO/top5-swap-logo.png'; 
 
 function Navbar() {
 

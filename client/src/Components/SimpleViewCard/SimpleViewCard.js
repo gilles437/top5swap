@@ -1,12 +1,20 @@
 import React from 'react';
 import './SimpleViewCard.css';
 
-function SimpleViewCard({title,description,value,gain}) {
+function SimpleViewCard({title,description,value,gain,type,name}) {
+  console.log("**@ type is , ",type);
     return (
         <a href='/expandedView'>
           <div className="simpleView_card jumbotron">
             <h3>{title}</h3>
             <p>{description}</p>
+            {
+              type.map((asset,i)=>{
+                return(
+                  <h3 style={{textAlign:"left"}}>{asset.name}</h3>
+                )
+              })
+            }
 
             <form>
   <div className="form-group row">
