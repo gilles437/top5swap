@@ -9,10 +9,13 @@
   }
   
   .navbar_logo {
-    width: 100px;
-    object-fit: contain;
-    margin: 0 20px;
-    margin-top: 18px;
+    max-width:200px;
+    height:50px;
+    margin-left: 0px;
+    /* margin:0; */
+    /* object-fit: contain; */
+    /* margin: 0 20px; */
+    /* margin-top: 18px; */
   }
   
   .navbar_search {

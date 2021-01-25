@@ -184,19 +184,19 @@ async function checkRate() {
    console.log("**@ derivatives data is , ",derivatives);
    setDerivatives(derivatives);
 
-   const getProjectCategory1 = getProject.data[0].category;
-   const getProjectCategory2 = getProject.data[1].category;
-   const getProjectCategory3 = getProject.data[2].category;
-   const getProjectCategory4 = getProject.data[3].category;
-//   const myGasPrice = (ethGasStationData.fastest / 10) * 1.0 //adding 10%
+//    const getProjectCategory1 = getProject.data[0].category;
+//    const getProjectCategory2 = getProject.data[1].category;
+//    const getProjectCategory3 = getProject.data[2].category;
+//    const getProjectCategory4 = getProject.data[3].category;
+// //   const myGasPrice = (ethGasStationData.fastest / 10) * 1.0 //adding 10%
 
-  console.log('**@ getProjectCategory is ',getProject.data.length, getProjectCategory1, getProjectCategory2, getProjectCategory3, getProjectCategory4)
+//   console.log('**@ getProjectCategory is ',getProject.data.length, getProjectCategory1, getProjectCategory2, getProjectCategory3, getProjectCategory4)
 
-  var i;
-  for (i=0; i < getProject.data.length;i++) {
-  console.log(" **@ for loop entry is , ",getProject.data[i].category, getProject.data[i].name, getProject.data[i].value.tvl.USD.value)
+//   var i;
+//   for (i=0; i < getProject.data.length;i++) {
+//   console.log(" **@ for loop entry is , ",getProject.data[i].category, getProject.data[i].name, getProject.data[i].value.tvl.USD.value)
 
-  }
+//   }
 
 //  ****************** getting rates here
   // this.setState({myText})
@@ -239,14 +239,20 @@ useEffect(()=>{
       <div className="App">
       <Navbar />
       <Switch >
+      <Route path='/modal'>
+        <h1>Modal</h1>
+      <Modal />
+
+        </Route>
       <Route path='/expandedView'>
         < ExpandedViewCard />
 
         </Route>
         
-        <Route path='/' >
-
-        <Header content={myText}/>
+        <Route path='/' >     
+        
+         <Header content={'Buy the top 5 performing Defi Tokens in their category in their category in a single transaction'}/>
+         
       < AllSimpleViews
       assets={assets}
       lendings={lendings}

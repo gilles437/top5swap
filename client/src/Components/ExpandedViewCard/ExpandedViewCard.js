@@ -1,8 +1,16 @@
-import React from 'react';
+import React,{useState} from 'react';
 import './ExpandedViewCard.css';
+import Modal from "../Modal/Modal";
 //  import the graph component here
 
 function ExpandedViewCard({type}) {
+  const [showModal,setShowModal]=useState(false);
+
+  const handleModal= async (value)=>{
+    console.log("**@ handleModal called with value , ",value);
+    setShowModal(true);
+
+  }
 
   let data=[
     {
@@ -50,12 +58,17 @@ function ExpandedViewCard({type}) {
     return (
         <div className="expanded_view jumbotron">
             <h3>Top 5 Defi {type} Apps</h3>
+
+            <Modal 
+            showModal={showModal}
+            setShowModal={setShowModal}
+            />
             
         {/* Enter the chart component here */}
             
-            <button type="button" className="btn btn-primary buttonStyle">Buy</button>
-            <button type="button" className="btn btn-primary buttonStyle">Sell</button>
-            <button type="button" className="btn btn-primary buttonStyle">Deposit</button>
+            <button type="button" className="btn btn-primary buttonStyle" onClick={()=>handleModal('BUY')}>Buy</button>
+            <button type="button" className="btn btn-primary buttonStyle" onClick={()=>handleModal('SELL')}>Sell</button>
+            <button type="button" className="btn btn-primary buttonStyle" onClick={()=>handleModal('DEPOSIT')}>Deposit</button>
             <table class="table">
   <thead class="thead-dark">
     <tr>
