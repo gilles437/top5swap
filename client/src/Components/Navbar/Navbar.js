@@ -7,6 +7,8 @@ import {Link} from 'react-router-dom';
 import {getWeb3} from '../../Utils/Utils';
 // import {auth} from './firebase';
 
+import logo from '../../top5-swap-logo.png' 
+
 function Navbar() {
 
     // const [{basket,user},dispatch] = useStateValue();
@@ -37,7 +39,7 @@ function Navbar() {
     return (
         <div className='navbar'>
         <a to='/'>
-        <img className='navbar_logo' src='http://pngimg.com/uploads/amazon/amazon_PNG11.png' />
+        <img className='navbar_logo' src={logo} />
 
         </a>
 
